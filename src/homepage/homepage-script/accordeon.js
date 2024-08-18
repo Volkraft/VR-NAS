@@ -32,12 +32,11 @@ const motionAccord = (event) => {
 
 accordList.addEventListener("click", motionAccord);
 
-const headerAccrList = document.querySelector("#headerAccrList");
+const headerAccrList = document.querySelector("#menuList");
 
 const headerMotionAccord = (event) => {
-    const isHeaderListItem = event.target.closest("[data-accrdeon]");
+    const isHeaderListItem = event.target.closest("[data-acrList]");
     if (isHeaderListItem) {
-        console.log(isHeaderListItem);
         isHeaderListItem.classList.toggle("active");
     }
 };

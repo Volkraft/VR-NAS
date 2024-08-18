@@ -18,7 +18,7 @@
                     <img class="logo__img" src="../img/logo.svg" alt="VRNas logotype">
                 </a>
                 <nav class="menu">
-                    <ul class="menu__list">
+                    <ul class="menu__list" id="menuList">
                         <li class="menu__item">
                             <a href="#!" class="anchor-link">Home</a>
                         </li>
@@ -28,10 +28,8 @@
                         <li class="menu__item">
                             <a href="" class="anchor-link">Service</a>
                         </li>
-                        <li class="menu__item" id="headerAccrList">
-                            <div class="wrapper-anchor-link" data-accrdeon>
-                                <a href="page" class="anchor-link anchor-link--sublist">Page</a>
-                                <button class="anchor-link-arrow" title="show-list"></button>
+                        <li class="menu__item" data-acrList>
+                                <button class="anchor-link anchor-link--sublist">Page</button>
                                 <ul class="sublist sublist--first">
                                     <li class="sublist__item">
                                         <a href="">Pricing Plan</a></li>
@@ -42,12 +40,9 @@
                                     <li class="sublist__item">
                                         <a href="">Privacy Policy</a></li>
                                 </ul>
-                            </div>
                         </li>
-                        <li class="menu__item" id="headerAccrList">
-                            <div class="wrapper-anchor-link">
-                                <a href="" class="anchor-link anchor-link--sublist">Blog</a>
-                                <button class="anchor-link-arrow" title="show-list"></button>
+                        <li class="menu__item" data-acrList>
+                                <button class="anchor-link anchor-link--sublist">Blog</button>
                                 <!-- <ul class="sublist sublist--first">
                                     <li class="sublist__item">
                                         <a href="">Resent articles</a> 
@@ -59,7 +54,6 @@
                                         <a href="">Detail Service</a>
                                     </li>
                                 </ul> -->
-                            </div>
                         </li>
                     </ul>
                 </nav>
