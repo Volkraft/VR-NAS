@@ -1,0 +1,129 @@
+@import "/src/common/common-style/vars.scss";
+.services {
+    margin-bottom: 285px;
+}
+.services__content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.services__header {
+    max-width: 1158px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 46px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        display: block;
+        width: 350px;
+        height: 100px;
+        border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
+        transform: translate(100px, 100px) rotate(10deg);
+        z-index: -1;
+        background: $blue;
+        filter: blur(125px);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        display: block;
+        width: 350px;
+        height: 150px;
+        border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
+        transform: translate(250px, -65px) rotate(10deg);
+        z-index: -2;
+        background: $purple;
+        filter: blur(125px);
+    }
+    .main-text {
+        max-width: 625px;
+    }
+}
+.services__info {
+    max-width: 261px;
+}
+.services__cards {
+    display: flex;
+    justify-content: space-between;
+}
+.services__cards-column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 31px;
+    position: relative;
+    // пересмотреть подход к отступу
+    &--second {
+        top: 58px;
+    }
+    &--third {
+        top: 135px;
+    }
+}
+.card-service {
+    padding: 38px 39px 25px 32px;
+    position: relative;
+    width: 380px;
+    height: 291px;
+    background-color: $black50;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, #636366 0%, $black100 100%);
+    border-image-slice: 1;
+    overflow: hidden;
+
+    .card-service__img {
+        margin-bottom: 58px;
+    }
+    .card-service__title {
+        font-size: 20px;
+        margin-bottom: 17px;
+    }
+    .card-service__descript {
+        font-size: 14px;
+        line-height: 24px;
+        color: $grey1;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 99.5%;
+        height: 99.5%;
+        text-decoration: none;
+        border-width: 1px;
+        border-style: solid;
+        border-image: $linear;
+        border-image-slice: 1;
+        opacity: 0;
+        transition: 0.4s;
+        background-color: $black50;
+    }
+    &:hover {
+        &::before {
+            opacity: 0.8;
+        }
+        .services-button {
+            transform: translateY(-60%) translateX(50%);
+        }
+    }
+
+    .services-button {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(100%) translateX(50%);
+        right: 50%;
+        padding: 15px 35px;
+        transition: 0.5s;
+        span {
+            font-weight: 800;
+        }
+    }
+}

@@ -1,0 +1,120 @@
+@import "/src/common/common-style/vars.scss";
+.choouse-us {
+    margin-bottom: 175px;
+}
+.choouse-us__content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    column-gap: 90px;
+}
+.choouse-us__info {
+    padding-top: 95px;
+    max-width: 550px;
+    width: 100%;
+    .context-subtitle {
+        margin-bottom: 35px;
+    }
+}
+.accord {
+}
+
+.accord__point-decrpit {
+    color: $grey2;
+    line-height: 27px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.accord__point {
+    margin-bottom: 45px;
+
+    &.active {
+        .accord__point-decrpit {
+            height: 115px;
+        }
+        .accord__point-title::after {
+            transition: all 0.5s ease 0s;
+            transform: rotateX(180deg);
+        }
+    }
+}
+
+.accord__point-title {
+    position: relative;
+    font-weight: 400;
+    font-size: 20px;
+    padding-bottom: 10px;
+    border-bottom: $grey1 1px solid;
+    margin-bottom: 15px;
+    &::after {
+        content: "";
+        background-image: url(/src/img/icons/arrow-link.svg);
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 0;
+        right: 0;
+        transition: all 0.5s ease 0s;
+    }
+}
+
+.choouse-us__logo {
+    height: 662px;
+    position: relative;
+    right: -80px;
+
+    &::before {
+        content: "";
+        border-radius: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        inset: -1px;
+        width: 400px;
+        height: 200px;
+        border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
+        transform: translate(-105px, 350px) rotate(-60deg);
+        z-index: -1;
+        background: $blue;
+        filter: blur(105px);
+    }
+    &::after {
+        content: "";
+        border-radius: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        inset: -1px;
+        width: 500px;
+        height: 300px;
+        border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
+        transform: translate(75px, 150px) rotate(35deg);
+        z-index: -1;
+        background: $purple;
+        filter: blur(105px);
+    }
+    .choouse-us__wrapper-img {
+        position: relative;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 5px;
+            right: 100px;
+            background-color: $black50;
+            width: 399px;
+            height: 497px;
+            z-index: -3;
+        }
+    }
+    &-video {
+        position: absolute;
+        bottom: -40px;
+        right: 80px;
+    }
+}

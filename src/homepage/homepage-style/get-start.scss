@@ -1,0 +1,77 @@
+@import "/src/common/common-style/vars.scss";
+
+.get-start {
+    padding-bottom: 100px;
+}
+.get-start__content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.get-start__header {
+    position: relative;
+    margin: 0 auto;
+    max-width: 700px;
+    margin-bottom: 38px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 100px;
+        left: -500px;
+        display: block;
+        width: 450px;
+        height: 200px;
+        border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
+        transform: translate(-200px, 100px) rotate(10deg);
+        z-index: -1;
+        background: $blue;
+        filter: blur(125px);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100px;
+        left: -500px;
+        display: block;
+        width: 500px;
+        height: 250px;
+        border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
+        transform: translate(-100px, -65px) rotate(10deg);
+        z-index: -2;
+        background: $purple;
+        filter: blur(125px);
+    }
+
+    .context-title {
+        font-size: 16px;
+    }
+}
+.get-start__player {
+    border-radius: 20px;
+    width: 1200px;
+    height: 522px;
+    overflow: hidden;
+    margin-bottom: 45px;
+    position: relative;
+}
+.video-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.vjs-no-js {
+}
+.wrapper-button {
+}
+.button {
+}

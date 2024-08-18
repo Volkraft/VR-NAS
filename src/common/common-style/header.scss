@@ -1,0 +1,93 @@
+.header {
+    &__content {
+        padding: 31px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        column-gap: 65px;
+        align-items: center;
+        transform: translateX(12px);
+    }
+    &__item {
+        cursor: pointer;
+    }
+}
+
+.sublist {
+    height: 0;
+    transition: 0.5s;
+    position: absolute;
+    top: 100%;
+    left: -70px;
+    margin-top: 10px;
+    padding: 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, #636366 0%, $black100 100%);
+    border-image-slice: 1;
+    background-color: $black50;
+    font-size: 15px;
+
+    &--first {
+        width: 200px;
+    }
+    &__item {
+        margin-bottom: 14px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.wrapper-anchor-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    gap: 4px;
+    &.active {
+        .sublist--first {
+            height: 143px;
+            transform-origin: 0 0;
+            transform: rotateX(0deg);
+            transition: 0.5s;
+        }
+    }
+}
+.anchor-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    color: $grey1;
+    text-decoration: none;
+    transition: 0.5s;
+
+    &:hover {
+        color: $white;
+    }
+    &--sublist {
+    }
+}
+
+.anchor-link-arrow {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    background-image: url(/src/img/icons/arrow-link.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
