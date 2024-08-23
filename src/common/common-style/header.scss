@@ -1,4 +1,7 @@
 .header {
+    position: fixed;
+    z-index: 3;
+    width: 100%;
     &__content {
         padding: 31px 0;
         display: flex;
@@ -8,22 +11,43 @@
         margin: 0 auto;
     }
 }
-.sublist {
-    transition: 0.5s;
+.menu__wrapper-list {
     position: absolute;
-    top: 30px;
+    top: 40px;
     left: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 200px;
+    height: 0;
+    transition:
+        height 0.5s,
+        padding 0.5s;
+}
+.sublist {
+    width: 99%;
+    height: 99%;
     padding: 15px;
-    border-width: 1px;
-    border-style: solid;
-    border-image: linear-gradient(90deg, #636366 0%, $black100 100%);
-    border-image-slice: 1;
+    list-style: none;
     background-color: $black50;
     font-size: 15px;
-    min-width: 200px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 102%;
+        height: 102%;
+        background: linear-gradient(90deg, #636366 0%, $black100 100%);
+        z-index: -1;
+    }
 
     &__item {
         margin-bottom: 14px;
+
         &:last-child {
             margin-bottom: 0;
         }
@@ -39,16 +63,23 @@
     }
     &__item {
         position: relative;
-        cursor: pointer;
     }
     &__item.active {
-        .sublist {
-            transform: translateY(-100%);
+        .menu__wrapper-list {
+            height: 139px;
+            &--second {
+                height: 109px;
+            }
+        }
+        .anchor-link--sublist::after {
+            transition: all 0.5s ease 0s;
+            transform: rotateX(180deg) translateY(50%);
         }
     }
 }
 
 .anchor-link {
+    cursor: pointer;
     text-decoration: none;
     font-family: "Chakra Petch", sans-serif;
     font-weight: 300;
@@ -60,9 +91,21 @@
         color: $white;
     }
     &--sublist {
+        position: relative;
         background: transparent;
         outline: none;
         border: none;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            top: 50%;
+            right: -15px;
+            transform: translateY(-50%);
+            transition: all 0.5s ease 0s;
+            background-image: url(/src/img/icons/arrow-link.svg);
+        }
     }
 }
 
