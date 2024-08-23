@@ -6,3 +6,4 @@ import "./homepage-style/services.scss";
 import "./homepage-style/choouse-us.scss";
 import "./homepage-script/accordeon.js";
 import "./homepage-style/get-start.scss";
+import "../common/common-scripts/sublist.js";
