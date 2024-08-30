@@ -1,0 +1,357 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+.header{position:fixed;z-index:3;width:100%}.header__content{padding:31px 0;display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto}.menu__wrapper-list{position:absolute;top:40px;left:-30px;display:flex;justify-content:center;align-items:center;overflow:hidden;width:200px;height:0;transition:height .5s, padding .5s}.sublist{width:99%;height:99%;padding:15px;list-style:none;background-color:#252532;font-size:15px}.sublist::after{content:"";position:absolute;transform:translate(-50%, -50%);top:50%;left:50%;width:102%;height:102%;background:linear-gradient(90deg, #636366 0%, #18181b 100%);z-index:-1}.sublist__item{margin-bottom:14px}.sublist__item:last-child{margin-bottom:0}.menu__list{display:flex;-moz-column-gap:65px;column-gap:65px;align-items:center;transform:translateX(12px)}.menu__item{position:relative}.menu__item.active .menu__wrapper-list{height:139px}.menu__item.active .menu__wrapper-list--second{height:109px}.menu__item.active .anchor-link--sublist::after{transition:all .5s ease 0s;transform:rotateX(180deg) translateY(50%)}.anchor-link{cursor:pointer;-webkit-text-decoration:none;text-decoration:none;font-family:"Chakra Petch",sans-serif;font-weight:300;color:#b0b0b2;transition:.5s}.anchor-link:hover{color:#fff}.anchor-link--sublist{position:relative;background:rgba(0,0,0,0);outline:none;border:none}.anchor-link--sublist::after{content:"";position:absolute;width:12px;height:12px;top:50%;right:-15px;transform:translateY(-50%);transition:all .5s ease 0s;background-image:url(/img/arrow-linkcc4470c87c8cb097db87.svg)}.advantages{padding-bottom:120px}.advantages__content{margin:0 auto;background-color:#252532;max-width:1200px;padding:48px 0px}.advantages__list{display:flex;-moz-column-gap:50px;column-gap:50px;justify-content:center;align-items:center}.advantages__item{max-width:325px}.advantages__card{font-family:"Chakra Petch",sans-serif}.advantages__img{margin-bottom:35px}.advantages__title{display:inline-block;font-weight:400;font-size:20px;color:#fff;margin-bottom:15px}.advantagees__descript{color:#b0b0b2;font-size:14px;font-weight:200;line-height:200%}.link-other-page-empty{position:relative;padding:15px 22px;-webkit-text-decoration:none;text-decoration:none;border-width:1px;border-style:solid;-o-border-image:linear-gradient(90deg, #0cbaf1, #fe69fe);border-image:linear-gradient(90deg, #0cbaf1, #fe69fe);border-image-slice:1}.link-other-page-empty span{position:relative;color:#b0b0b2;cursor:pointer;font-family:"Chakra Petch",sans-serif;font-weight:400;font-size:16px}.link-other-page-empty:hover span{color:#fff}.link-other-page-empty::before{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(90deg, #0cbaf1, #fe69fe);opacity:0;transition:.4s}.link-other-page-empty:hover::before{opacity:1}.button{display:inline-block;position:relative;-webkit-text-decoration:none;text-decoration:none;background:linear-gradient(90deg, #0cbaf1, #fe69fe);padding:17px 38px;letter-spacing:1.5px;text-transform:uppercase}.button span{position:relative;color:#fff;cursor:pointer;font-family:"Chakra Petch",sans-serif;font-weight:700;font-size:14px}.button::before{content:"";position:absolute;top:0;right:0;top:-5px;right:-5px;bottom:-5px;left:-5px;transform:translate(8px, 5px);z-index:-1;background:linear-gradient(90deg, #0cbaf1, #fe69fe);filter:blur(20px);transition:.4s;opacity:0}.button:hover::before{opacity:1}.main-title{color:#fff;font-family:"Chakra Petch",sans-serif;font-size:64px;line-height:1.3;font-weight:600}.main-text{font-family:"Chakra Petch",sans-serif;font-weight:300;line-height:1.75;font-size:16px;color:#d1d1d1}.context-title{display:inline-block;font-family:"Chakra Petch",sans-serif;font-weight:500;font-size:17px;background:linear-gradient(90deg, #0cbaf1, #fe69fe);color:rgba(0,0,0,0);-webkit-background-clip:text;background-clip:text;letter-spacing:2.5px;margin-bottom:12px}.context-subtitle{font-family:"Chakra Petch",sans-serif;color:#fff;font-size:48px;font-weight:600;line-height:1.21;margin-bottom:12px}:root{--csstools-color-scheme--dark: ;color-scheme:light dark}@media (prefers-color-scheme: dark){:root{--csstools-color-scheme--dark:initial}}body{font-family:"Chakra Petch",sans-serif}*,*>*{padding:0;margin:0;box-sizing:border-box}a{-webkit-text-decoration:none;text-decoration:none;color:#b0b0b2}ul,ul,li{list-style:none}h1,h2,h3,h4,h5,h6{margin:0;padding:0}.main{padding-top:13px}.container{max-width:1458px;margin:0 auto;padding:0 16px}.background-wave{max-width:736px;width:100%;height:353px;background-image:url(/img/wavebe94f029902952a14310.svg);background-size:cover;background-repeat:no-repeat;position:absolute;top:0;right:0}.background__squares{max-width:1100px;width:100%;height:660px;background-image:url(/img/squaresee5b3681dbabf1f9af10.svg);background-size:cover;background-repeat:no-repeat;position:absolute;top:160px;left:0px;z-index:-1}
+.preview{position:relative;padding-top:114px}.preview__content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between}.preview .hero{padding-top:75px;max-width:540px;margin-bottom:42px}.preview .hero .main-title{margin-bottom:12px}.preview .hero .main-text{margin-bottom:29px;width:450px}.preview .preview__avatar{z-index:-5;height:626px;position:relative}.preview .preview__avatar::before{content:"";display:block;width:400px;height:200px;border-radius:47% 51% 51% 47%/46% 49% 45% 51%;position:absolute;top:-1px;right:-1px;bottom:-1px;left:-1px;transform:translate(-105px, 350px) rotate(-60deg);z-index:-1;background:#19b5f1;filter:blur(105px)}.preview .preview__avatar::after{content:"";display:block;width:500px;height:300px;border-radius:47% 51% 51% 47%/46% 49% 45% 51%;position:absolute;top:-1px;right:-1px;bottom:-1px;left:-1px;transform:translate(75px, 150px) rotate(35deg);z-index:-2;background:#ca6aeb;filter:blur(105px)}.reviews{display:flex;-moz-column-gap:75px;column-gap:75px}.reviews__clients{display:flex;-moz-column-gap:15px;column-gap:15px;align-items:center;text-align:center}.reviews__clients-list{position:relative;flex-shrink:0;width:130px;height:51px}.reviews__clients-list .reviews__clients-list-logo{position:absolute;transform:translateY(-50%);top:50%}.reviews__clients-list .reviews__clients-list-logo--client1{left:0}.reviews__clients-list .reviews__clients-list-logo--client2{left:30%}.reviews__clients-list .reviews__clients-list-logo--client3{left:60%}.reviews__clients-counter{flex-shrink:0;font-family:"Chakra Petch",sans-serif;font-size:16px;font-weight:200;color:#d1d1d1}.reviews__quantity{position:relative;color:#fff;font-weight:600}.reviews__quantity::before{content:"";position:absolute;bottom:-15%;left:-20%;width:48px;height:7px;background-image:url(/img/stick997c9c16a660d6ef44f2.svg)}.reviews__clients-video{flex-shrink:0}
+.about-us{margin-bottom:170px}.about-us__content{margin:0 auto;max-width:1200px;display:flex;justify-content:center;-moz-column-gap:80px;column-gap:80px}.about-us__logo{position:relative}.about-us__logo::before{content:"";border-radius:100%;display:block;position:absolute;top:0;right:0;top:-1px;right:-1px;bottom:-1px;left:-1px;width:400px;height:200px;border-radius:47% 51% 51% 47%/46% 49% 45% 51%;transform:translate(-105px, 350px) rotate(-60deg);z-index:-1;background:#19b5f1;filter:blur(105px)}.about-us__logo::after{content:"";border-radius:100%;display:block;position:absolute;top:0;right:0;top:-1px;right:-1px;bottom:-1px;left:-1px;width:500px;height:300px;border-radius:47% 51% 51% 47%/46% 49% 45% 51%;transform:translate(75px, 150px) rotate(35deg);z-index:-1;background:#ca6aeb;filter:blur(105px)}.about-us__logo .about-us__wrapper-img{position:relative}.about-us__logo .about-us__wrapper-img::after{content:"";display:block;position:absolute;bottom:5px;left:-15px;background-color:#252532;width:399px;height:497px;z-index:-3}.about-us__logo-video{position:absolute;bottom:-19px;right:13px}.about-us__info{padding-top:85px;max-width:562px;width:100%}.about-us__info .context-subtitle{margin-bottom:12px}.about-us__info .main-text{max-width:530px;margin-bottom:24px}.about-us__list{margin-bottom:35px}.about-us__list-point{color:#fff;font-family:"Chakra Petch",sans-serif;margin-bottom:25px;background-image:url(/img/check-marked4f98d6c4b313439642.svg);padding-left:28px;background-repeat:no-repeat}
+.services{margin-bottom:285px}.services__content{max-width:1200px;margin:0 auto}.services__header{max-width:1158px;width:100%;display:flex;justify-content:space-between;margin-bottom:46px;position:relative}.services__header::before{content:"";position:absolute;top:1px;right:1px;display:block;width:350px;height:100px;border-radius:47% 51% 51% 47%/46% 49% 45% 51%;transform:translate(100px, 100px) rotate(10deg);z-index:-1;background:#19b5f1;filter:blur(125px)}.services__header::after{content:"";position:absolute;top:1px;right:1px;display:block;width:350px;height:150px;border-radius:47% 51% 51% 47%/46% 49% 45% 51%;transform:translate(250px, -65px) rotate(10deg);z-index:-2;background:#ca6aeb;filter:blur(125px)}.services__header .main-text{max-width:625px}.services__info{max-width:261px}.services__cards{display:flex;justify-content:space-between}.services__cards-column{display:flex;flex-direction:column;row-gap:31px;position:relative}.services__cards-column--second{top:58px}.services__cards-column--third{top:135px}.card-service{padding:38px 39px 25px 32px;position:relative;width:380px;height:291px;background-color:#252532;border-width:1px;border-style:solid;-o-border-image:linear-gradient(90deg, #636366 0%, #18181b 100%);border-image:linear-gradient(90deg, #636366 0%, #18181b 100%);border-image-slice:1;overflow:hidden}.card-service .card-service__img{margin-bottom:58px}.card-service .card-service__title{font-size:20px;margin-bottom:17px}.card-service .card-service__descript{font-size:14px;line-height:24px;color:#b0b0b2}.card-service::before{content:"";position:absolute;top:0;left:0;width:99.5%;height:99.5%;-webkit-text-decoration:none;text-decoration:none;border-width:1px;border-style:solid;-o-border-image:linear-gradient(90deg, #0cbaf1, #fe69fe);border-image:linear-gradient(90deg, #0cbaf1, #fe69fe);border-image-slice:1;opacity:0;transition:.4s;background-color:#252532}.card-service:hover::before{opacity:.8}.card-service:hover .services-button{transform:translateY(-60%) translateX(50%)}.card-service .services-button{position:absolute;bottom:0;transform:translateY(110%) translateX(50%);right:50%;padding:15px 35px;transition:.5s}.card-service .services-button span{font-weight:800}
+.choouse-us{margin-bottom:175px}.choouse-us__content{display:flex;justify-content:space-between;max-width:1200px;margin:0 auto;-moz-column-gap:90px;column-gap:90px}.choouse-us__info{padding-top:95px;max-width:550px;width:100%}.choouse-us__info .context-subtitle{margin-bottom:35px}.accord__point-decrpit{color:#d1d1d1;line-height:27px;height:0;overflow:hidden;transition:.5s}.accord__point{margin-bottom:45px}.accord__point.active .accord__point-decrpit{height:115px}.accord__point.active .accord__point-title::after{transition:all .5s ease 0s;transform:rotateX(180deg)}.accord__point-title{position:relative;font-weight:400;font-size:20px;padding-bottom:10px;border-bottom:#b0b0b2 1px solid;margin-bottom:15px}.accord__point-title::after{content:"";background-image:url(/img/arrow-linkcc4470c87c8cb097db87.svg);position:absolute;width:12px;height:12px;top:0;right:0;transition:all .5s ease 0s}.choouse-us__logo{height:662px;position:relative;right:-80px}.choouse-us__logo::before{content:"";border-radius:100%;display:block;position:absolute;top:0;right:0;top:-1px;right:-1px;bottom:-1px;left:-1px;width:400px;height:200px;border-radius:47% 51% 51% 47%/46% 49% 45% 51%;transform:translate(-105px, 350px) rotate(-60deg);z-index:-1;background:#19b5f1;filter:blur(105px)}.choouse-us__logo::after{content:"";border-radius:100%;display:block;position:absolute;top:0;right:0;top:-1px;right:-1px;bottom:-1px;left:-1px;width:500px;height:300px;border-radius:47% 51% 51% 47%/46% 49% 45% 51%;transform:translate(75px, 150px) rotate(35deg);z-index:-1;background:#ca6aeb;filter:blur(105px)}.choouse-us__logo .choouse-us__wrapper-img{position:relative}.choouse-us__logo .choouse-us__wrapper-img::after{content:"";display:block;position:absolute;bottom:5px;right:100px;background-color:#252532;width:399px;height:497px;z-index:-3}.choouse-us__logo-video{position:absolute;bottom:-40px;right:80px}
+.get-start{padding-bottom:100px}.get-start__content{display:flex;max-width:1200px;width:100%;margin:0 auto;flex-direction:column;text-align:center;justify-content:center}.get-start__header{position:relative;margin:0 auto;max-width:700px;margin-bottom:38px}.get-start__header::before{content:"";position:absolute;top:100px;left:-500px;display:block;width:450px;height:200px;border-radius:47% 51% 51% 47%/46% 49% 45% 51%;transform:translate(-200px, 100px) rotate(10deg);z-index:-1;background:#19b5f1;filter:blur(125px)}.get-start__header::after{content:"";position:absolute;top:100px;left:-500px;display:block;width:500px;height:250px;border-radius:47% 51% 51% 47%/46% 49% 45% 51%;transform:translate(-100px, -65px) rotate(10deg);z-index:-2;background:#ca6aeb;filter:blur(125px)}.get-start__header .context-title{font-size:16px}.get-start__player{border-radius:20px;width:1200px;height:522px;overflow:hidden;margin-bottom:45px;position:relative}.video-js{position:absolute;top:0;left:0;right:0;bottom:0;-o-object-fit:cover;object-fit:cover;width:100%;height:100%}
+.testimonial__content{position:relative;padding-top:111px;margin:0 auto;max-width:1247px;height:1247px;width:100%;background-image:url(/img/cirlesa5968a6085c18bc30d2f.svg);background-repeat:no-repeat;background-position:center;background-size:contain}.testimonial__header{text-align:center;margin-bottom:140px}.testimonial .testimonial__wrapper-img{width:613px;position:absolute;top:28%;left:50%;transform:translateX(-49.1%)}.testimonial .testimonial__wrapper-img::before{content:"";border-radius:100%;display:block;position:absolute;top:-25%;left:150px;width:400px;height:200px;border-radius:47% 51% 51% 47%/46% 49% 45% 51%;transform:translate(-105px, 350px) rotate(0deg);z-index:-1;background:#19b5f1;filter:blur(105px)}.testimonial .testimonial__wrapper-img::after{content:"";border-radius:100%;display:block;position:absolute;top:-15%;right:150px;width:400px;height:250px;border-radius:47% 51% 51% 47%/46% 49% 45% 51%;transform:translate(75px, 150px) rotate(15deg);z-index:-1;background:#ca6aeb;filter:blur(105px)}.testimonial__img{-o-object-fit:cover;object-fit:cover;width:100%}.testimonial-btn{cursor:pointer;width:75px;height:75px;position:relative;background-color:rgba(0,0,0,0);border:none;background-image:url(/img/gradient08afc7aabae014ac76a6.svg);background-repeat:no-repeat;background-position:center;background-size:cover;transition:.4s}.testimonial-btn:hover{background-image:url(/img/gradient-linear07a119714069a9c729b3.svg)}.testimonial-btn::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);border-radius:50%;background-color:rgba(37,37,50,.699);z-index:-2;width:90%;height:90%}.testimonial-btn .testimonial-btn__img{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:50px;height:50px}.testimonial-btn__parent-shadow{z-index:-1;width:100%;height:100%;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%)}.testimonial-btn__parent-shadow.active::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:45px;height:35px;border-radius:47% 51% 51% 47%/46% 49% 45% 51%;transform:rotate(10deg) translate(-27px, 0px);background:#19b5f1;filter:blur(8px)}.testimonial-btn__parent-shadow.active::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:45px;height:35px;border-radius:47% 51% 51% 47%/46% 49% 45% 51%;transform:rotate(10deg) translate(-23px, -25px);background:#ca6aeb;filter:blur(8px)}
