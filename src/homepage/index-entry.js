@@ -10,3 +10,4 @@ import "./homepage-style/testimonial.scss";
 
 import "./homepage-script/accordeon.js";
 import "../common/common-scripts/sublist.js";
+import "./homepage-script/testimonial-btn.js";
