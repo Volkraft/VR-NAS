@@ -7,6 +7,7 @@ import "./homepage-style/services.scss";
 import "./homepage-style/choouse-us.scss";
 import "./homepage-style/get-start.scss";
 import "./homepage-style/testimonial.scss";
+import "./homepage-style/price.scss";
 
 import "./homepage-script/accordeon.js";
 import "../common/common-scripts/sublist.js";
