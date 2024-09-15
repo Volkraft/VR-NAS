@@ -17,7 +17,7 @@
 
     &__logo {
         position: relative;
-        height: 540px;
+        height: 890px;
         background: linear-gradient(
                 180deg,
                 rgba(176, 176, 178, 0) 85%,
@@ -28,14 +28,125 @@
         background-position: center;
         background-size: contain;
     }
-
     &__wrapper-img {
         position: absolute;
-        top: 35%;
+        top: 29.1%;
         left: 50%;
         transform: translateX(-50%);
+        &::before {
+            content: "";
+            border-radius: 100%;
+            display: block;
+            position: absolute;
+            top: -5%;
+            left: 200px;
+            width: 300px;
+            height: 200px;
+            border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
+            transform: translate(-105px, 350px) rotate(50deg);
+            z-index: -1;
+            background: $blue;
+            filter: blur(105px);
+        }
+
+        &::after {
+            content: "";
+            border-radius: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 170px;
+            width: 400px;
+            height: 250px;
+            border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
+            transform: translate(75px, 150px) rotate(15deg);
+            z-index: -1;
+            background: $purple;
+            filter: blur(105px);
+        }
     }
 
     &__img {
+    }
+}
+.partners__logo-ambassadors {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    z-index: 2;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-image: url(/src/img/testimonial/gradient.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: rgba(37, 37, 50, 0.699);
+        z-index: -2;
+        width: 90%;
+        height: 90%;
+    }
+    &-img {
+        width: 78px;
+    }
+
+    &--first {
+        bottom: 23%;
+        left: 17px;
+        animation: transform-circles ease 8s infinite;
+    }
+    &--second {
+        bottom: 48%;
+        left: 60px;
+        animation: transform-circles ease 6s infinite;
+    }
+    &--third {
+        top: 18%;
+        left: 220px;
+        animation: transform-circles ease 7s infinite;
+    }
+    &--fourth {
+        top: 10%;
+        left: 45%;
+        animation: transform-circles ease 6s infinite;
+    }
+    &--fifth {
+        top: 18%;
+        right: 220px;
+        animation: transform-circles ease 8s infinite;
+    }
+    &--sixth {
+        bottom: 48%;
+        right: 60px;
+        animation: transform-circles ease 6s infinite;
+    }
+    &--seventh {
+        bottom: 23%;
+        right: 17px;
+        animation: transform-circles ease 7s infinite;
+    }
+
+    @keyframes transform-circles {
+        0% {
+            transform: scale(1);
+        }
+        40% {
+            transform: scale(0.9);
+        }
+        70% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 }
