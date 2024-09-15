@@ -1,0 +1,28 @@
+@import "/src/common/common-style/vars.scss";
+.articles {
+    &__content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__header-wrapper {
+    }
+}
+
+.context-title {
+}
+.context-subtitle {
+}
+.link-other-page-empty {
+    &--articles {
+        align-self: center;
+        padding: 18px 38px;
+        span {
+            font-weight: 700;
+            color: $white;
+        }
+    }
+}
