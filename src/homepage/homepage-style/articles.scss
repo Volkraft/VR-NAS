@@ -1,14 +1,21 @@
 @import "/src/common/common-style/vars.scss";
 .articles {
+    margin-bottom: 153px;
     &__content {
-        max-width: 1200px;
         margin: 0 auto;
     }
     &__header {
+        margin: 0 auto;
+        max-width: 1200px;
         display: flex;
         justify-content: space-between;
     }
     &__header-wrapper {
+    }
+    &__action-elements {
+        padding-top: 72px;
+        display: flex;
+        justify-content: flex-end;
     }
 }
 
