@@ -24,16 +24,8 @@ export default class Slider {
         wrapperHidden.append(sliderTrack);
         this.slider.append(wrapperHidden);
 
-        const arrowLeft = document.createElement("button");
-        arrowLeft.className = "arrow arrowLeft";
-
-        const arrowRight = document.createElement("button");
-        arrowRight.className = "arrow arrowRight";
-
-        this.slider.prepend(arrowLeft);
-        this.slider.append(arrowRight);
-
         this.creatorPagination();
+        this.creatorArrows();
     }
 
     creatorPagination() {
@@ -51,5 +43,16 @@ export default class Slider {
         }
 
         this.slider.append(listPagination);
+    }
+
+    creatorArrows() {
+        const arrowLeft = document.createElement("button");
+        arrowLeft.className = "arrow arrowLeft";
+
+        const arrowRight = document.createElement("button");
+        arrowRight.className = "arrow arrowRight";
+
+        this.slider.prepend(arrowLeft);
+        this.slider.append(arrowRight);
     }
 }
