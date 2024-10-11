@@ -13,13 +13,7 @@ export default class Slider {
         const sliderTrack = document.createElement("div");
         sliderTrack.classList.add("sliderTrack");
         sliderTrack.setAttribute("id", "sliderTrack");
-
-        const slides = Array.from(this.slider.children);
-        this.countSlide = slides.length;
-
-        slides.forEach((slide) => {
-            sliderTrack.append(slide);
-        });
+        this.creatorSlide(sliderTrack);
 
         wrapperHidden.append(sliderTrack);
         this.slider.append(wrapperHidden);
@@ -54,5 +48,14 @@ export default class Slider {
 
         this.slider.prepend(arrowLeft);
         this.slider.append(arrowRight);
+    }
+
+    creatorSlide(sliderTrack) {
+        const slides = Array.from(this.slider.children);
+        this.countSlide = slides.length;
+
+        slides.forEach((slide) => {
+            sliderTrack.append(slide);
+        });
     }
 }
