@@ -33,6 +33,10 @@ export default class Slider {
         this.slider.prepend(arrowLeft);
         this.slider.append(arrowRight);
 
+        this.creatorPagination();
+    }
+
+    creatorPagination() {
         const listPagination = document.createElement("ul");
         listPagination.classList.add("listPagination");
 
