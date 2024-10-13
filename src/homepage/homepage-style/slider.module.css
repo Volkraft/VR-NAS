@@ -1,0 +1,62 @@
+.slider {
+    position: relative;
+    margin: 0 auto;
+    max-width: 636px;
+}
+
+.wrapperHidden {
+    overflow: hidden;
+}
+
+.sliderTrack {
+    display: flex;
+}
+
+.slide {
+    background-color: black;
+    min-width: 100%;
+    height: 425px;
+}
+
+.listPagination {
+    background-color: aliceblue;
+}
+
+.paginationItem {
+    position: relative;
+    background-color: bisque;
+}
+
+.paginationBtn {
+    height: 15px;
+    width: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: blue;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    background-image: url(../../img/icons/arrow-link.svg);
+}
+
+.arrow:first-child {
+    right: -50px;
+
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.arrow:last-child {
+    left: -50px;
+    transform: translateY(-50%) rotate(90deg);
+}

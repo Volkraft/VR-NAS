@@ -50,6 +50,7 @@ export default (env) => {
               loader: "css-loader",
               options: {
                 modules: {
+                  namedExport: false,
                   auto: /\.module\.css$/,
                 },
               },
