@@ -70,11 +70,15 @@
     font-weight: 400;
 }
 .link-other-page-empty--product {
+    position: relative;
     width: 40px;
     height: 40px;
-    padding: 9px;
 
     .product-wrapper-arrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: inline-block;
         width: 20px;
         height: 20px;

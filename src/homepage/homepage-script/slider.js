@@ -59,7 +59,7 @@ export default class Slider {
         this.countSlide = slides.length;
 
         slides.forEach((slide) => {
-            slide.className = styles.slide;
+            slide.classList.add(styles.slide);
             sliderTrack.append(slide);
         });
     }
