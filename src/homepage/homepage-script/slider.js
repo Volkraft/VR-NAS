@@ -3,8 +3,11 @@ import styles from "../homepage-style/slider.module.css";
 export default class Slider {
     constructor(htmlEl) {
         this.slider = htmlEl;
-        this.creatorElements();
+        this.storageWidth;
+        this.numberCurrentSlides = 0;
         this.countSlide;
+        this.creatorElements();
+        this.setListener();
     }
 
     creatorElements() {
@@ -46,9 +49,11 @@ export default class Slider {
     creatorArrows() {
         const arrowLeft = document.createElement("button");
         arrowLeft.className = styles.arrow;
+        arrowLeft.setAttribute("data-arrow", "left");
 
         const arrowRight = document.createElement("button");
         arrowRight.className = styles.arrow;
+        arrowRight.setAttribute("data-arrow", "right");
 
         this.slider.prepend(arrowLeft);
         this.slider.append(arrowRight);
@@ -57,10 +62,33 @@ export default class Slider {
     creatorSlide(sliderTrack) {
         const slides = Array.from(this.slider.children);
         this.countSlide = slides.length;
+        this.storageWidth = this.slider.children[0].offsetWidth;
 
         slides.forEach((slide) => {
             slide.classList.add(styles.slide);
             sliderTrack.append(slide);
         });
     }
+
+    setListener() {
+        const sliderEl = document.querySelector("#slider");
+        sliderEl.addEventListener("click", this.handlerEvent);
+    }
+    motion = () => {
+        const currentMove = this.storageWidth * this.numberCurrentSlides;
+        const sliderTrack = document.querySelector("#sliderTrack");
+        sliderTrack.style.transform = `translateX(-${currentMove}px)`;
+    };
+    handlerEvent = (e) => {
+        const isArrowLeft = e.target.closest('[data-arrow="left"]');
+        const isArrowRight = e.target.closest('[data-arrow="right"]');
+
+        if (isArrowRight) {
+            this.numberCurrentSlides++;
+            this.motion();
+        } else if (isArrowLeft) {
+            this.numberCurrentSlides--;
+            this.motion();
+        }
+    };
 }

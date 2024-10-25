@@ -10,6 +10,7 @@
 
 .sliderTrack {
     display: flex;
+    transition: transform 0.5s;
 }
 
 .slide {
@@ -51,12 +52,12 @@
 }
 
 .arrow:first-child {
-    right: -50px;
-
-    transform: translateY(-50%) rotate(-90deg);
+    left: -50px;
+    transform: translateY(-50%) rotate(90deg);
 }
 
 .arrow:last-child {
-    left: -50px;
-    transform: translateY(-50%) rotate(90deg);
+    right: -50px;
+
+    transform: translateY(-50%) rotate(-90deg);
 }
