@@ -4,9 +4,10 @@ export default class Slider {
     constructor(htmlEl) {
         this.slider = htmlEl;
         this.sliderTrack = null;
+        this.paginationList = null;
         this.storageWidth = null;
-        this.numberCurrentSlides = 0;
         this.countSlide = 0;
+        this.numberCurrentSlides = 0;
         this.creatorElements();
         this.setListener();
     }
@@ -31,20 +32,24 @@ export default class Slider {
     };
 
     creatorPagination = () => {
-        const listPagination = document.createElement("ul");
-        listPagination.className = styles.listPagination;
+        this.paginationList = document.createElement("ul");
+        this.paginationList.className = styles.listPagination;
 
         for (let i = 0; i < this.countSlide; i++) {
             const paginationItem = document.createElement("li");
-            paginationItem.className = styles.paginationItem;
 
             const paginationBtn = document.createElement("button");
             paginationBtn.className = styles.paginationBtn;
+
+            if (i === 0) {
+                paginationBtn.classList.add(styles.activeBtn);
+            }
+
             paginationItem.append(paginationBtn);
-            listPagination.append(paginationItem);
+            this.paginationList.append(paginationItem);
         }
 
-        this.slider.append(listPagination);
+        this.slider.append(this.paginationList);
     };
 
     creatorArrows = () => {
@@ -75,6 +80,23 @@ export default class Slider {
         this.slider.addEventListener("click", this.handlerEvent);
     };
 
+    btnControllStyle = () => {
+        const activeBtn = this.paginationList.querySelector(
+            `.${styles.activeBtn}`
+        );
+
+        if (activeBtn) {
+            activeBtn.classList.remove(styles.activeBtn);
+        }
+
+        const buttons = Array.from(
+            this.paginationList.querySelectorAll("button")
+        );
+        if (buttons[this.numberCurrentSlides]) {
+            buttons[this.numberCurrentSlides].classList.add(styles.activeBtn);
+        }
+    };
+
     choiceOfDirection = (direction) => {
         if (direction === "right") {
             this.numberCurrentSlides =
@@ -92,6 +114,7 @@ export default class Slider {
     motion = () => {
         const currentMove = this.storageWidth * this.numberCurrentSlides;
         this.sliderTrack.style.transform = `translateX(-${currentMove}px)`;
+        this.btnControllStyle();
     };
 
     handlerEvent = (e) => {

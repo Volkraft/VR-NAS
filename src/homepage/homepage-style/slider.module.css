@@ -28,18 +28,18 @@
     border-radius: 20px;
 }
 
-.paginationItem {
-}
-
 .paginationBtn {
     height: 3px;
     width: 9px;
     background-color: blue;
     transition: trasform 0.5s;
+    border: none;
+    outline: none;
 }
 
-.paginationBtn.active {
-    transform: scaleX(1.2);
+.activeBtn {
+    transform: scaleX(1.5);
+    background-color: aliceblue;
 }
 
 .arrow {
