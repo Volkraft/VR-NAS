@@ -77,7 +77,6 @@ export default class Slider {
 
     motion = () => {
         const currentMove = this.storageWidth * this.numberCurrentSlides;
-        this.sliderTrack = document.querySelector("#sliderTrack");
         this.sliderTrack.style.transform = `translateX(-${currentMove}px)`;
     };
 
