@@ -75,6 +75,20 @@ export default class Slider {
         this.slider.addEventListener("click", this.handlerEvent);
     };
 
+    choiceOfDirection = (direction) => {
+        if (direction === "right") {
+            this.numberCurrentSlides =
+                this.numberCurrentSlides < this.countSlide - 1
+                    ? this.numberCurrentSlides + 1
+                    : 0;
+        } else if (direction === "left") {
+            this.numberCurrentSlides =
+                this.numberCurrentSlides > 0
+                    ? this.numberCurrentSlides - 1
+                    : this.countSlide - 1;
+        }
+    };
+
     motion = () => {
         const currentMove = this.storageWidth * this.numberCurrentSlides;
         this.sliderTrack.style.transform = `translateX(-${currentMove}px)`;
@@ -85,11 +99,10 @@ export default class Slider {
         const isArrowRight = e.target.closest('[data-arrow="right"]');
 
         if (isArrowRight) {
-            this.numberCurrentSlides++;
-            this.motion();
+            this.choiceOfDirection("right");
         } else if (isArrowLeft) {
-            this.numberCurrentSlides--;
-            this.motion();
+            this.choiceOfDirection("left");
         }
+        this.motion();
     };
 }
