@@ -35,6 +35,7 @@
     transition: trasform 0.5s;
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 .activeBtn {

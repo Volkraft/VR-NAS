@@ -5,6 +5,7 @@ export default class Slider {
         this.slider = htmlEl;
         this.sliderTrack = null;
         this.paginationList = null;
+        this.arrayPaginationBtns = null;
         this.storageWidth = null;
         this.countSlide = 0;
         this.numberCurrentSlides = 0;
@@ -40,6 +41,7 @@ export default class Slider {
 
             const paginationBtn = document.createElement("button");
             paginationBtn.className = styles.paginationBtn;
+            paginationBtn.setAttribute("data-button-controll", "");
 
             if (i === 0) {
                 paginationBtn.classList.add(styles.activeBtn);
@@ -47,6 +49,8 @@ export default class Slider {
 
             paginationItem.append(paginationBtn);
             this.paginationList.append(paginationItem);
+            this.arrayPaginationBtns =
+                this.paginationList.querySelectorAll("button");
         }
 
         this.slider.append(this.paginationList);
@@ -89,11 +93,14 @@ export default class Slider {
             activeBtn.classList.remove(styles.activeBtn);
         }
 
-        const buttons = Array.from(
+        this.arrayPaginationBtns = Array.from(
             this.paginationList.querySelectorAll("button")
         );
-        if (buttons[this.numberCurrentSlides]) {
-            buttons[this.numberCurrentSlides].classList.add(styles.activeBtn);
+
+        if (this.arrayPaginationBtns[this.numberCurrentSlides]) {
+            this.arrayPaginationBtns[this.numberCurrentSlides].classList.add(
+                styles.activeBtn
+            );
         }
     };
 
@@ -121,11 +128,21 @@ export default class Slider {
         const isArrowLeft = e.target.closest('[data-arrow="left"]');
         const isArrowRight = e.target.closest('[data-arrow="right"]');
 
+        const isControllButton = e.target.closest("[data-button-controll]");
+
+        if (isControllButton) {
+            const indexCurrentBtnControll = Array.from(
+                this.arrayPaginationBtns
+            ).indexOf(isControllButton);
+            this.numberCurrentSlides = indexCurrentBtnControll;
+        }
+
         if (isArrowRight) {
             this.choiceOfDirection("right");
         } else if (isArrowLeft) {
             this.choiceOfDirection("left");
         }
+
         this.motion();
     };
 }
