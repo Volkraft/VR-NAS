@@ -3,33 +3,34 @@ import styles from "../homepage-style/slider.module.css";
 export default class Slider {
     constructor(htmlEl) {
         this.slider = htmlEl;
-        this.storageWidth;
+        this.sliderTrack = null;
+        this.storageWidth = null;
         this.numberCurrentSlides = 0;
-        this.countSlide;
+        this.countSlide = 0;
         this.creatorElements();
         this.setListener();
     }
 
-    creatorElements() {
+    creatorElements = () => {
         this.slider.className = styles.slider;
 
         const wrapperHidden = document.createElement("div");
         wrapperHidden.className = styles.wrapperHidden;
         wrapperHidden.setAttribute("id", "wrapperHidden");
 
-        const sliderTrack = document.createElement("div");
-        sliderTrack.className = styles.sliderTrack;
-        sliderTrack.setAttribute("id", "sliderTrack");
-        this.creatorSlide(sliderTrack);
+        this.sliderTrack = document.createElement("div");
+        this.sliderTrack.className = styles.sliderTrack;
+        this.sliderTrack.setAttribute("id", "sliderTrack");
+        this.creatorSlide(this.sliderTrack);
 
-        wrapperHidden.append(sliderTrack);
+        wrapperHidden.append(this.sliderTrack);
         this.slider.append(wrapperHidden);
 
         this.creatorPagination();
         this.creatorArrows();
-    }
+    };
 
-    creatorPagination() {
+    creatorPagination = () => {
         const listPagination = document.createElement("ul");
         listPagination.className = styles.listPagination;
 
@@ -44,9 +45,9 @@ export default class Slider {
         }
 
         this.slider.append(listPagination);
-    }
+    };
 
-    creatorArrows() {
+    creatorArrows = () => {
         const arrowLeft = document.createElement("button");
         arrowLeft.className = styles.arrow;
         arrowLeft.setAttribute("data-arrow", "left");
@@ -57,28 +58,29 @@ export default class Slider {
 
         this.slider.prepend(arrowLeft);
         this.slider.append(arrowRight);
-    }
+    };
 
-    creatorSlide(sliderTrack) {
+    creatorSlide = () => {
         const slides = Array.from(this.slider.children);
         this.countSlide = slides.length;
         this.storageWidth = this.slider.children[0].offsetWidth;
 
         slides.forEach((slide) => {
             slide.classList.add(styles.slide);
-            sliderTrack.append(slide);
+            this.sliderTrack.append(slide);
         });
-    }
+    };
 
-    setListener() {
-        const sliderEl = document.querySelector("#slider");
-        sliderEl.addEventListener("click", this.handlerEvent);
-    }
+    setListener = () => {
+        this.slider.addEventListener("click", this.handlerEvent);
+    };
+
     motion = () => {
         const currentMove = this.storageWidth * this.numberCurrentSlides;
-        const sliderTrack = document.querySelector("#sliderTrack");
-        sliderTrack.style.transform = `translateX(-${currentMove}px)`;
+        this.sliderTrack = document.querySelector("#sliderTrack");
+        this.sliderTrack.style.transform = `translateX(-${currentMove}px)`;
     };
+
     handlerEvent = (e) => {
         const isArrowLeft = e.target.closest('[data-arrow="left"]');
         const isArrowRight = e.target.closest('[data-arrow="right"]');
