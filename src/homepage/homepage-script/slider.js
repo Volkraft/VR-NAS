@@ -3,50 +3,60 @@ import styles from "../homepage-style/slider.module.css";
 export default class Slider {
     constructor(htmlEl) {
         this.slider = htmlEl;
-        this.storageWidth;
+        this.sliderTrack = null;
+        this.paginationList = null;
+        this.arrayPaginationBtns = null;
+        this.storageWidth = null;
+        this.countSlide = 0;
         this.numberCurrentSlides = 0;
-        this.countSlide;
         this.creatorElements();
         this.setListener();
     }
 
-    creatorElements() {
+    creatorElements = () => {
         this.slider.className = styles.slider;
 
         const wrapperHidden = document.createElement("div");
         wrapperHidden.className = styles.wrapperHidden;
         wrapperHidden.setAttribute("id", "wrapperHidden");
 
-        const sliderTrack = document.createElement("div");
-        sliderTrack.className = styles.sliderTrack;
-        sliderTrack.setAttribute("id", "sliderTrack");
-        this.creatorSlide(sliderTrack);
+        this.sliderTrack = document.createElement("div");
+        this.sliderTrack.className = styles.sliderTrack;
+        this.sliderTrack.setAttribute("id", "sliderTrack");
+        this.creatorSlide(this.sliderTrack);
 
-        wrapperHidden.append(sliderTrack);
+        wrapperHidden.append(this.sliderTrack);
         this.slider.append(wrapperHidden);
 
         this.creatorPagination();
         this.creatorArrows();
-    }
+    };
 
-    creatorPagination() {
-        const listPagination = document.createElement("ul");
-        listPagination.className = styles.listPagination;
+    creatorPagination = () => {
+        this.paginationList = document.createElement("ul");
+        this.paginationList.className = styles.listPagination;
 
         for (let i = 0; i < this.countSlide; i++) {
             const paginationItem = document.createElement("li");
-            paginationItem.className = styles.paginationItem;
 
             const paginationBtn = document.createElement("button");
             paginationBtn.className = styles.paginationBtn;
+            paginationBtn.setAttribute("data-button-controll", "");
+
+            if (i === 0) {
+                paginationBtn.classList.add(styles.activeBtn);
+            }
+
             paginationItem.append(paginationBtn);
-            listPagination.append(paginationItem);
+            this.paginationList.append(paginationItem);
+            this.arrayPaginationBtns =
+                this.paginationList.querySelectorAll("button");
         }
 
-        this.slider.append(listPagination);
-    }
+        this.slider.append(this.paginationList);
+    };
 
-    creatorArrows() {
+    creatorArrows = () => {
         const arrowLeft = document.createElement("button");
         arrowLeft.className = styles.arrow;
         arrowLeft.setAttribute("data-arrow", "left");
@@ -57,38 +67,82 @@ export default class Slider {
 
         this.slider.prepend(arrowLeft);
         this.slider.append(arrowRight);
-    }
+    };
 
-    creatorSlide(sliderTrack) {
+    creatorSlide = () => {
         const slides = Array.from(this.slider.children);
         this.countSlide = slides.length;
         this.storageWidth = this.slider.children[0].offsetWidth;
 
         slides.forEach((slide) => {
             slide.classList.add(styles.slide);
-            sliderTrack.append(slide);
+            this.sliderTrack.append(slide);
         });
-    }
+    };
 
-    setListener() {
-        const sliderEl = document.querySelector("#slider");
-        sliderEl.addEventListener("click", this.handlerEvent);
-    }
+    setListener = () => {
+        this.slider.addEventListener("click", this.handlerEvent);
+    };
+
+    btnControllStyle = () => {
+        const activeBtn = this.paginationList.querySelector(
+            `.${styles.activeBtn}`
+        );
+
+        if (activeBtn) {
+            activeBtn.classList.remove(styles.activeBtn);
+        }
+
+        this.arrayPaginationBtns = Array.from(
+            this.paginationList.querySelectorAll("button")
+        );
+
+        if (this.arrayPaginationBtns[this.numberCurrentSlides]) {
+            this.arrayPaginationBtns[this.numberCurrentSlides].classList.add(
+                styles.activeBtn
+            );
+        }
+    };
+
+    choiceOfDirection = (direction) => {
+        if (direction === "right") {
+            this.numberCurrentSlides =
+                this.numberCurrentSlides < this.countSlide - 1
+                    ? this.numberCurrentSlides + 1
+                    : 0;
+        } else if (direction === "left") {
+            this.numberCurrentSlides =
+                this.numberCurrentSlides > 0
+                    ? this.numberCurrentSlides - 1
+                    : this.countSlide - 1;
+        }
+    };
+
     motion = () => {
         const currentMove = this.storageWidth * this.numberCurrentSlides;
-        const sliderTrack = document.querySelector("#sliderTrack");
-        sliderTrack.style.transform = `translateX(-${currentMove}px)`;
+        this.sliderTrack.style.transform = `translateX(-${currentMove}px)`;
+        this.btnControllStyle();
     };
+
     handlerEvent = (e) => {
         const isArrowLeft = e.target.closest('[data-arrow="left"]');
         const isArrowRight = e.target.closest('[data-arrow="right"]');
 
-        if (isArrowRight) {
-            this.numberCurrentSlides++;
-            this.motion();
-        } else if (isArrowLeft) {
-            this.numberCurrentSlides--;
-            this.motion();
+        const isControllButton = e.target.closest("[data-button-controll]");
+
+        if (isControllButton) {
+            const indexCurrentBtnControll = Array.from(
+                this.arrayPaginationBtns
+            ).indexOf(isControllButton);
+            this.numberCurrentSlides = indexCurrentBtnControll;
         }
+
+        if (isArrowRight) {
+            this.choiceOfDirection("right");
+        } else if (isArrowLeft) {
+            this.choiceOfDirection("left");
+        }
+
+        this.motion();
     };
 }
