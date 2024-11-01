@@ -29,10 +29,11 @@
 }
 
 .paginationBtn {
+    border-radius: 15px;
     height: 3px;
     width: 9px;
-    background-color: blue;
-    transition: trasform 0.5s;
+    background-color: rgba(255, 255, 255, 0.212);
+    transition: transform 0.7s;
     border: none;
     outline: none;
     cursor: pointer;
@@ -40,7 +41,8 @@
 
 .activeBtn {
     transform: scaleX(1.5);
-    background-color: aliceblue;
+    background-color: #ffff;
+    transition: transform 0.7s;
 }
 
 .arrow {

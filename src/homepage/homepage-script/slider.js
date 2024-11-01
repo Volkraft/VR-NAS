@@ -9,6 +9,8 @@ export default class Slider {
         this.storageWidth = null;
         this.countSlide = 0;
         this.numberCurrentSlides = 0;
+        this.startPoint = 0;
+        this.endPoint = 0;
         this.creatorElements();
         this.setListener();
     }
@@ -82,6 +84,8 @@ export default class Slider {
 
     setListener = () => {
         this.slider.addEventListener("click", this.handlerEvent);
+        this.slider.addEventListener("mousedown", this.createStartingPoint);
+        this.slider.addEventListener("mouseup", this.createEndingPoint);
     };
 
     btnControllStyle = () => {
@@ -144,5 +148,27 @@ export default class Slider {
         }
 
         this.motion();
+    };
+
+    handlerMove = () => {
+        const differenceMoves = this.startPoint - this.endPoint;
+        const minMove = 40;
+
+        if (Math.abs(differenceMoves) >= minMove) {
+            if (differenceMoves > 0) {
+                this.choiceOfDirection("right");
+            } else {
+                this.choiceOfDirection("left");
+            }
+        }
+    };
+
+    createStartingPoint = (e) => {
+        this.startPoint = e.clientX;
+    };
+
+    createEndingPoint = (e) => {
+        this.endPoint = e.clientX;
+        this.handlerMove();
     };
 }
