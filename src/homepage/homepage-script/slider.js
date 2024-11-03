@@ -13,6 +13,7 @@ export default class Slider {
         this.endPoint = 0;
         this.creatorElements();
         this.setListener();
+        setInterval(() => this.autoplay(), 6000);
     }
 
     creatorElements = () => {
@@ -110,18 +111,31 @@ export default class Slider {
         }
     };
 
+    increaseCurrentCounter = () => {
+        this.numberCurrentSlides =
+            this.numberCurrentSlides < this.countSlide - 1
+                ? this.numberCurrentSlides + 1
+                : 0;
+    };
+
+    decreaseCurrentCounter = () => {
+        this.numberCurrentSlides =
+            this.numberCurrentSlides > 0
+                ? this.numberCurrentSlides - 1
+                : this.countSlide - 1;
+    };
+
     choiceOfDirection = (direction) => {
         if (direction === "right") {
-            this.numberCurrentSlides =
-                this.numberCurrentSlides < this.countSlide - 1
-                    ? this.numberCurrentSlides + 1
-                    : 0;
+            this.increaseCurrentCounter();
         } else if (direction === "left") {
-            this.numberCurrentSlides =
-                this.numberCurrentSlides > 0
-                    ? this.numberCurrentSlides - 1
-                    : this.countSlide - 1;
+            this.decreaseCurrentCounter();
         }
+    };
+
+    autoplay = () => {
+        this.increaseCurrentCounter();
+        this.motion();
     };
 
     motion = () => {
