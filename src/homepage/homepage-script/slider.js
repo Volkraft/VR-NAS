@@ -32,7 +32,7 @@ export default class Slider {
         this.slider.append(wrapperHidden);
 
         this.creatorPagination();
-        this.creatorArrows();
+        // this.creatorArrows();
     };
 
     creatorPagination = () => {
@@ -59,18 +59,18 @@ export default class Slider {
         this.slider.append(this.paginationList);
     };
 
-    creatorArrows = () => {
-        const arrowLeft = document.createElement("button");
-        arrowLeft.className = styles.arrow;
-        arrowLeft.setAttribute("data-arrow", "left");
+    // creatorArrows = () => {
+    //     const arrowLeft = document.createElement("button");
+    //     arrowLeft.className = styles.arrow;
+    //     arrowLeft.setAttribute("data-arrow", "left");
 
-        const arrowRight = document.createElement("button");
-        arrowRight.className = styles.arrow;
-        arrowRight.setAttribute("data-arrow", "right");
+    //     const arrowRight = document.createElement("button");
+    //     arrowRight.className = styles.arrow;
+    //     arrowRight.setAttribute("data-arrow", "right");
 
-        this.slider.prepend(arrowLeft);
-        this.slider.append(arrowRight);
-    };
+    //     this.slider.prepend(arrowLeft);
+    //     this.slider.append(arrowRight);
+    // };
 
     creatorSlide = () => {
         const slides = Array.from(this.slider.children);
