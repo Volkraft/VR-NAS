@@ -86,6 +86,8 @@ export default class Slider {
         this.slider.addEventListener("click", this.handlerEvent);
         this.slider.addEventListener("mousedown", this.createStartingPoint);
         this.slider.addEventListener("mouseup", this.createEndingPoint);
+        this.slider.addEventListener("touchstart", this.createStartingPoint);
+        this.slider.addEventListener("touchend", this.createEndingPoint);
     };
 
     btnControllStyle = () => {
@@ -161,14 +163,23 @@ export default class Slider {
                 this.choiceOfDirection("left");
             }
         }
+
+        this.motion();
     };
 
     createStartingPoint = (e) => {
-        this.startPoint = e.clientX;
+        const point = e.type.includes("mouse")
+            ? e.clientX
+            : e.touches[0].clientX;
+        this.startPoint = point;
+        this.endPoint = this.startPoint;
     };
 
     createEndingPoint = (e) => {
-        this.endPoint = e.clientX;
+        const point = e.type.includes("mouse")
+            ? e.clientX
+            : e.changedTouches[0].clientX;
+        this.endPoint = point;
         this.handlerMove();
     };
 }
