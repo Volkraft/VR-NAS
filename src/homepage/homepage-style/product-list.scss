@@ -1,5 +1,9 @@
 @import "/src/common/common-style/vars.scss";
 .products {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
     width: 100%;
     max-width: 730px;
     padding: 32px 0 0 97px;

@@ -1,7 +1,10 @@
 .slider {
-    position: relative;
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 110px;
+    transform: translateY(-47%);
     max-width: 636px;
+    z-index: 2;
 }
 
 .wrapperHidden {
