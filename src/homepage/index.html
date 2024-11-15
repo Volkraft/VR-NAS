@@ -9,8 +9,7 @@
     <title>VRNas | Homepage</title>
 </head>
 <body>
-    <div class="background-wave"></div>
-    <div class="background__squares"></div>
+    <div class="background-cell background-cell--first"></div>
     <header class="header">
         <div class="container">
             <div class="header__content">
@@ -29,25 +28,25 @@
                             <a href="" class="anchor-link">Service</a>
                         </li>
                         <li class="menu__item" data-acrList>
-                                <button class="anchor-link anchor-link--sublist">Page</button>
-                                <div class="menu__wrapper-list">
-                                    <ul class="sublist sublist--first">
-                                        <li class="sublist__item">
-                                            <a class="anchor-link" href="">Pricing Plan</a>
-                                        </li>
-                                        <li class="sublist__item">
-                                            <a class="anchor-link" href="">FAQ</a>
-                                        </li>
-                                        <li class="sublist__item">
-                                            <a class="anchor-link" href="">Tems & Conditions</a>
-                                        </li>
+                            <button class="anchor-link anchor-link--sublist">Page</button>
+                            <div class="menu__wrapper-list">
+                                <ul class="sublist sublist--first">
+                                    <li class="sublist__item">
+                                        <a class="anchor-link" href="">Pricing Plan</a>
+                                    </li>
+                                    <li class="sublist__item">
+                                        <a class="anchor-link" href="">FAQ</a>
+                                    </li>
+                                    <li class="sublist__item">
+                                        <a class="anchor-link" href="">Tems & Conditions</a>
+                                    </li>
                                         <li class="sublist__item">
                                             <a class="anchor-link" href="">Privacy Policy</a>
                                         </li>
                                     </ul>
                                 </div >
-                        </li>
-                        <li class="menu__item" data-acrList>
+                            </li>
+                            <li class="menu__item" data-acrList>
                                 <button class="anchor-link anchor-link--sublist">Blog</button>
                                 <div class="menu__wrapper-list menu__wrapper-list--second">
                                     <ul class="sublist sublist--first">
@@ -62,16 +61,18 @@
                                         </li>
                                     </ul>
                                 </div>
-                        </li>
-                    </ul>
-                </nav>
-                <a href="" class="link-other-page-empty"><span>Contact us</span></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="" class="link-other-page-empty"><span>Contact us</span></a>
+                </div>
             </div>
-        </div>
-    </header>
-    <main class="main">
-        <section class="preview">
-            <div class="container">
+        </header>
+        <main class="main">
+            <img class="background-wave" src="/src/img/icons/wave.svg" alt="">
+            
+            <section class="preview">
+                <div class="container">
                 <div class="preview__content">
                     <div class="preview__basic-info">
                         <div class="hero">
@@ -451,6 +452,7 @@
             </div>
         </section>
         <section class="articles">
+            <div class="background-cell background-cell--second"></div>
             <div class="container">
                 <div class="articles__content">
                     <div class="articles__header">
@@ -665,5 +667,9 @@
             </div>
         </section>
     </main>
+    <footer class="footer">
+        <img class="background-wave-bottom" src="/src/img/icons/wave-footer.svg" alt="">
+    </footer>
+    
 </body>
 </html>

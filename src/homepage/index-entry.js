@@ -12,7 +12,6 @@ import "./homepage-style/partners.scss";
 import "./homepage-style/articles.scss";
 import "./homepage-style/product-list.scss";
 import "./homepage-style/my-slide.scss";
-import "./homepage-style/banner.scss";
 
 import "./homepage-script/accordeon.js";
 import "../common/common-scripts/sublist.js";

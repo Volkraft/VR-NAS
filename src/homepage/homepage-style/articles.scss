@@ -1,5 +1,6 @@
 @import "/src/common/common-style/vars.scss";
 .articles {
+    position: relative;
     margin-bottom: 153px;
     &__content {
         margin: 0 auto;
