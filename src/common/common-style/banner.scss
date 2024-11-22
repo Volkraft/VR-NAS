@@ -1,5 +1,6 @@
 @import "/src/common/common-style/vars.scss";
 .subscribe {
+    margin-bottom: 182px;
 }
 .subscribe__content {
     margin: 0 auto;
@@ -28,6 +29,11 @@
     width: 100%;
     height: 56px;
     background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid transparent;
+
+    &:has(> input:focus) {
+        border-color: $white;
+    }
 }
 .banner__wrapper-icon {
     display: block;
@@ -57,7 +63,15 @@
     height: 50px;
     border: none;
     outline: none;
-    background: url(/src/img/icons/tg.svg) rgba(255, 255, 255, 0.24);
+    background: url(/src/img/icons/tg.svg) rgba(255, 255, 255, 0.2);
     background-position: center;
     background-repeat: no-repeat;
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+        background: url(/src/img/icons/tg.svg) rgba(255, 255, 255, 0.45);
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }

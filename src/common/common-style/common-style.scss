@@ -81,8 +81,9 @@ h6 {
     max-width: 100%;
     height: auto;
     position: absolute;
-    left: 0;
+    left: -330px;
     bottom: 0;
+    z-index: -4;
 }
 .background-cell {
     max-width: 1100px;
