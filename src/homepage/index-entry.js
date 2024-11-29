@@ -17,3 +17,4 @@ import "./homepage-script/accordeon.js";
 import "../common/common-scripts/sublist.js";
 import "./homepage-script/testimonial-btn.js";
 import "./homepage-script/init-slider.js";
+import "../common/common-scripts/scrollList.js";

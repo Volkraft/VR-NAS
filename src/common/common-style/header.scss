@@ -2,13 +2,23 @@
     position: fixed;
     z-index: 3;
     width: 100%;
+    transition:
+        padding-top 0.4s,
+        background-color 0.4s,
+        backdrop-filter 0.4s;
+    padding: 31px 0;
     &__content {
-        padding: 31px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
         max-width: 1200px;
         margin: 0 auto;
+    }
+    &.scroll {
+        padding: 10px;
+        background-color: rgba(37, 37, 50, 0.7);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
     }
 }
 .menu__wrapper-list {
