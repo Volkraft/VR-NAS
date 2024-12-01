@@ -13,8 +13,8 @@ import "./homepage-style/articles.scss";
 import "./homepage-style/product-list.scss";
 import "./homepage-style/my-slide.scss";
 
-import "./homepage-script/accordeon.js";
-import "../common/common-scripts/sublist.js";
-import "./homepage-script/testimonial-btn.js";
-import "./homepage-script/init-slider.js";
+// import "./homepage-script/accordeon.js";
+import "../common/common-scripts/header.js";
+// import "./homepage-script/testimonial-btn.js";
+// import "./homepage-script/init-slider.js";
 import "../common/common-scripts/scrollList.js";
