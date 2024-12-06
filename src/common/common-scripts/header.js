@@ -1,8 +1,7 @@
 const header = document.querySelector("#header");
-const menu = document.querySelector("#menu");
 
 const toggleSublist = (currentBtn) => {
-    const allActiveItems = menu.querySelectorAll("[data-acrList].active");
+    const allActiveItems = header.querySelectorAll("[data-acrList].active");
 
     allActiveItems.forEach((item) => {
         if (item !== currentBtn.closest("[data-acrList]")) {
@@ -15,8 +14,9 @@ const toggleSublist = (currentBtn) => {
 };
 
 const mobileMenu = (burgerEl) => {
+    const menu = header.querySelector("#menu");
     burgerEl.classList.toggle("active");
-    menu.classList.toggle("active");
+    menu.classList.toggle("open");
 };
 
 const handlerEvent = (e) => {

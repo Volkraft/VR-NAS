@@ -20,6 +20,17 @@
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
     }
+    @media (max-width: 425px) {
+        [data-link-desktop] {
+            display: none;
+        }
+        [data-link-mobile] {
+            display: block;
+        }
+    }
+    [data-link-mobile] {
+        display: none;
+    }
 }
 
 .menu__wrapper-list {
@@ -94,7 +105,14 @@
     }
 
     @media (max-width: 768px) {
-        display: none;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        transition: left 0.4s;
+
+        &.open {
+            left: 0;
+        }
     }
 }
 
