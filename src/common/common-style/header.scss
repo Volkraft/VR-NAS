@@ -147,6 +147,7 @@
         width: 16px;
         height: 2px;
         background-color: $white;
+        transition: 0.4s;
 
         &::before,
         &::after {
@@ -155,20 +156,36 @@
             height: 2px;
             background-color: $white;
             right: 0;
+            transition: 0.4s;
         }
         &::before {
             content: "";
-            top: -7px;
+            top: -8px;
             width: 23px;
         }
         &::after {
             content: "";
-            bottom: -7px;
+            bottom: -8px;
             width: 10px;
         }
     }
 
     @media (max-width: 768px) {
         display: block;
+    }
+}
+.burger.active {
+    .burger__line {
+        width: 0;
+        &::before {
+            content: "";
+            top: 0;
+            transform: rotate(-45deg);
+        }
+        &::after {
+            width: 23px;
+            bottom: 0;
+            transform: rotate(45deg);
+        }
     }
 }
