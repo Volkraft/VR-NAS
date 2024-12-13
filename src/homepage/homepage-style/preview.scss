@@ -7,24 +7,38 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        @media (max-width: 1220px) {
+            align-items: center;
+        }
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            gap: 75px;
+        }
     }
     .hero {
         padding-top: 75px;
         max-width: 540px;
         margin-bottom: 42px;
 
+        @media (max-width: 1220px) {
+            max-width: 500px;
+        }
+        @media (max-width: 1024px) {
+            max-width: 100%;
+        }
+
         .main-title {
             margin-bottom: 12px;
         }
         .main-text {
             margin-bottom: 29px;
-            width: 450px;
+            max-width: 450px;
         }
     }
 
     .preview__avatar {
-        z-index: -5;
-        height: 626px;
+        z-index: -1;
+        height: 756px;
         position: relative;
         &::before {
             content: "";
@@ -52,12 +66,30 @@
             background: $purple;
             filter: blur(105px);
         }
+        @media (max-width: 1220px) {
+            height: 526px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+            }
+        }
     }
 }
 
 .reviews {
     display: flex;
     column-gap: 75px;
+
+    @media (max-width: 1220px) {
+        justify-content: space-between;
+        column-gap: normal;
+    }
+    @media (max-width: 1024px) {
+        column-gap: 75px;
+        justify-content: normal;
+    }
 }
 .reviews__clients {
     display: flex;
