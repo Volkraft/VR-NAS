@@ -4,17 +4,23 @@
 .advantages__content {
     margin: 0 auto;
     background-color: $black50;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, #636366 0%, $black100 100%);
+    border-image-slice: 1;
     max-width: 1200px;
     padding: 48px 0px;
 }
 .advantages__list {
     display: flex;
-    column-gap: 50px;
+    flex-wrap: wrap;
+    gap: 50px;
     justify-content: center;
     align-items: center;
 }
 .advantages__item {
     max-width: 325px;
+    padding: 0 10px;
 }
 .advantages__card {
     font-family: "Chakra Petch", sans-serif;

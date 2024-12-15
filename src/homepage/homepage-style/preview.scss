@@ -46,7 +46,7 @@
 
     .preview__avatar {
         z-index: -1;
-        height: 756px;
+        height: 620px;
         position: relative;
         backface-visibility: hidden;
         &::before {
@@ -76,7 +76,7 @@
             filter: blur(105px);
         }
         @media (max-width: 1220px) {
-            height: 526px;
+            height: 544px;
 
             img {
                 height: 100%;
