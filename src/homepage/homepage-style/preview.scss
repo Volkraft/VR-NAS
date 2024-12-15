@@ -3,6 +3,13 @@
     overflow: hidden;
     position: relative;
     padding-top: 114px;
+
+    @media (max-width: 768px) {
+        height: 1015px;
+    }
+    @media (max-width: 425px) {
+        height: 1080px;
+    }
     &__content {
         max-width: 1200px;
         margin: 0 auto;
@@ -42,9 +49,6 @@
         height: 756px;
         position: relative;
         backface-visibility: hidden;
-
-        img {
-        }
         &::before {
             content: "";
             display: block;
@@ -81,9 +85,14 @@
             }
         }
         @media (max-width: 768px) {
-            transform: translate(48%, -85%);
+            position: absolute;
+            bottom: 0;
+            right: 0;
             width: 354px;
             height: 422px;
+        }
+        @media (max-width: 425px) {
+            right: -38%;
         }
     }
 }
