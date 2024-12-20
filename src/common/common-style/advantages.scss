@@ -1,5 +1,11 @@
 .advantages {
     padding-bottom: 120px;
+
+    .container {
+        @media (max-width: 768px) {
+            padding: 0;
+        }
+    }
 }
 .advantages__content {
     margin: 0 auto;
