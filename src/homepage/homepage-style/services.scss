@@ -13,36 +13,41 @@
     justify-content: space-between;
     margin-bottom: 46px;
     position: relative;
-    // &::before {
-    //     content: "";
-    //     position: absolute;
-    //     top: 1px;
-    //     right: 1px;
-    //     display: block;
-    //     width: 350px;
-    //     height: 100px;
-    //     border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
-    //     transform: translate(100px, 100px) rotate(10deg);
-    //     z-index: -1;
-    //     background: $blue;
-    //     filter: blur(125px);
-    // }
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     top: 1px;
-    //     right: 1px;
-    //     display: block;
-    //     width: 350px;
-    //     height: 150px;
-    //     border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
-    //     transform: translate(250px, -65px) rotate(10deg);
-    //     z-index: -2;
-    //     background: $purple;
-    //     filter: blur(125px);
-    // }
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 5%;
+        right: -20%;
+        width: 28.125rem;
+        height: 12.5rem;
+        background: -o-linear-gradient(
+            351.46deg,
+            rgba(28, 196, 249, 0.8) 0.72%,
+            rgba(254, 105, 254, 0.8) 90.69%
+        );
+        background: linear-gradient(
+            98.54deg,
+            rgba(28, 196, 249, 0.8) 0.72%,
+            rgba(254, 105, 254, 0.8) 90.69%
+        );
+        -webkit-filter: blur(105px);
+        filter: blur(105px);
+        border-radius: 88% 12% 88% 12% / 20% 37% 63% 80%;
+        -webkit-transform: translate(-50%, -50%) rotate(-20deg);
+        -ms-transform: translate(-50%, -50%) rotate(-20deg);
+        transform: translate(-50%, -50%) rotate(-20deg);
+    }
     .main-text {
         max-width: 625px;
+    }
+    @media (max-width: 1215px) {
+        &::before {
+            right: -15%;
+        }
+    }
+    @media (max-width: 1024px) {
+        flex-direction: column;
     }
 }
 .services__info {
@@ -87,7 +92,8 @@
 .card-service {
     padding: 38px 39px 25px 32px;
     position: relative;
-    width: 380px;
+    max-width: 380px;
+    width: 100%;
     height: 291px;
     background-color: $black50;
     border-width: 1px;
@@ -97,7 +103,6 @@
     overflow: hidden;
 
     @media (max-width: 822px) {
-        width: 100%;
     }
 
     .card-service__img {
@@ -147,6 +152,9 @@
         transition: 0.5s;
         span {
             font-weight: 800;
+        }
+        @media (max-width: 425px) {
+            padding: 15px 25px;
         }
     }
 }
