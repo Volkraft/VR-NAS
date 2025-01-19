@@ -13,12 +13,30 @@
     align-items: center;
     padding: 38px 74px 31px;
     background: $linear;
+    @media (max-width: 950px) {
+        flex-direction: column;
+        gap: 15px;
+    }
+    @media (max-width: 560px) {
+        padding: 38px 20px 31px;
+    }
 }
 .banner__title {
     max-width: 525px;
     font-size: 40px;
     font-weight: 600;
     line-height: 1.45;
+    @media (max-width: 1024px) {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    @media (max-width: 950px) {
+        text-align: center;
+        max-width: 100%;
+    }
+    @media (max-width: 560px) {
+        line-height: 1.1;
+    }
 }
 .banner__form {
     display: flex;
