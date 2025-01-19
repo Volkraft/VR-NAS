@@ -17,8 +17,16 @@
     padding-top: 95px;
     max-width: 550px;
     width: 100%;
+
+    @media (max-width: 700px) {
+        padding-top: 50px;
+    }
     .context-subtitle {
         margin-bottom: 35px;
+
+        @media (max-width: 600px) {
+            font-size: 35px;
+        }
     }
 }
 .accord {
@@ -39,6 +47,10 @@
     &.active {
         .accord__point-decrpit {
             height: 115px;
+
+            @media (max-width: 600px) {
+                height: 210px;
+            }
         }
         .accord__point-title::after {
             transition: all 0.5s ease 0s;
@@ -141,13 +153,13 @@
             @media (max-width: 768px) {
                 // width: 350px;
                 // height: 450px;
-                bottom: 15px;
+                bottom: 5px;
                 right: 35px;
             }
             @media (max-width: 450px) {
                 width: 250px;
                 height: 350px;
-                bottom: 22px;
+                bottom: 5px;
                 right: 35px;
             }
         }
