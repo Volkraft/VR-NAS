@@ -164,11 +164,31 @@
             }
         }
     }
-    // &-video {
-    //     position: absolute;
-    //     bottom: -40px;
-    //     right: 80px;
-    // }
+    &-video {
+        position: absolute;
+        bottom: -40px;
+        right: 80px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 1460px) {
+            bottom: -40px;
+            right: 80px;
+        }
+        @media (max-width: 768px) {
+            bottom: -40px;
+            right: 0px;
+        }
+        @media (max-width: 450px) {
+            bottom: -0px;
+            right: 0px;
+            width: 146px;
+            height: 90px;
+        }
+    }
 
     @media (max-width: 1460px) {
         width: 503px;
