@@ -5,9 +5,13 @@
 .choouse-us__content {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1350px;
     margin: 0 auto;
-    column-gap: 90px;
+
+    @media (max-width: 1200px) {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 }
 .choouse-us__info {
     padding-top: 95px;
@@ -30,6 +34,7 @@
 
 .accord__point {
     margin-bottom: 45px;
+    cursor: pointer;
 
     &.active {
         .accord__point-decrpit {
@@ -62,44 +67,62 @@
 }
 
 .choouse-us__logo {
+    width: 563px;
     height: 662px;
     position: relative;
-    right: -80px;
 
-    &::before {
-        content: "";
-        border-radius: 100%;
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        inset: -1px;
-        width: 400px;
-        height: 200px;
-        border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
-        transform: translate(-105px, 350px) rotate(-60deg);
-        z-index: -1;
-        background: $blue;
-        filter: blur(105px);
-    }
     &::after {
         content: "";
-        border-radius: 100%;
-        display: block;
         position: absolute;
-        top: 0;
-        right: 0;
-        inset: -1px;
-        width: 500px;
-        height: 300px;
-        border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
-        transform: translate(75px, 150px) rotate(35deg);
         z-index: -1;
-        background: $purple;
+        top: 60%;
+        left: 50%;
+        width: 100%;
+        height: 50%;
+        background: -o-linear-gradient(
+            351.46deg,
+            rgba(28, 196, 249, 0.8) 0.72%,
+            rgba(254, 105, 254, 0.8) 90.69%
+        );
+        background: linear-gradient(
+            98.54deg,
+            rgba(28, 196, 249, 0.8) 0.72%,
+            rgba(254, 105, 254, 0.8) 90.69%
+        );
+        -webkit-filter: blur(105px);
         filter: blur(105px);
+        border-radius: 88% 12% 88% 12% / 20% 37% 63% 80%;
+        -webkit-transform: translate(-50%, -50%) rotate(-30deg);
+        -ms-transform: translate(-50%, -50%) rotate(-30deg);
+        transform: translate(-50%, -50%) rotate(-30deg);
+
+        @media (max-width: 1450px) {
+            width: 95%;
+            left: 45%;
+        }
+        @media (max-width: 768px) {
+            width: 95%;
+            left: 45%;
+        }
+        @media (max-width: 768px) {
+            width: 50%;
+            left: 10%;
+        }
+        @media (max-width: 450px) {
+            width: 30%;
+            left: 10%;
+        }
     }
     .choouse-us__wrapper-img {
+        display: block;
+        width: 100%;
         position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
         &::after {
             content: "";
             display: block;
@@ -110,11 +133,41 @@
             width: 399px;
             height: 497px;
             z-index: -3;
+
+            @media (max-width: 1460px) {
+                width: 350px;
+                height: 450px;
+            }
+            @media (max-width: 768px) {
+                // width: 350px;
+                // height: 450px;
+                bottom: 15px;
+                right: 35px;
+            }
+            @media (max-width: 450px) {
+                width: 250px;
+                height: 350px;
+                bottom: 22px;
+                right: 35px;
+            }
         }
     }
-    &-video {
-        position: absolute;
-        bottom: -40px;
-        right: 80px;
+    // &-video {
+    //     position: absolute;
+    //     bottom: -40px;
+    //     right: 80px;
+    // }
+
+    @media (max-width: 1460px) {
+        width: 503px;
+        height: 602px;
+    }
+    @media (max-width: 768px) {
+        width: 403px;
+        height: 502px;
+    }
+    @media (max-width: 450px) {
+        width: 303px;
+        height: 402px;
     }
 }

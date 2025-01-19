@@ -1,6 +1,9 @@
 @import "/src/common/common-style/vars.scss";
 .services {
     margin-bottom: 285px;
+    @media (max-width: 1200px) {
+        margin-bottom: 100px;
+    }
 }
 .services__content {
     max-width: 1200px;
