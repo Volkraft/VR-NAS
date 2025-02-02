@@ -17,7 +17,9 @@
 }
 .footer-lists {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    gap: 40px;
     border-image: linear-gradient(
         90deg,
         hsla(194, 91%, 50%, 0.612),
@@ -28,6 +30,21 @@
     padding-bottom: 33px;
 }
 .footer-lists__item {
+    &--social {
+        @media (max-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-width: 100%;
+            .logo {
+                margin-bottom: 0;
+            }
+        }
+        @media (max-width: 490px) {
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
 }
 .social-list {
     display: flex;
