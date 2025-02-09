@@ -23,6 +23,14 @@
         }
         .context-subtitle {
         }
+        @media (max-width: 768px) {
+            .context-title {
+                font-size: 16px;
+            }
+            .context-subtitle {
+                font-size: 32px;
+            }
+        }
     }
     // Задать изначальные размеры
     &__action {
@@ -69,8 +77,11 @@
         transform: translate(-50%, -50%);
         z-index: 5;
 
-        @media (max-width: 1000px) {
-            transform: translate(-50%, -50%);
+        @media (max-width: 1100px) {
+            transform: translate(-50%, -48%);
+        }
+        @media (max-width: 800px) {
+            transform: translate(-50%, -45%);
         }
     }
 
@@ -88,7 +99,7 @@
     width: 78px;
     height: 78px;
     position: absolute;
-    z-index: 2;
+    z-index: 6;
     background-color: transparent;
     border: none;
     background-image: url(/src/img/testimonial/gradient.svg);
@@ -98,18 +109,27 @@
     transition: 0.4s;
 
     &--first {
-        top: 313px;
-        left: 21px;
+        top: 25%;
+        left: 10%;
         &.active {
             .testimonial-btn__wrapper-info {
                 height: 124px;
             }
         }
+        @media (max-width: 640px) {
+            left: 27%;
+
+            &.active {
+                .testimonial-btn__wrapper-info {
+                    height: 124px;
+                }
+            }
+        }
     }
 
     &--second {
-        bottom: 260px;
-        left: 165px;
+        top: 65%;
+        left: 17%;
         &.active {
             .testimonial-btn__wrapper-info {
                 height: 107px;
@@ -128,8 +148,8 @@
     }
 
     &--fourth {
-        top: 260px;
-        right: 415px;
+        top: 30%;
+        left: 69%;
         &.active {
             .testimonial-btn__wrapper-info {
                 height: 104px;
@@ -182,6 +202,16 @@
         width: 50px;
         height: 50px;
     }
+
+    @media (max-width: 768px) {
+        width: 50px;
+        height: 50px;
+
+        .testimonial-btn__img {
+            width: 35px;
+            height: 35px;
+        }
+    }
 }
 
 .testimonial-btn__wrapper-info {
@@ -194,6 +224,11 @@
     display: block;
     width: 300px;
     transition: 0.5s;
+
+    @media (max-width: 768px) {
+        left: 55px;
+        width: 270px;
+    }
 }
 
 .testimonial-btn__info-block {
@@ -204,6 +239,10 @@
     height: 100%;
     text-align: left;
     display: block;
+
+    @media (max-width: 768px) {
+        padding: 18px 19px 13px 23px;
+    }
 }
 
 .testimonial-btn__text {
@@ -212,6 +251,11 @@
     color: $grey2;
     line-height: 1.6;
     margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
 }
 
 .testimonial-btn__author {
@@ -236,28 +280,25 @@
     &::before {
         content: "";
         position: absolute;
+        z-index: 1;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        width: 45px;
-        height: 35px;
-        border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
-        transform: rotate(10deg) translate(-27px, 0px);
-        background: $blue;
-        filter: blur(8px);
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 45px;
-        height: 35px;
-        border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
-        transform: rotate(10deg) translate(-23px, -25px);
-        background: #ca6aeb;
-        filter: blur(8px);
+        width: 90%;
+        height: 50%;
+        background: linear-gradient(
+            98.54deg,
+            rgba(28, 196, 249, 0.8) 0.72%,
+            rgba(254, 105, 254, 0.8) 90.69%
+        );
+        -webkit-filter: blur(10px);
+        filter: blur(10px);
+        border-radius: 88% 12% 88% 12% / 20% 37% 63% 80%;
+        -webkit-transform: translate(-50%, -50%) rotate(-20deg);
+        -ms-transform: translate(-50%, -50%) rotate(-20deg);
+        transform: translate(-50%, -50%) rotate(-20deg);
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
     }
 }
 .testimonial-btn.active {
