@@ -108,6 +108,10 @@
     background-size: cover;
     transition: 0.4s;
 
+    &.active {
+        z-index: 8;
+    }
+
     &--first {
         top: 25%;
         left: 10%;
@@ -135,15 +139,26 @@
                 height: 107px;
             }
         }
+        @media (max-width: 640px) {
+            left: 30%;
+            top: 63%;
+        }
     }
 
     &--third {
-        bottom: 310px;
-        left: 575px;
+        top: 75%;
+        left: 55%;
         &.active {
             .testimonial-btn__wrapper-info {
                 height: 144px;
             }
+            @media (max-width: 1230px) {
+                transform: translateX(-265px);
+            }
+        }
+        @media (max-width: 640px) {
+            left: 65%;
+            top: 67%;
         }
     }
 
@@ -153,7 +168,17 @@
         &.active {
             .testimonial-btn__wrapper-info {
                 height: 104px;
+                @media (max-width: 768px) {
+                    height: 117px;
+                }
             }
+            @media (max-width: 1230px) {
+                transform: translateX(-280px);
+            }
+        }
+        @media (max-width: 640px) {
+            left: 65%;
+            top: 35%;
         }
     }
 
@@ -164,16 +189,30 @@
             .testimonial-btn__wrapper-info {
                 height: 84px;
             }
+            @media (max-width: 1230px) {
+                transform: translateX(-230px);
+            }
+        }
+        @media (max-width: 640px) {
+            top: 59%;
+            right: 35%;
         }
     }
 
     &--sixth {
-        bottom: 85px;
-        right: 235px;
+        top: 83%;
+        right: 25%;
         &.active {
             .testimonial-btn__wrapper-info {
                 height: 144px;
             }
+            @media (max-width: 1230px) {
+                transform: translateX(-30px);
+            }
+        }
+        @media (max-width: 1100px) {
+            top: 77%;
+            right: 61%;
         }
     }
 
@@ -239,10 +278,6 @@
     height: 100%;
     text-align: left;
     display: block;
-
-    @media (max-width: 768px) {
-        padding: 18px 19px 13px 23px;
-    }
 }
 
 .testimonial-btn__text {
