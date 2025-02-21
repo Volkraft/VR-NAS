@@ -1,0 +1,97 @@
+@import "/src/common/common-style/vars.scss";
+
+.plans {
+    margin-bottom: 175px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__header {
+        text-align: center;
+        width: 751px;
+        margin-bottom: 40px;
+    }
+}
+
+.plans__cards {
+    &-list {
+        display: flex;
+        gap: 62px;
+    }
+}
+.plans__card {
+    padding: 35px 35px 50px 35px;
+    background-color: $black50;
+    border-width: 1px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, #323233 0%, $black100 100%);
+    border-image-slice: 1;
+    transition: 0.5s;
+
+    .plans__title {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 13px;
+    }
+    .price__cost {
+        display: flex;
+        align-items: baseline;
+        column-gap: 5px;
+        margin-bottom: 10px;
+
+        .plans__month {
+            color: $grey1;
+            font-size: 16px;
+        }
+    }
+
+    .main-text {
+        width: 260px;
+        margin-bottom: 15px;
+    }
+    .link-other-page-empty--price {
+        padding: 21px 49px;
+        background-color: #32323338;
+        span {
+            font-size: 14px;
+            color: $white;
+            font-weight: 600;
+        }
+    }
+    &:hover {
+        border-width: 1px;
+        border-style: solid;
+        border-image: $linear;
+        border-image-slice: 1;
+        transition: 0.5s;
+    }
+}
+
+.plans__permissions {
+    width: 265px;
+    margin-bottom: 57px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.plans__permission {
+    padding-left: 26px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url(/src/img/price-page/circle.svg);
+        width: 20px;
+        height: 20px;
+        left: -2px;
+    }
+}

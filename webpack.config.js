@@ -14,7 +14,9 @@ export default (env) => {
     mode: env.mode ?? "development",
     entry: {
       main: ["@babel/polyfill", path.resolve(__dirname, "./src/homepage/index-entry.js")],
-      // second: ["@babel/polyfill", path.resolve(__dirname, "./src/second/second-entry.js")],
+      aboutUs: ["@babel/polyfill", path.resolve(__dirname, "./src/about-us/about-us-entry.js")],
+      service: ["@babel/polyfill", path.resolve(__dirname, "./src/service/service-entry.js")],
+      price: ["@babel/polyfill", path.resolve(__dirname, "./src/price/price-entry.js")],
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -22,11 +24,21 @@ export default (env) => {
         template: path.resolve(__dirname, "./src/homepage/index.html"),
         chunks: ['main'],
       }),
-      // new HtmlWebpackPlugin({
-      //   filename: 'second.html',
-      //   template: path.resolve(__dirname, "./src/second/second.html"),
-      //   chunks: ['second'],
-      // }),
+      new HtmlWebpackPlugin({
+        filename: 'about-us.html',
+        template: path.resolve(__dirname, "./src/about-us/about-us.html"),
+        chunks: ['aboutUs'],
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'service.html',
+        template: path.resolve(__dirname, "./src/service/service.html"),
+        chunks: ['service'],
+      }),
+      new HtmlWebpackPlugin({
+        filename: 'price.html',
+        template: path.resolve(__dirname, "./src/price/price.html"),
+        chunks: ['price'],
+      }),
       new MiniCssExtractPlugin({
         filename: isDev ? "[name].css" : "css/[name][contenthash].css",
       }),

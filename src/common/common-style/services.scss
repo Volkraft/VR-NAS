@@ -41,6 +41,10 @@
         -ms-transform: translate(-50%, -50%) rotate(-20deg);
         transform: translate(-50%, -50%) rotate(-20deg);
     }
+
+    &--service::before {
+        content: none;
+    }
     .main-text {
         max-width: 625px;
     }

@@ -8,6 +8,10 @@
     max-width: 1350px;
     margin: 0 auto;
 
+    &--about-us {
+        flex-direction: row-reverse;
+    }
+
     @media (max-width: 1200px) {
         flex-direction: column-reverse;
         align-items: center;
@@ -126,6 +130,7 @@
         }
     }
     .choouse-us__wrapper-img {
+        backface-visibility: hidden;
         display: block;
         width: 100%;
         position: relative;

@@ -1,3 +1,4 @@
+@import "/src/common/common-style/vars.scss";
 .main-title {
     color: $white;
     font-family: "Chakra Petch", sans-serif;
@@ -36,4 +37,12 @@
     font-weight: 600;
     line-height: 1.21;
     margin-bottom: 12px;
+}
+
+.team-title {
+    font-size: 16px;
+}
+.team-subtitle {
+    color: $grey1;
+    font-size: 12px;
 }

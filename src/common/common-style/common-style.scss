@@ -6,6 +6,14 @@
 @import "./main-texts.scss";
 @import "./banner.scss";
 @import "./footer.scss";
+@import "./choouse-us.scss";
+@import "./info.scss";
+@import "./partners.scss";
+@import "./faq.scss";
+@import "./experience.scss";
+@import "./testimonial.scss";
+@import "./price.scss";
+@import "./services.scss";
 
 :root {
     background-color: $black100;
@@ -102,5 +110,8 @@ h6 {
     &--second {
         top: 260px;
         left: 100px;
+    }
+    &--third {
+        top: 75%;
     }
 }
