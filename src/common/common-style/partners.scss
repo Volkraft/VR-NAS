@@ -1,10 +1,18 @@
 @import "/src/common/common-style/vars.scss";
 .partners {
-    margin-bottom: 150px;
+    padding-bottom: 100px;
+
+    @media (max-width: 840px) {
+        overflow: hidden;
+    }
     &__content {
         max-width: 1055px;
         margin: 0 auto;
         text-align: center;
+        position: relative;
+        @media (max-width: 840px) {
+            height: 500px;
+        }
     }
 
     &__header {
@@ -13,12 +21,18 @@
             text-transform: uppercase;
         }
         .context-subtitle {
+            @media (max-width: 840px) {
+                font-size: 35px;
+            }
         }
     }
 
     &__logo {
+        // поработать с размерами этого элемента
         position: relative;
-        height: 890px;
+        margin: 0 auto;
+        height: 741px;
+        width: 1055px;
         background: linear-gradient(
                 180deg,
                 rgba(176, 176, 178, 0) 85%,
@@ -28,46 +42,56 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
+
+        @media (max-width: 1100px) {
+            height: 500px;
+            width: 800px;
+        }
+        @media (max-width: 840px) {
+            height: 300px;
+            width: 600px;
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @media (max-width: 500px) {
+            width: 350px;
+        }
     }
     &__wrapper-img {
         position: absolute;
-        top: 29.1%;
+        top: 25.1%;
         left: 50%;
         transform: translateX(-50%);
         &::before {
             content: "";
-            border-radius: 100%;
-            display: block;
             position: absolute;
-            top: -5%;
-            left: 200px;
-            width: 300px;
-            height: 200px;
-            border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
-            transform: translate(-105px, 350px) rotate(50deg);
-            z-index: -1;
-            background: $blue;
+            top: 60%;
+            left: 50%;
+            width: 40%;
+            height: 40%;
+            background: linear-gradient(90deg, #19b5f1, #ca6aeb);
             filter: blur(105px);
+            transform: translate(-50%, -50%) rotate(-30deg);
+            z-index: -1;
         }
-
-        &::after {
-            content: "";
-            border-radius: 100%;
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 170px;
-            width: 400px;
-            height: 250px;
-            border-radius: 47% 51% 51% 47% / 46% 49% 45% 51%;
-            transform: translate(75px, 150px) rotate(15deg);
-            z-index: -1;
-            background: $purple;
-            filter: blur(105px);
+        @media (max-width: 1100px) {
+            top: 29.1%;
+            height: 355px;
+        }
+        @media (max-width: 840px) {
+            height: 235px;
+            top: 21.1%;
+        }
+        @media (max-width: 500px) {
+            height: 190px;
+            top: 28.1%;
         }
     }
 
     &__img {
+        height: 100%;
     }
 }
 .partners__logo-ambassadors {
@@ -96,44 +120,78 @@
         width: 90%;
         height: 90%;
     }
+
+    @media (max-width: 1024px) {
+        width: 80px;
+        height: 80px;
+    }
     &-img {
         width: 78px;
+
+        @media (max-width: 1024px) {
+            width: 55px;
+        }
     }
 
     &--first {
         bottom: 23%;
         left: 17px;
         animation: transform-circles ease 8s infinite;
+        @media (max-width: 1024px) {
+            left: 120px;
+        }
     }
     &--second {
         bottom: 48%;
         left: 60px;
         animation: transform-circles ease 6s infinite;
+        @media (max-width: 1024px) {
+            left: 163px;
+            bottom: 53%;
+        }
     }
     &--third {
-        top: 18%;
+        top: 13%;
         left: 220px;
         animation: transform-circles ease 7s infinite;
+        @media (max-width: 1024px) {
+            top: 10%;
+            left: 270px;
+        }
     }
     &--fourth {
-        top: 10%;
+        top: 2%;
         left: 45%;
         animation: transform-circles ease 6s infinite;
+        @media (max-width: 1024px) {
+            top: 1%;
+        }
     }
     &--fifth {
-        top: 18%;
+        top: 13%;
         right: 220px;
         animation: transform-circles ease 8s infinite;
+        @media (max-width: 1024px) {
+            top: 10%;
+            right: 270px;
+        }
     }
     &--sixth {
         bottom: 48%;
         right: 60px;
         animation: transform-circles ease 6s infinite;
+        @media (max-width: 1024px) {
+            right: 163px;
+            bottom: 53%;
+        }
     }
     &--seventh {
         bottom: 23%;
         right: 17px;
         animation: transform-circles ease 7s infinite;
+        @media (max-width: 1024px) {
+            right: 120px;
+        }
     }
 
     @keyframes transform-circles {
