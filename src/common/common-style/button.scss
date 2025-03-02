@@ -6,6 +6,7 @@
     border-style: solid;
     border-image: $linear;
     border-image-slice: 1;
+    flex-shrink: 0;
 
     span {
         position: relative;

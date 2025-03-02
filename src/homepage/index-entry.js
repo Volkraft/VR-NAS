@@ -11,5 +11,5 @@ import "./homepage-style/my-slide.scss";
 import "../common/common-scripts/accordeon.js";
 import "../common/common-scripts/header.js";
 import "./homepage-script/testimonial-btn.js";
-// import "./homepage-script/init-slider.js";
+import "./homepage-script/init-slider.js";
 import "../common/common-scripts/scrollList.js";
