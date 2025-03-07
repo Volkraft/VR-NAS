@@ -1,7 +1,11 @@
 @import "/src/common/common-style/vars.scss";
 .articles {
     position: relative;
-    margin-bottom: 153px;
+    padding-bottom: 153px;
+
+    background-image: url(/src/img/preview/squares.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
     &__content {
         margin: 0 auto;
     }
@@ -41,6 +45,9 @@
             left: 0;
             top: 0;
             margin-bottom: 7%;
+        }
+        @media (max-width: 800px) {
+            margin-bottom: 20%;
         }
     }
     &__action-elements {
