@@ -1,0 +1,57 @@
+@import "/src/common/common-style/vars.scss";
+.about-us {
+    margin-bottom: 150px;
+}
+.about-us__content {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 150px;
+
+    .about-us__content-info {
+        width: 1152px;
+        display: flex;
+        gap: 46px;
+
+        .context-subtitle {
+            width: 708px;
+        }
+        .main-text {
+            width: 625px;
+        }
+
+        .about-us__logo {
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 65%;
+                left: 69%;
+                width: 100%;
+                height: 50%;
+                background: linear-gradient(90deg, #19b5f1, #ca6aeb);
+                filter: blur(100px);
+                transform: translate(-55%, -60%) rotate(-40deg);
+                z-index: -1;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 3px;
+                left: 13px;
+                background: #252532;
+                width: 100%;
+                height: 87%;
+                z-index: -2;
+            }
+        }
+        .about-us-video {
+            position: absolute;
+            bottom: -10%;
+            right: 80%;
+        }
+    }
+}

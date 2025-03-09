@@ -1,0 +1,264 @@
+@import "/src/common/common-style/vars.scss";
+.partners {
+    padding-bottom: 100px;
+
+    @media (max-width: 840px) {
+        overflow: hidden;
+    }
+    &__content {
+        max-width: 1055px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        @media (max-width: 840px) {
+            height: 500px;
+        }
+    }
+
+    &__header {
+        margin-bottom: 30px;
+        .context-title {
+            text-transform: uppercase;
+        }
+        .context-subtitle {
+            @media (max-width: 840px) {
+                font-size: 35px;
+            }
+        }
+    }
+
+    &__logo {
+        // поработать с размерами этого элемента
+        position: relative;
+        margin: 0 auto;
+        height: 741px;
+        width: 1055px;
+        background: linear-gradient(
+                180deg,
+                rgba(176, 176, 178, 0) 85%,
+                rgb(24, 24, 27) 100%
+            ),
+            url(/src/img/partners/half-circles.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (max-width: 1100px) {
+            height: 500px;
+            width: 800px;
+        }
+        @media (max-width: 840px) {
+            height: 300px;
+            width: 600px;
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @media (max-width: 500px) {
+            width: 350px;
+        }
+    }
+    &__wrapper-img {
+        position: absolute;
+        top: 25.1%;
+        left: 50%;
+        transform: translateX(-50%);
+        &::before {
+            content: "";
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            width: 40%;
+            height: 40%;
+            background: linear-gradient(90deg, #19b5f1, #ca6aeb);
+            filter: blur(105px);
+            transform: translate(-50%, -50%) rotate(-30deg);
+            z-index: -1;
+        }
+        @media (max-width: 1100px) {
+            top: 29.1%;
+            height: 355px;
+        }
+        @media (max-width: 840px) {
+            height: 235px;
+            top: 21.1%;
+        }
+        @media (max-width: 500px) {
+            height: 190px;
+            top: 28.1%;
+        }
+    }
+
+    &__img {
+        height: 100%;
+    }
+}
+.partners__logo-ambassadors {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    z-index: 2;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-image: url(/src/img/testimonial/gradient.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background-color: rgba(37, 37, 50, 0.699);
+        z-index: -2;
+        width: 90%;
+        height: 90%;
+    }
+
+    @media (max-width: 1100px) {
+        width: 80px;
+        height: 80px;
+    }
+    @media (max-width: 840px) {
+        height: 50px;
+        width: 50px;
+    }
+    &-img {
+        width: 78px;
+
+        @media (max-width: 1100px) {
+            width: 55px;
+        }
+        @media (max-width: 840px) {
+            width: 42px;
+        }
+    }
+
+    &--first {
+        bottom: 23%;
+        left: 17px;
+        animation: transform-circles ease 8s infinite;
+        @media (max-width: 1100px) {
+            left: 6.8%;
+        }
+        @media (max-width: 840px) {
+            left: 15%;
+        }
+        @media (max-width: 500px) {
+            left: 0%;
+        }
+    }
+    &--second {
+        bottom: 48%;
+        left: 60px;
+        animation: transform-circles ease 6s infinite;
+        @media (max-width: 1100px) {
+            left: 12%;
+            bottom: 53%;
+        }
+        @media (max-width: 840px) {
+            left: 19%;
+        }
+        @media (max-width: 500px) {
+            left: 5%;
+            bottom: 50%;
+        }
+    }
+    &--third {
+        top: 13%;
+        left: 220px;
+        animation: transform-circles ease 7s infinite;
+        @media (max-width: 1100px) {
+            top: 10%;
+            left: 25%;
+        }
+        @media (max-width: 840px) {
+            left: 30%;
+        }
+        @media (max-width: 500px) {
+            left: 21%;
+            top: 15%;
+        }
+    }
+    &--fourth {
+        top: 2%;
+        left: 45%;
+        animation: transform-circles ease 6s infinite;
+        @media (max-width: 1100px) {
+            top: 0%;
+            left: 45%;
+        }
+        @media (max-width: 500px) {
+            top: 7%;
+            left: 42.5%;
+        }
+    }
+    &--fifth {
+        top: 13%;
+        right: 220px;
+        animation: transform-circles ease 8s infinite;
+        @media (max-width: 1100px) {
+            top: 10%;
+            right: 25%;
+        }
+        @media (max-width: 840px) {
+            right: 30%;
+        }
+        @media (max-width: 500px) {
+            right: 21%;
+            top: 15%;
+        }
+    }
+    &--sixth {
+        bottom: 48%;
+        right: 60px;
+        animation: transform-circles ease 6s infinite;
+        @media (max-width: 1100px) {
+            right: 12%;
+            bottom: 53%;
+        }
+        @media (max-width: 840px) {
+            right: 19%;
+        }
+        @media (max-width: 500px) {
+            right: 5%;
+            bottom: 50%;
+        }
+    }
+    &--seventh {
+        bottom: 23%;
+        right: 17px;
+        animation: transform-circles ease 7s infinite;
+        @media (max-width: 1100px) {
+            right: 6.8%;
+        }
+        @media (max-width: 840px) {
+            right: 15%;
+        }
+        @media (max-width: 500px) {
+            right: 0%;
+        }
+    }
+
+    @keyframes transform-circles {
+        0% {
+            transform: scale(1);
+        }
+        40% {
+            transform: scale(0.9);
+        }
+        70% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}

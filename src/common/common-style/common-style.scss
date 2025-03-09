@@ -1,0 +1,117 @@
+@import "~normalize.css";
+@import "./vars.scss";
+@import "./header.scss";
+@import "./advantages.scss";
+@import "./button.scss";
+@import "./main-texts.scss";
+@import "./banner.scss";
+@import "./footer.scss";
+@import "./choouse-us.scss";
+@import "./info.scss";
+@import "./partners.scss";
+@import "./faq.scss";
+@import "./experience.scss";
+@import "./testimonial.scss";
+@import "./price.scss";
+@import "./services.scss";
+
+:root {
+    background-color: $black100;
+}
+body {
+    font-family: "Chakra Petch", sans-serif;
+    color: $white;
+}
+*,
+* > * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: $grey1;
+}
+ul,
+ul,
+li {
+    list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    padding-top: 13px;
+}
+
+.container {
+    max-width: 1458px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+// .background-wave {
+//     max-width: 736px;
+//     width: 100%;
+//     height: 353px;
+//     background-image: url(/src/img/preview/wave.svg);
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+// }
+// .background-wave-bottom{
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     width: 1011px;
+//     height: 498px;
+//     background: url(/src/img/icons/wave-footer.svg);
+// }
+.background-wave {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+.background-wave-bottom {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    left: -330px;
+    bottom: 0;
+    z-index: -4;
+}
+.background-cell {
+    max-width: 1100px;
+    width: 100%;
+    height: 660px;
+    background-image: url(/src/img/preview/squares.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+
+    &--first {
+        top: 160px;
+        left: 0px;
+    }
+    &--second {
+        top: 260px;
+        left: 100px;
+    }
+    &--third {
+        top: 75%;
+    }
+}
