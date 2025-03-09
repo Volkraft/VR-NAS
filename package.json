@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint src --fix",
     "prettier": "prettier './src/**/*.{js,jsx,ts,tsx,css,scss,md}' --write",
-    "format": "npm run lint && npm run prettier"
+    "format": "npm run lint && npm run prettier",
+    "prepare": "husky"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,css,scss,md}": [
@@ -22,6 +23,8 @@
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.3",
     "globals": "^16.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
     "prettier": "3.5.3",
     "vite": "^6.2.1"
   }
