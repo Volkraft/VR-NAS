@@ -1,82 +1,82 @@
-@import "/src/common/common-style/vars.scss";
+@use "/src/common/common-style/vars.scss" as *;
 
 .info {
-    padding-top: 175px;
-    margin-bottom: 150px;
+  padding-top: 175px;
+  margin-bottom: 150px;
 }
 .info__content {
-    margin: 0 auto;
-    max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 150px;
+
+  .info__header {
+    width: 100%;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    row-gap: 150px;
+    row-gap: 20px;
 
-    .info__header {
-        width: 100%;
+    .info__top {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .main-title {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          top: 50%;
+          left: 50%;
+          width: 120%;
+          height: 130%;
+          background: linear-gradient(180deg, #ca6aeb 40%, #19b5f1);
+          transform: translate(-50%, -50%) rotate(10deg);
+          border-bottom-right-radius: 100%;
+          border-top-left-radius: 50%;
+          border-top-right-radius: 50%;
+          filter: blur(60px);
+          z-index: -1;
+        }
+      }
+
+      .info__links {
         display: flex;
-        flex-direction: column;
-        row-gap: 20px;
+        gap: 30px;
 
-        .info__top {
-            display: flex;
-            gap: 30px;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            .main-title {
-                position: relative;
+        .anchor-link {
+          font-size: 16px;
+          &--main {
+            color: $white;
+            font-weight: 700;
+            position: relative;
 
-                &::before {
-                    position: absolute;
-                    content: "";
-                    top: 50%;
-                    left: 50%;
-                    width: 120%;
-                    height: 130%;
-                    background: linear-gradient(180deg, #ca6aeb 40%, #19b5f1);
-                    transform: translate(-50%, -50%) rotate(10deg);
-                    border-bottom-right-radius: 100%;
-                    border-top-left-radius: 50%;
-                    border-top-right-radius: 50%;
-                    filter: blur(60px);
-                    z-index: -1;
-                }
+            &::after {
+              content: "";
+              background-image: url(/about-us-page/about-us/link.svg);
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-position: center;
+              position: absolute;
+              width: 23px;
+              height: 18px;
+              top: 1.5px;
+              left: 46.5px;
             }
-
-            .info__links {
-                display: flex;
-                gap: 30px;
-
-                .anchor-link {
-                    font-size: 16px;
-                    &--main {
-                        color: $white;
-                        font-weight: 700;
-                        position: relative;
-
-                        &::after {
-                            content: "";
-                            background-image: url(/src/img/about-us-page/about-us/link.svg);
-                            background-repeat: no-repeat;
-                            background-size: cover;
-                            background-position: center;
-                            position: absolute;
-                            width: 23px;
-                            height: 18px;
-                            top: 1.5px;
-                            left: 46.5px;
-                        }
-                    }
-                }
-            }
+          }
         }
-
-        .info__line {
-            background: linear-gradient(90deg, #19b5f1, #ca6aeb);
-            height: 1px;
-            width: 100%;
-            margin-top: 2rem;
-        }
+      }
     }
+
+    .info__line {
+      background: linear-gradient(90deg, #19b5f1, #ca6aeb);
+      height: 1px;
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
 }

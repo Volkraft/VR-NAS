@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="shortcut icon" href="../img/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VRNas | Pricing Plan</title>
@@ -14,7 +14,7 @@
         <div class="container">
             <div class="header__content">
                 <a href="/index.html" class="logo">
-                    <img class="logo__img" src="../img/logo.svg" alt="VRNas logotype">
+                    <img class="logo__img" src="/logo.svg" alt="VRNas logotype">
                 </a>
                 <nav class="menu" id="menu">
                     <ul class="menu__list">
@@ -22,48 +22,48 @@
                             <a href="/index.html" class="anchor-link">Home</a>
                         </li>
                         <li class="menu__item">
-                            <a href="/about-us.html" class="anchor-link">About us</a>
+                            <a href="/src/about-us/about-us.html" class="anchor-link">About us</a>
                         </li>
                         <li class="menu__item">
-                            <a href="/service.html" class="anchor-link">Service</a>
+                            <a href="/src/service/service.html" class="anchor-link">Service</a>
                         </li>
                         <li class="menu__item" data-acrList>
                             <button class="anchor-link anchor-link--sublist">Page</button>
                             <div class="menu__wrapper-list">
                                 <ul class="sublist sublist--first">
                                     <li class="sublist__item">
-                                        <a class="anchor-link" href="#!">Pricing Plan</a>
+                                        <a class="anchor-link" href="/src/price/price.html">Pricing Plan</a>
                                     </li>
                                     <li class="sublist__item">
-                                        <a class="anchor-link" href="/faq.html">FAQ</a>
+                                        <a class="anchor-link" href="/src/faq/faq.html">FAQ</a>
                                     </li>
                                     <li class="sublist__item">
-                                        <a class="anchor-link" href="/t&c.html">Tems & Conditions</a>
+                                        <a class="anchor-link" href="/src/t&c/t&c.html">Tems & Conditions</a>
                                     </li>
-                                        <li class="sublist__item">
-                                            <a class="anchor-link" href="/policy.html">Privacy Policy</a>
-                                        </li>
-                                    </ul>
-                                </div >
+                                    <li class="sublist__item">
+                                        <a class="anchor-link" href="/src/policy/policy.html">Privacy Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li class="menu__item" data-acrList>
-                                <button class="anchor-link anchor-link--sublist">Blog</button>
-                                <div class="menu__wrapper-list menu__wrapper-list--second">
-                                    <ul class="sublist sublist--first">
-                                        <li class="sublist__item">
-                                            <a class="anchor-link" href="/articles.html">Resent articles</a> 
-                                        </li>
-                                        <li class="sublist__item">
-                                            <a class="anchor-link" href="/team.html">Our Team</a>
-                                        </li>
-                                        <li class="sublist__item">
-                                            <a class="anchor-link" href="/detail.html">Detail Service</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <button class="anchor-link anchor-link--sublist">Blog</button>
+                            <div class="menu__wrapper-list menu__wrapper-list--second">
+                                <ul class="sublist sublist--first">
+                                    <li class="sublist__item">
+                                        <a class="anchor-link" href="/src/articles/articles.html">Resent articles</a>
+                                    </li>
+                                    <li class="sublist__item">
+                                        <a class="anchor-link" href="/src/team/team.html">Our Team</a>
+                                    </li>
+                                    <li class="sublist__item">
+                                        <a class="anchor-link" href="/src/detail/detail.html">Detail Service</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                         <li data-link-mobile>
-                            <a href="/contact.html" class="link-other-page-empty"><span>Contact us</span></a>
+                            <a href="/src/contact/contact.html" class="link-other-page-empty"><span>Contact us</span></a>
                         </li>
                         </ul>
                     </nav>
@@ -75,10 +75,57 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
+    <main class="main">
+        <img class="background-wave" src="/icons/wave.svg" alt="">
+        <section class="info">
+            <div class="container">
+                <div class="info__content">
+                    <div class="info__header">
+                        <div class="info__top">
+                            <h1 class="main-title">Pricing Plan</h1>
+                            <ul class="info__links">
+                                <li class="info_link">
+                                    <a href="/src/homepage/index.html" class="anchor-link anchor-link--main">Home</a>
+                                </li>
+                                <li class="info_link">
+                                    <a href="/src/price/price.html" class="anchor-link">Pricing Plan</a>
+                                </li>
+                            </ul>
+                            <div class="info__line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="plans">
+            <div class="container">
+                <div class="plans__content">
+                    <div class="plans__header">
+                        <h6 class="context-title">PRICING</h6>
+                        <p class="context-subtitle">Pricing Plans</p>
+                        <div class="main-text">Choose the pricing plan that fits your needs and budget. All plans come with a free trial period so you can test out our service and see which plan works best for you.</div>
+                    </div>
+                    <div class="plans__cards">
+                        <ul class="plans__cards-list">
+                            <li class="plans__card">
+                                <h6 class="plans__title">Basic Plan</h6>
+                                <div class="price__cost">
+                                    <p class="context-subtitle">$99</p>
+                                    <p class="plans__month">/ month</p>
+                                </div>
+                                <div class="main-text">All the basic features to boost your freelance career</div>
+                                <ul class="plans__permissions">
+                                    <li class="plans__permission">Access to a selection of VR games and experiences</li>
+                                    <li class="plans__permission">Limited access to educational content</li>
+                                    <li class="plans__permission">Limited access to architecture and design tools</li>
+                                    <li class="plans__permission">No access to exclusive events or promotions</li>
+                                </ul>
         <main class="main">
-            <img class="background-wave" src="/src/img/icons/wave.svg" alt="">
+            <img class="background-wave" src="/icons/wave.svg" alt="">
             <section class="info">
                 <div class="container">
                     <div class="info__content">
@@ -184,10 +231,10 @@
                         </div>
                         <div class="choouse-us__logo">
                             <span class="choouse-us__wrapper-img">
-                                <img src="/src/img/about-us-page/choouse-us/man-vr.svg" alt="A man in a virtual reality glasses">
+                                <img src="/about-us-page/choouse-us/man-vr.svg" alt="A man in a virtual reality glasses">
                             </span>
                             <div class="choouse-us__logo-video">
-                                <div class="preview-video preview-video--about"><img src="/src/img/about-us/video.svg" alt=""></div>
+                                <div class="preview-video preview-video--about"><img src="/about-us/video.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -248,33 +295,33 @@
         </main>
 
         <footer class="footer">
-            <img class="background-wave-bottom" src="/src/img/icons/wave-footer.svg" alt="">
+            <img class="background-wave-bottom" src="/icons/wave-footer.svg" alt="">
             <div class="container">
                 <div class="footer__content">
                     <ul class="footer-lists">
                         <li class="footer-lists__item footer-lists__item--social">
                             <a href="#!" class="logo">
-                                <img class="logo__img" src="../img/logo.svg" alt="VRNas logotype">
+                                <img class="logo__img" src="/logo.svg" alt="VRNas logotype">
                             </a>
                             <ul class="social-list">
                                 <li class="social-list__item">
                                     <a href="" class="social-link">
-                                        <img src="/src/img/icons/x.svg" alt="">
+                                        <img src="/icons/x.svg" alt="">
                                     </a>
                                 </li>
                                 <li class="social-list__item">
                                     <a href="" class="social-link">
-                                        <img src="/src/img/icons/f.svg" alt="">
+                                        <img src="/icons/f.svg" alt="">
                                     </a>
                                 </li>
                                 <li class="social-list__item">
                                     <a href="" class="social-link">
-                                        <img src="/src/img/icons/insta.svg" alt="">
+                                        <img src="/icons/insta.svg" alt="">
                                     </a>
                                 </li>
                                 <li class="social-list__item">
                                     <a href="" class="social-link">
-                                        <img src="/src/img/icons/github.svg" alt="">
+                                        <img src="/icons/github.svg" alt="">
                                     </a>
                                 </li>
                             </ul>

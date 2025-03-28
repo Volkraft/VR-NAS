@@ -1,5 +1,4 @@
-import "./index.html";
-
+import "normalize.css";
 import "../common/common-style/common-style.scss";
 import "./homepage-style/preview.scss";
 import "./homepage-style/about-us.scss";

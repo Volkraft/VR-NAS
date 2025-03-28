@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VRNas | Homepage</title>
+    <script src="./src/homepage/index-entry.js" type="module" defer="defer"> </script>
 </head>
 <body>
     <div class="background-cell background-cell--first"></div>
@@ -15,7 +16,7 @@
         <div class="container">
             <div class="header__content">
                 <a href="#!" class="logo">
-                    <img class="logo__img" src="../img/logo.svg" alt="VRNas logotype">
+                    <img class="logo__img" src="/logo.svg" alt="VRNas logotype">
                 </a>
                 <nav class="menu" id="menu">
                     <ul class="menu__list">
@@ -23,10 +24,10 @@
                             <a href="#!" class="anchor-link">Home</a>
                         </li>
                         <li class="menu__item">
-                            <a href="/about-us.html" class="anchor-link">About us</a>
+                            <a href="./src/about-us/about-us.html" class="anchor-link">About us</a>
                         </li>
                         <li class="menu__item">
-                            <a href="/service.html" class="anchor-link">Service</a>
+                            <a href="./src/pages/service.html" class="anchor-link">Service</a>
                         </li>
                         <li class="menu__item" data-acrList>
                             <button class="anchor-link anchor-link--sublist">Page</button>
@@ -78,7 +79,7 @@
             </div>
         </header>
         <main class="main">
-            <img class="background-wave" src="/src/img/icons/wave.svg" alt="">
+            <img class="background-wave" src="/icons/wave.svg" alt="">
             
             <section class="preview">
                     <div class="container">
@@ -94,20 +95,20 @@
                             <div class="reviews">
                                 <div class="reviews__clients">
                                     <ul class="reviews__clients-list">
-                                            <li class="reviews__clients-list-logo reviews__clients-list-logo--client1"><img src="../img/preview/logo/client1.svg" alt="human2"></li>
-                                            <li class="reviews__clients-list-logo reviews__clients-list-logo--client2"><img src="../img/preview/logo/client2.svg" alt="human1"></li>
-                                            <li class="reviews__clients-list-logo reviews__clients-list-logo--client3"><img src="../img/preview/logo/client3.svg" alt="human3"></li>
+                                            <li class="reviews__clients-list-logo reviews__clients-list-logo--client1"><img src="/preview/logo/client1.svg" alt="human2"></li>
+                                            <li class="reviews__clients-list-logo reviews__clients-list-logo--client2"><img src="/preview/logo/client2.svg" alt="human1"></li>
+                                            <li class="reviews__clients-list-logo reviews__clients-list-logo--client3"><img src="/preview/logo/client3.svg" alt="human3"></li>
                                     </ul>
                                     <div class="reviews__clients-counter">
                                             <span class="reviews__quantity">32k+</span> 
                                             <span>Happy Client</span>
                                     </div>
                                 </div>
-                                <div class="preview-video preview-video--reviews"><img src="/src/img/preview/Video.svg" alt=""></div>
+                                <div class="preview-video preview-video--reviews"><img src="/preview/Video.svg" alt=""></div>
                             </div>
                         </div>
                         <div class="preview__avatar">
-                            <img src="../img/preview/man-with-headset.svg" alt="man-with-headset" class="logo__man">
+                            <img src="/preview/man-with-headset.svg" alt="man-with-headset" class="logo__man">
                         </div>
                     </div>
                 </div>
@@ -120,7 +121,7 @@
                                 <li class="advantages__item">
                                     <article class="advantages__card">
                                         <div class="advantages__img">
-                                            <img src="/src/img/icons/expertise-logo.svg" alt="">
+                                            <img src="/icons/expertise-logo.svg" alt="">
                                         </div>
                                         <span class="advantages__title">Expertise</span>
                                         <div class="advantagees__descript">Our team consists of experienced VR developers, designers, and technicians who have a passion for VR and a commitment to delivering quality work and give the best service</div>
@@ -129,7 +130,7 @@
                                 <li class="advantages__item">
                                     <article class="advantages__card">
                                         <div class="advantages__img">
-                                            <img src="/src/img/icons/customization-logo.svg" alt="">
+                                            <img src="/icons/customization-logo.svg" alt="">
                                         </div>
                                         <span class="advantages__title">Customization</span>
                                         <div class="advantagees__descript">Every client is unique, and we believe every VR experience should be too. We'll work with you to create a customized solution that meets your specific needs and goals</div>
@@ -138,7 +139,7 @@
                                 <li class="advantages__item">
                                     <article class="advantages__card">
                                         <div class="advantages__img">
-                                            <img src="/src/img/icons/service-logo.svg" alt="">
+                                            <img src="/icons/service-logo.svg" alt="">
                                         </div>
                                         <span class="advantages__title">Service</span>
                                         <div class="advantagees__descript">We believe in providing exceptional customer service, from initial consultation to final delivery. Our goal is to ensure you're satisfied with every aspect of your VR experience.</div>
@@ -153,9 +154,9 @@
                 <div class="container">
                     <div class="about-us__content">
                         <div class="about-us__logo">
-                            <span class="about-us__wrapper-img"><img src="/src/img/man-point.svg" alt="A man in a virtual reality glasses"></span>
+                            <span class="about-us__wrapper-img"><img src="/man-point.svg" alt="A man in a virtual reality glasses"></span>
                             <div class="about-us__logo-video">
-                                <div class="preview-video preview-video--about"><img src="/src/img/about-us/video.svg" alt=""></div>
+                                <div class="preview-video preview-video--about"><img src="/about-us/video.svg" alt=""></div>
                             </div>
                         </div>
                         <div class="about-us__info">
@@ -188,7 +189,7 @@
                             <li class="services__cards-column services__cards-column--first">
                                 <article class="card-service">
                                     <div class="card-service__img">
-                                        <img src="/src/img/services/software.svg" alt="">
+                                        <img src="/services/software.svg" alt="">
                                     </div>
                                     <p class="card-service__title">VR Development</p>
                                     <div class="card-service__descript">From concept to creation, our team of VR developers will bring your vision to life.</div>
@@ -196,7 +197,7 @@
                                 </article>
                                 <article class="card-service">
                                     <div class="card-service__img">
-                                        <img src="/src/img/services/video-console.svg" alt="">
+                                        <img src="/services/video-console.svg" alt="">
                                     </div>
                                     <p class="card-service__title">VR Games</p>
                                     <div class="card-service__descript">We offer a wide selection of VR games that are suitable for players of all ages and skill levels.</div>
@@ -206,7 +207,7 @@
                             <li class="services__cards-column services__cards-column--second">
                                 <article class="card-service">
                                     <div class="card-service__img">
-                                        <img src="/src/img/services/design.svg" alt="">
+                                        <img src="/services/design.svg" alt="">
                                     </div>
                                     <p class="card-service__title">VR Design</p>
                                     <div class="card-service__descript">Our talented VR designers will create immersive and engaging environments that will captivate your audience.</div>
@@ -214,7 +215,7 @@
                                 </article>
                                 <article class="card-service">
                                     <div class="card-service__img">
-                                        <img src="/src/img/services/party.svg" alt="">
+                                        <img src="/services/party.svg" alt="">
                                     </div>
                                     <p class="card-service__title">VR Events</p>
                                     <div class="card-service__descript">Make your next event unforgettable with our VR event services.</div>
@@ -224,7 +225,7 @@
                             <li class="services__cards-column services__cards-column--third">
                                 <article class="card-service">
                                     <div class="card-service__img">
-                                        <img src="/src/img/services/review.svg" alt="">
+                                        <img src="/services/review.svg" alt="">
                                     </div>
                                     <p class="card-service__title">VR Consulting</p>
                                     <div class="card-service__descript">Our VR consultants will work with you to ensure that your VR experience meets your goals and exceeds your expectations.</div>
@@ -232,7 +233,7 @@
                                 </article>
                                 <article class="card-service">
                                     <div class="card-service__img">
-                                        <img src="/src/img/services/theatre.svg" alt="">
+                                        <img src="/services/theatre.svg" alt="">
                                     </div>
                                     <p class="card-service__title">VR Entertainment</p>
                                     <div class="card-service__descript">reate a VR escape room, or offer VR experiences at a theme park, we have the expertise and experience to make it happen.</div>
@@ -266,10 +267,10 @@
                         </div>
                         <div class="choouse-us__logo">
                             <span class="choouse-us__wrapper-img">
-                                <img src="/src/img/choouse-us/man-with-vr.svg" alt="A man in a virtual reality glasses">
+                                <img src="/choouse-us/man-with-vr.svg" alt="A man in a virtual reality glasses">
                             </span>
                             <div class="choouse-us__logo-video">
-                                <div class="preview-video preview-video--about"><img src="/src/img/choouse-us/video-player.svg" alt=""></div>
+                                <div class="preview-video preview-video--about"><img src="/choouse-us/video-player.svg" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -289,7 +290,7 @@
                                 <p class="player__subtitle">How to get started</p>
                             </div>
                             <button title="button" class="player__button-start"></button>
-                            <img src="/src/img/get-start/player-img.svg" alt="" class="player__poster">
+                            <img src="/get-start/player-img.svg" alt="" class="player__poster">
                             <!-- <video
                             id="my-video"
                             class="video-js"
@@ -313,7 +314,7 @@
                         </div>
                         <div class="testimonial__action">
                             <button class="testimonial-btn testimonial-btn--first active" name="button" data-testimonial-action>
-                                <img class="testimonial-btn__img" src="/src/img/testimonial/first.svg" alt="">
+                                <img class="testimonial-btn__img" src="/testimonial/first.svg" alt="">
                                 <span class="testimonial-btn__parent-shadow"></span>
                                 <span class="testimonial-btn__wrapper-info">
                                     <span class="testimonial-btn__info-block">
@@ -323,7 +324,7 @@
                                 </span>
                             </button>
                             <button class="testimonial-btn testimonial-btn--second" name="button" data-testimonial-action>
-                                <img class="testimonial-btn__img" src="/src/img/testimonial/second.svg" alt="">
+                                <img class="testimonial-btn__img" src="/testimonial/second.svg" alt="">
                                 <span class="testimonial-btn__parent-shadow"></span>
                                 <span class="testimonial-btn__wrapper-info">
                                     <span class="testimonial-btn__info-block">
@@ -333,7 +334,7 @@
                                 </span>
                             </button>
                             <button class="testimonial-btn testimonial-btn--third" name="button" data-testimonial-action>
-                                <img class="testimonial-btn__img" src="/src/img/testimonial/third.svg" alt="">
+                                <img class="testimonial-btn__img" src="/testimonial/third.svg" alt="">
                                 <span class="testimonial-btn__parent-shadow"></span>
                                 <span class="testimonial-btn__wrapper-info">
                                     <span class="testimonial-btn__info-block">
@@ -343,7 +344,7 @@
                                 </span>
                             </button>
                             <button class="testimonial-btn testimonial-btn--fourth" name="button" data-testimonial-action>
-                                <img class="testimonial-btn__img" src="/src/img/testimonial/fourth.svg" alt="">
+                                <img class="testimonial-btn__img" src="/testimonial/fourth.svg" alt="">
                                 <span class="testimonial-btn__parent-shadow"></span>
                                 <span class="testimonial-btn__wrapper-info">
                                     <span class="testimonial-btn__info-block">
@@ -353,7 +354,7 @@
                                 </span>
                             </button>
                             <button class="testimonial-btn testimonial-btn--fifth" name="button" data-testimonial-action>
-                                <img class="testimonial-btn__img" src="/src/img/testimonial/fifth.svg" alt="">
+                                <img class="testimonial-btn__img" src="/testimonial/fifth.svg" alt="">
                                 <span class="testimonial-btn__parent-shadow"></span>
                                 <span class="testimonial-btn__wrapper-info">
                                     <span class="testimonial-btn__info-block">
@@ -363,7 +364,7 @@
                                 </span>
                             </button>
                             <button class="testimonial-btn testimonial-btn--sixth" name="button" data-testimonial-action>
-                                <img class="testimonial-btn__img" src="/src/img/testimonial/sixth.svg" alt="">
+                                <img class="testimonial-btn__img" src="/testimonial/sixth.svg" alt="">
                                 <span class="testimonial-btn__parent-shadow"></span>
                                 <span class="testimonial-btn__wrapper-info">
                                     <span class="testimonial-btn__info-block">
@@ -374,7 +375,7 @@
                             </button>
     
                             <div class="testimonial__wrapper-img">
-                                <img class="testimonial__img" src="/src/img/testimonial/man-testimonial.svg"  alt="man-testimonial">
+                                <img class="testimonial__img" src="/testimonial/man-testimonial.svg"  alt="man-testimonial">
                             </div>
                         </div>
                     </div>
@@ -393,7 +394,7 @@
                                 <li class="pricing-policy-list__item">
                                     <article class="price-advantages">
                                         <div class="price-advantages__wrapper-icon">
-                                            <img src="/src/img/icons/price-icon.svg" alt="" class="price-advantages__icon">
+                                            <img src="/icons/price-icon.svg" alt="" class="price-advantages__icon">
                                         </div>
                                         <div class="price-advantages__description">
                                             <h6 class="price-advantages__title">Customizable Packages</h6>
@@ -404,7 +405,7 @@
                                 <li class="pricing-policy-list__item">
                                     <article class="price-advantages">
                                         <div class="price-advantages__wrapper-icon">
-                                            <img src="/src/img/icons/price-icon.svg" alt="" class="price-advantages__icon">
+                                            <img src="/icons/price-icon.svg" alt="" class="price-advantages__icon">
                                         </div>
                                         <div class="price-advantages__description">
                                             <h6 class="price-advantages__title">Flexible Payment Options</h6>
@@ -415,7 +416,7 @@
                                 <li class="pricing-policy-list__item">
                                     <article class="price-advantages">
                                         <div class="price-advantages__wrapper-icon">
-                                            <img src="/src/img/icons/price-icon.svg" alt="" class="price-advantages__icon">
+                                            <img src="/icons/price-icon.svg" alt="" class="price-advantages__icon">
                                         </div>
                                         <div class="price-advantages__description">
                                             <h6 class="price-advantages__title">Satisfaction Guarantee</h6>
@@ -425,7 +426,7 @@
                                 </li>
                             </ul>
                             <div class="price__logo">
-                                <img class="price__img" src="/src/img/price/man-price.svg" alt="">
+                                <img class="price__img" src="/price/man-price.svg" alt="">
                             </div>
                             <div class="start-price-card">
                                 <p class="start-price-card__title">Start from</p>
@@ -446,28 +447,28 @@
                         </div>
                         <div class="partners__logo">
                             <div class="partners__logo-ambassadors partners__logo-ambassadors--first">
-                                <img src="/src/img/partners/facebook.webp" alt="" class="partners__logo-ambassadors-img">
+                                <img src="/partners/facebook.webp" alt="" class="partners__logo-ambassadors-img">
                             </div>
                             <div class="partners__logo-ambassadors partners__logo-ambassadors--second">
-                                <img src="/src/img/partners/power.webp" alt="" class="partners__logo-ambassadors-img">
+                                <img src="/partners/power.webp" alt="" class="partners__logo-ambassadors-img">
                             </div>
                             <div class="partners__logo-ambassadors partners__logo-ambassadors--third">
-                                <img src="/src/img/partners/wazzup.webp" alt="" class="partners__logo-ambassadors-img">
+                                <img src="/partners/wazzup.webp" alt="" class="partners__logo-ambassadors-img">
                             </div>
                             <div class="partners__logo-ambassadors partners__logo-ambassadors--fourth">
-                                <img src="/src/img/partners/insta.webp" alt="" class="partners__logo-ambassadors-img">
+                                <img src="/partners/insta.webp" alt="" class="partners__logo-ambassadors-img">
                             </div>
                             <div class="partners__logo-ambassadors partners__logo-ambassadors--fifth">
-                                <img src="/src/img/partners/mailchimp.webp" alt="" class="partners__logo-ambassadors-img">
+                                <img src="/partners/mailchimp.webp" alt="" class="partners__logo-ambassadors-img">
                             </div>
                             <div class="partners__logo-ambassadors partners__logo-ambassadors--sixth">
-                                <img src="/src/img/partners/pulse.webp" alt="" class="partners__logo-ambassadors-img">
+                                <img src="/partners/pulse.webp" alt="" class="partners__logo-ambassadors-img">
                             </div>
                             <div class="partners__logo-ambassadors partners__logo-ambassadors--seventh">
-                                <img src="/src/img/partners/unisender.webp" alt="" class="partners__logo-ambassadors-img">
+                                <img src="/partners/unisender.webp" alt="" class="partners__logo-ambassadors-img">
                             </div>
                             <div class="partners__wrapper-img">
-                                <img class="partners__img" src="/src/img/partners/man-vr-circles.svg"  alt="man-vr">
+                                <img class="partners__img" src="/partners/man-vr-circles.svg"  alt="man-vr">
                             </div>
                         </div>
                     </div>
@@ -547,7 +548,7 @@
                                     <li class="product-list__item">
                                         <div class="product">
                                             <div class="product__wrapper-img">
-                                                <img src="/src/img/articles/vr-edication.svg" class="product__img" alt="">
+                                                <img src="/articles/vr-edication.svg" class="product__img" alt="">
                                             </div>
                                             <div class="product__wrapper-text">
                                                 <p class="product__title">VR Education</p>
@@ -561,7 +562,7 @@
                                     <li class="product-list__item">
                                         <div class="product">
                                             <div class="product__wrapper-img">
-                                                <img src="/src/img/articles/hand-vr.svg" class="product__img" alt="">
+                                                <img src="/articles/hand-vr.svg" class="product__img" alt="">
                                             </div>
                                             <div class="product__wrapper-text">
                                                 <p class="product__title">VR Architecture</p>
@@ -575,7 +576,7 @@
                                     <li class="product-list__item">
                                         <div class="product">
                                             <div class="product__wrapper-img">
-                                                <img src="/src/img/articles/vr-entertainment.svg" class="product__img" alt="">
+                                                <img src="/articles/vr-entertainment.svg" class="product__img" alt="">
                                             </div>
                                             <div class="product__wrapper-text">
                                                 <p class="product__title">VR Entertainment</p>
@@ -589,7 +590,7 @@
                                     <li class="product-list__item">
                                         <div class="product">
                                             <div class="product__wrapper-img">
-                                                <img src="/src/img/articles/vr-event.svg" class="product__img" alt="">
+                                                <img src="/articles/vr-event.svg" class="product__img" alt="">
                                             </div>
                                             <div class="product__wrapper-text">
                                                 <p class="product__title">VR Event</p>
@@ -603,7 +604,7 @@
                                     <li class="product-list__item">
                                         <div class="product">
                                             <div class="product__wrapper-img">
-                                                <img src="/src/img/articles/vr-games-1.svg" class="product__img" alt="">
+                                                <img src="/articles/vr-games-1.svg" class="product__img" alt="">
                                             </div>
                                             <div class="product__wrapper-text">
                                                 <p class="product__title">VR Games</p>
@@ -617,7 +618,7 @@
                                     <li class="product-list__item">
                                         <div class="product">
                                             <div class="product__wrapper-img">
-                                                <img src="/src/img/articles/vr-games-2.svg" class="product__img" alt="">
+                                                <img src="/articles/vr-games-2.svg" class="product__img" alt="">
                                             </div>
                                             <div class="product__wrapper-text">
                                                 <p class="product__title">VR Games</p>
@@ -631,7 +632,7 @@
                                     <li class="product-list__item">
                                         <div class="product">
                                             <div class="product__wrapper-img">
-                                                <img src="/src/img/articles/vr-games-3.svg" class="product__img" alt="">
+                                                <img src="/articles/vr-games-3.svg" class="product__img" alt="">
                                             </div>
                                             <div class="product__wrapper-text">
                                                 <p class="product__title">VR Games</p>
@@ -645,7 +646,7 @@
                                     <li class="product-list__item">
                                         <div class="product">
                                             <div class="product__wrapper-img">
-                                                <img src="/src/img/articles/vr-games-4.svg" class="product__img" alt="">
+                                                <img src="/articles/vr-games-4.svg" class="product__img" alt="">
                                             </div>
                                             <div class="product__wrapper-text">
                                                 <p class="product__title">VR Games</p>
@@ -659,7 +660,7 @@
                                     <li class="product-list__item">
                                         <div class="product">
                                             <div class="product__wrapper-img">
-                                                <img src="/src/img/articles/vr-games-5.svg" class="product__img" alt="">
+                                                <img src="/articles/vr-games-5.svg" class="product__img" alt="">
                                             </div>
                                             <div class="product__wrapper-text">
                                                 <p class="product__title">VR Games</p>
@@ -692,33 +693,33 @@
             </section>
     </main>
     <footer class="footer">
-        <img class="background-wave-bottom" src="/src/img/icons/wave-footer.svg" alt="">
+        <img class="background-wave-bottom" src="/icons/wave-footer.svg" alt="">
         <div class="container">
             <div class="footer__content">
                 <ul class="footer-lists">
                     <li class="footer-lists__item footer-lists__item--social">
                         <a href="#!" class="logo">
-                            <img class="logo__img" src="../img/logo.svg" alt="VRNas logotype">
+                            <img class="logo__img" src="/logo.svg" alt="VRNas logotype">
                         </a>
                         <ul class="social-list">
                             <li class="social-list__item">
                                 <a href="" class="social-link">
-                                    <img src="/src/img/icons/x.svg" alt="">
+                                    <img src="/icons/x.svg" alt="">
                                 </a>
                             </li>
                             <li class="social-list__item">
                                 <a href="" class="social-link">
-                                    <img src="/src/img/icons/f.svg" alt="">
+                                    <img src="/icons/f.svg" alt="">
                                 </a>
                             </li>
                             <li class="social-list__item">
                                 <a href="" class="social-link">
-                                    <img src="/src/img/icons/insta.svg" alt="">
+                                    <img src="/icons/insta.svg" alt="">
                                 </a>
                             </li>
                             <li class="social-list__item">
                                 <a href="" class="social-link">
-                                    <img src="/src/img/icons/github.svg" alt="">
+                                    <img src="/icons/github.svg" alt="">
                                 </a>
                             </li>
                         </ul>

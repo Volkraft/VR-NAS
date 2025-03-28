@@ -1,169 +1,169 @@
-@import "/src/common/common-style/vars.scss";
+@use "/src/common/common-style/vars.scss" as *;
 .preview {
-    overflow: hidden;
-    position: relative;
-    padding-top: 114px;
+  overflow: hidden;
+  position: relative;
+  padding-top: 114px;
 
+  @media (max-width: 768px) {
+    height: 1015px;
+  }
+  @media (max-width: 425px) {
+    height: 1080px;
+  }
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 1220px) {
+      align-items: center;
+    }
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 75px;
+    }
+  }
+  .hero {
+    padding-top: 75px;
+    max-width: 540px;
+    margin-bottom: 42px;
+
+    @media (max-width: 1220px) {
+      max-width: 500px;
+    }
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+
+    .main-title {
+      margin-bottom: 12px;
+    }
+    .main-text {
+      margin-bottom: 29px;
+      max-width: 450px;
+    }
+  }
+
+  .preview__avatar {
+    z-index: -1;
+    height: 620px;
+    position: relative;
+    backface-visibility: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      z-index: -1;
+      top: 60%;
+      left: 50%;
+      width: 100%;
+      height: 50%;
+      background: -o-linear-gradient(
+        351.46deg,
+        rgba(28, 196, 249, 0.8) 0.72%,
+        rgba(254, 105, 254, 0.8) 90.69%
+      );
+      background: linear-gradient(
+        98.54deg,
+        rgba(28, 196, 249, 0.8) 0.72%,
+        rgba(254, 105, 254, 0.8) 90.69%
+      );
+      -webkit-filter: blur(105px);
+      filter: blur(105px);
+      border-radius: 88% 12% 88% 12% / 20% 37% 63% 80%;
+      transform: translate(-50%, -50%) rotate(-30deg);
+    }
+    @media (max-width: 1220px) {
+      height: 544px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
     @media (max-width: 768px) {
-        height: 1015px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 354px;
+      height: 422px;
     }
     @media (max-width: 425px) {
-        height: 1080px;
+      right: -38%;
     }
-    &__content {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        @media (max-width: 1220px) {
-            align-items: center;
-        }
-        @media (max-width: 1024px) {
-            flex-direction: column;
-            gap: 75px;
-        }
-    }
-    .hero {
-        padding-top: 75px;
-        max-width: 540px;
-        margin-bottom: 42px;
-
-        @media (max-width: 1220px) {
-            max-width: 500px;
-        }
-        @media (max-width: 1024px) {
-            max-width: 100%;
-        }
-
-        .main-title {
-            margin-bottom: 12px;
-        }
-        .main-text {
-            margin-bottom: 29px;
-            max-width: 450px;
-        }
-    }
-
-    .preview__avatar {
-        z-index: -1;
-        height: 620px;
-        position: relative;
-        backface-visibility: hidden;
-        &::before {
-            content: "";
-            position: absolute;
-            display: block;
-            z-index: -1;
-            top: 60%;
-            left: 50%;
-            width: 100%;
-            height: 50%;
-            background: -o-linear-gradient(
-                351.46deg,
-                rgba(28, 196, 249, 0.8) 0.72%,
-                rgba(254, 105, 254, 0.8) 90.69%
-            );
-            background: linear-gradient(
-                98.54deg,
-                rgba(28, 196, 249, 0.8) 0.72%,
-                rgba(254, 105, 254, 0.8) 90.69%
-            );
-            -webkit-filter: blur(105px);
-            filter: blur(105px);
-            border-radius: 88% 12% 88% 12% / 20% 37% 63% 80%;
-            transform: translate(-50%, -50%) rotate(-30deg);
-        }
-        @media (max-width: 1220px) {
-            height: 544px;
-
-            img {
-                height: 100%;
-                width: 100%;
-                object-fit: contain;
-            }
-        }
-        @media (max-width: 768px) {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 354px;
-            height: 422px;
-        }
-        @media (max-width: 425px) {
-            right: -38%;
-        }
-    }
+  }
 }
 
 .reviews {
-    display: flex;
-    column-gap: 75px;
+  display: flex;
+  column-gap: 75px;
 
-    @media (max-width: 1220px) {
-        justify-content: space-between;
-        column-gap: normal;
-    }
-    @media (max-width: 1024px) {
-        column-gap: 75px;
-        justify-content: normal;
-    }
-    @media (max-width: 768px) {
-        flex-direction: column;
-        row-gap: 145px;
-    }
+  @media (max-width: 1220px) {
+    justify-content: space-between;
+    column-gap: normal;
+  }
+  @media (max-width: 1024px) {
+    column-gap: 75px;
+    justify-content: normal;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    row-gap: 145px;
+  }
 }
 .reviews__clients {
-    display: flex;
-    column-gap: 15px;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+  text-align: center;
 }
 .reviews__clients-list {
-    position: relative;
-    flex-shrink: 0;
-    width: 130px;
-    height: 51px;
+  position: relative;
+  flex-shrink: 0;
+  width: 130px;
+  height: 51px;
 
-    .reviews__clients-list-logo {
-        position: absolute;
-        transform: translateY(-50%);
-        top: 50%;
+  .reviews__clients-list-logo {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
 
-        &--client1 {
-            left: 0;
-        }
-        &--client2 {
-            left: 30%;
-        }
-        &--client3 {
-            left: 60%;
-        }
+    &--client1 {
+      left: 0;
     }
+    &--client2 {
+      left: 30%;
+    }
+    &--client3 {
+      left: 60%;
+    }
+  }
 }
 .reviews__clients-counter {
-    flex-shrink: 0;
-    font-family: "Chakra Petch", sans-serif;
-    font-size: 16px;
-    font-weight: 200;
-    color: $grey2;
+  flex-shrink: 0;
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  color: $grey2;
 }
 
 .reviews__quantity {
-    position: relative;
-    color: $white;
-    font-weight: 600;
+  position: relative;
+  color: $white;
+  font-weight: 600;
 
-    &::before {
-        content: "";
-        position: absolute;
-        bottom: -15%;
-        left: -20%;
-        width: 48px;
-        height: 7px;
-        background-image: url(/src/img/preview/stick.svg);
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -15%;
+    left: -20%;
+    width: 48px;
+    height: 7px;
+    background-image: url(/preview/stick.svg);
+  }
 }
 
 .reviews__clients-video {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }

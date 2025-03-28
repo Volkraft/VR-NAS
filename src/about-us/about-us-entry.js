@@ -1,4 +1,4 @@
-import "./about-us.html";
+import "normalize.css";
 
 import "../common/common-style/common-style.scss";
 import "./about-us-style/about-us.scss";
