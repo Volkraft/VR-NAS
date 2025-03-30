@@ -1,4 +1,4 @@
-@import "/src/common/common-style/vars.scss";
+@use "/src/common/common-style/vars.scss" as *;
 
 .plans {
   margin-bottom: 175px;
@@ -89,7 +89,7 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url(/src/img/price-page/circle.svg);
+    background-image: url(/price-page/circle.svg);
     width: 20px;
     height: 20px;
     left: -2px;

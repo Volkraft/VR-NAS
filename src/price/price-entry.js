@@ -1,4 +1,4 @@
-import "./price.html";
+import "normalize.css";
 
 import "../common/common-style/common-style.scss";
 import "./price-style/plans.scss";
