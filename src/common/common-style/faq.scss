@@ -1,6 +1,8 @@
 @use '/src/common/common-style/vars.scss' as *;
 
 .faq {
+    padding-top: 100px;
+    overflow: hidden;
     margin-bottom: 150px;
 }
 .faq__content {
@@ -14,10 +16,10 @@
         content: '';
         position: absolute;
         display: block;
-        top: 33%;
+        top: 42%;
         right: -52%;
-        width: 50%;
-        height: 25%;
+        width: 290px;
+        height: 190px;
         background: linear-gradient(90deg, #19b5f1, #ca6aeb);
         filter: blur(100px);
         transform: translate(-55%, -60%) rotate(-40deg);
