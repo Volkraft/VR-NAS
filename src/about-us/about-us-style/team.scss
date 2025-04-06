@@ -15,16 +15,47 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media (max-width: 768px) {
+            text-align: center;
+            align-items: center;
+            .link-other-page-empty {
+                display: none;
+            }
+        }
     }
 
     &__text {
+        @media (max-width: 768px) {
+            margin: 0 auto;
+
+            .context-subtitle {
+                font-size: 32px;
+            }
+        }
     }
 
     &__cards {
+        .link-other-page-empty {
+            display: none;
+
+            @media (max-width: 768px) {
+                display: block;
+                max-width: 150px;
+                margin: 0 auto;
+            }
+        }
     }
     &__cards-list {
         display: flex;
-        column-gap: 10px;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: 1200px) {
+            margin-bottom: 32px;
+            gap: 24px;
+        }
     }
     &__card {
         cursor: pointer;
