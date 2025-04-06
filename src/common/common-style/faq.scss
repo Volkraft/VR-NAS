@@ -1,96 +1,96 @@
-@use "/src/common/common-style/vars.scss" as *;
+@use '/src/common/common-style/vars.scss' as *;
 
 .faq {
-  margin-bottom: 150px;
+    margin-bottom: 150px;
 }
 .faq__content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  max-width: 800px;
-  margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
 
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: 33%;
-    right: -52%;
-    width: 50%;
-    height: 25%;
-    background: linear-gradient(90deg, #19b5f1, #ca6aeb);
-    filter: blur(100px);
-    transform: translate(-55%, -60%) rotate(-40deg);
-    z-index: -1;
-  }
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 33%;
+        right: -52%;
+        width: 50%;
+        height: 25%;
+        background: linear-gradient(90deg, #19b5f1, #ca6aeb);
+        filter: blur(100px);
+        transform: translate(-55%, -60%) rotate(-40deg);
+        z-index: -1;
+    }
 }
 .partners__header {
-  text-align: center;
+    text-align: center;
 
-  .context-subtitle {
-    margin-bottom: 24px;
-  }
+    .context-subtitle {
+        margin-bottom: 24px;
+    }
 }
 .partners__info {
 }
 .faqList {
 }
 .faq__point {
-  background-color: $black50;
-  border-width: 1px;
-  border-style: solid;
-  border-image: linear-gradient(90deg, #323233 0%, $black100 100%);
-  border-image-slice: 1;
-  padding: 24px 32px;
-  margin-bottom: 24px;
-  transition: 0.5s;
-  cursor: pointer;
-
-  &.active {
+    background-color: $black50;
     border-width: 1px;
     border-style: solid;
-    border-image: $linear;
+    border-image: linear-gradient(90deg, #323233 0%, $black100 100%);
     border-image-slice: 1;
+    padding: 24px 32px;
+    margin-bottom: 24px;
+    transition: 0.5s;
+    cursor: pointer;
 
-    .faq__point-decrpit {
-      height: 85px;
+    &.active {
+        border-width: 1px;
+        border-style: solid;
+        border-image: $linear;
+        border-image-slice: 1;
 
-      @media (max-width: 600px) {
-        height: 210px;
-      }
-    }
-    .faq__point-title {
-      border-bottom: $grey1 1px solid;
-      padding-bottom: 10px;
-      margin-bottom: 15px;
-    }
+        .faq__point-decrpit {
+            height: 85px;
 
-    .faq__point-title::after {
-      transition: all 0.5s ease 0s;
-      transform: rotateX(180deg);
+            @media (max-width: 600px) {
+                height: 210px;
+            }
+        }
+        .faq__point-title {
+            border-bottom: $grey1 1px solid;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .faq__point-title::after {
+            transition: all 0.5s ease 0s;
+            transform: rotateX(180deg);
+        }
     }
-  }
 }
 .faq__point-title {
-  transition: all 0.5s ease 0s;
-  position: relative;
-  font-weight: 400;
-  font-size: 20px;
-  &::after {
-    content: "";
-    background-image: url(/icons/arrow-link.svg);
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    top: 0;
-    right: 0;
     transition: all 0.5s ease 0s;
-  }
+    position: relative;
+    font-weight: 400;
+    font-size: 20px;
+    &::after {
+        content: '';
+        background-image: url(/icons/arrow-link.svg);
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        top: 0;
+        right: 0;
+        transition: all 0.5s ease 0s;
+    }
 }
 .faq__point-decrpit {
-  color: $grey2;
-  line-height: 27px;
-  height: 0;
-  overflow: hidden;
-  transition: 0.5s;
+    color: $grey2;
+    line-height: 27px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
 }

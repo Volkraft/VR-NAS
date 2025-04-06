@@ -1,14 +1,14 @@
-import "normalize.css";
-import "../common/common-style/common-style.scss";
-import "./homepage-style/preview.scss";
-import "./homepage-style/about-us.scss";
-import "./homepage-style/get-start.scss";
-import "./homepage-style/articles.scss";
-import "./homepage-style/product-list.scss";
-import "./homepage-style/my-slide.scss";
+import 'normalize.css'
+import '../common/common-style/common-style.scss'
+import './homepage-style/preview.scss'
+import './homepage-style/about-us.scss'
+import './homepage-style/get-start.scss'
+import './homepage-style/articles.scss'
+import './homepage-style/product-list.scss'
+import './homepage-style/my-slide.scss'
 
-import "../common/common-scripts/accordeon.js";
-import "../common/common-scripts/header.js";
-import "./homepage-script/testimonial-btn.js";
-import "./homepage-script/init-slider.js";
-import "../common/common-scripts/scrollList.js";
+import '../common/common-scripts/accordeon.js'
+import '../common/common-scripts/header.js'
+import './homepage-script/testimonial-btn.js'
+import './homepage-script/init-slider.js'
+import '../common/common-scripts/scrollList.js'
