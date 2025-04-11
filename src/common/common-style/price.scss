@@ -8,6 +8,9 @@
 
     &__info {
         margin-bottom: 40px;
+        &--design {
+            text-align: center;
+        }
         .context-subtitle {
             margin-bottom: 16px;
 
@@ -17,6 +20,8 @@
         }
         .main-text {
             max-width: 625px;
+            text-align: center;
+            margin: 0 auto;
         }
     }
 
