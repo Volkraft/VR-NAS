@@ -19,15 +19,26 @@
             filter: blur(77px);
             z-index: -1;
         }
+        @media (max-width: 955px) {
+            &::after {
+                height: 10%;
+            }
+        }
     }
 
     &__list {
+        max-width: 913px;
+        margin: 0 auto;
         position: relative;
         display: flex;
-        justify-content: center;
-        flex-direction: row;
+        justify-content: space-between;
         text-align: center;
-        column-gap: 200px;
+        gap: 40px;
+        flex-wrap: wrap;
+        align-items: center;
+        @media (max-width: 955px) {
+            flex-direction: column;
+        }
     }
 
     &__item {
