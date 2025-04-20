@@ -1,5 +1,4 @@
 import styles from '../homepage-style/slider.module.css'
-// import Creator from '../../detail/detail-script/creator.js'
 export default class Slider {
     constructor(htmlEl) {
         this.slider = htmlEl
