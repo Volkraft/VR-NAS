@@ -11,27 +11,101 @@
 }
 
 .slideTitle {
+    display: inline-block;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    background: linear-gradient(90deg, #0cbaf1, #fe69fe);
+    color: transparent;
+    background-clip: text;
+    letter-spacing: 2.5px;
+    margin-bottom: 12px;
 }
 
 .slideSubtitle {
+    font-family: 'Chakra Petch', sans-serif;
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.21;
+    margin-bottom: 16px;
 }
 
 .slideDescription {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 300;
+    line-height: 1.75;
+    font-size: 16px;
+    color: #d1d1d1;
+}
+.slideDescriptionFirst {
+    margin-bottom: 40px;
+}
+.slideDescriptionSecond {
+    margin-bottom: 54px;
+}
+.slideDescriptionThird {
+    margin-bottom: 40px;
+}
+.slideDescriptionFourth {
+    margin-bottom: 32px;
 }
 
 .slideArticle {
 }
 
 .slideArticleTitle {
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    margin-bottom: 24px;
 }
 
 .slideArticleList {
 }
 
 .slideArticleListItem {
+    color: #ffffff;
+    font-family: 'Chakra Petch', sans-serif;
+    margin-bottom: 14px;
+    background-image: url(/icons/check-mark.svg);
+    padding-left: 25px;
+    background-repeat: no-repeat;
 }
 
 .slideBtn {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    background: linear-gradient(90deg, #0cbaf1, #fe69fe);
+    padding: 17px 38px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.slideBtn span {
+    position: relative;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.slideBtn span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    inset: -5px;
+    transform: translate(8px, 5px);
+    z-index: -1;
+    background: linear-gradient(90deg, #0cbaf1, #fe69fe);
+    filter: blur(20px);
+    transition: 0.4s;
+    opacity: 0;
+}
+.slideBtn span:hover::before {
+    opacity: 1;
 }
 
 .slideBtnTitle {

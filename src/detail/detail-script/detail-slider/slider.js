@@ -1,5 +1,6 @@
 import data from './data-slider.js'
 import Creator from '../creator.js'
+import styles from '../../detail-style/slider.module.css'
 import {
     sliderParams,
     wrapperHiddenParams,
@@ -59,6 +60,9 @@ export default class Slider {
                 const slideDescriptionFirst = new Creator(
                     slideDescriptionParams
                 )
+                slideDescriptionFirst
+                    .getElement()
+                    .classList.add(styles.slideDescriptionFirst)
                 slide.getElement().append(slideDescriptionFirst.getElement())
             }
             if (item.descriptionSecond) {
@@ -66,6 +70,9 @@ export default class Slider {
                 const slideDescriptionSecond = new Creator(
                     slideDescriptionParams
                 )
+                slideDescriptionSecond
+                    .getElement()
+                    .classList.add(styles.slideDescriptionSecond)
                 slide.getElement().append(slideDescriptionSecond.getElement())
             }
             if (item.list) {
@@ -92,6 +99,9 @@ export default class Slider {
                 const slideDescriptionThird = new Creator(
                     slideDescriptionParams
                 )
+                slideDescriptionThird
+                    .getElement()
+                    .classList.add(styles.slideDescriptionThird)
                 slide.getElement().append(slideDescriptionThird.getElement())
             }
             if (item.descriptionFourth) {
@@ -99,6 +109,9 @@ export default class Slider {
                 const slideDescriptionFourth = new Creator(
                     slideDescriptionParams
                 )
+                slideDescriptionFourth
+                    .getElement()
+                    .classList.add(styles.slideDescriptionFourth)
                 slide.getElement().append(slideDescriptionFourth.getElement())
             }
             if (item.btn) {
