@@ -1,4 +1,4 @@
-import styles from './slider.module.css'
+import styles from '../../detail-style/slider.module.css'
 const sliderParams = {
     tagName: 'div',
     styles: styles.slider,
@@ -42,6 +42,7 @@ const slideArticleParams = {
 const slideArticleTitleParams = {
     tagName: 'h3',
     styles: styles.slideArticleTitle,
+    text: '',
 }
 
 const slideArticleListParams = {
@@ -62,19 +63,24 @@ const slideBtnParams = {
 const slideBtnTitleParams = {
     tagName: 'span',
     styles: styles.slideBtnTitle,
+    text: 'Contact us',
 }
 
 const listPaginationParams = {
     tagName: 'ul',
     styles: styles.listPagination,
 }
-const paginationBtnParams = {
+const paginationItemParams = {
     tagName: 'li',
-    styles: styles.paginationBtn,
+    styles: styles.paginationItem,
 }
 
-const activeBtnParams = {
-    tagName: 'li',
+const paginationBtnParams = {
+    tagName: 'button',
+    styles: styles.paginationBtn,
+}
+const paginationBtnActiveParams = {
+    tagName: 'button',
     styles: styles.paginationBtnActive,
 }
 
@@ -108,8 +114,9 @@ export {
     slideBtnParams,
     slideBtnTitleParams,
     listPaginationParams,
+    paginationItemParams,
     paginationBtnParams,
-    activeBtnParams,
+    paginationBtnActiveParams,
     wrapperArrowsParams,
     arrowLeftParams,
     arrowRightParams,
