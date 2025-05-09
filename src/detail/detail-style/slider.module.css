@@ -1,16 +1,26 @@
 .slider {
+    width: 627px;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 .wrapperHidden {
 }
 
 .sliderTrack {
+    display: flex;
 }
 
 .slide {
+    display: flex;
+    min-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .slideTitle {
+    text-transform: uppercase;
     display: inline-block;
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 400;
@@ -52,6 +62,13 @@
 }
 
 .slideArticle {
+    margin-bottom: 32px;
+    padding: 30px 59px 35px 32px;
+    background-color: rgba(37, 37, 50, 0.623);
+    border-image: linear-gradient(90deg, #636366 0%, #18181b 100%);
+    border-width: 1px;
+    border-style: solid;
+    border-image-slice: 1;
 }
 
 .slideArticleTitle {
@@ -114,7 +131,47 @@
 .listPagination {
 }
 
+.listPagination > li {
+    position: absolute;
+}
+.listPagination > li:first-child {
+    top: 97%;
+    left: 18%;
+}
+.listPagination > li:last-child {
+    top: 97%;
+    right: 18%;
+}
+
 .paginationBtn {
+    color: #ffffff;
+    cursor: pointer;
+    width: 102px;
+    height: 102px;
+    font-size: 14px;
+    position: absolute;
+    background-color: transparent;
+    z-index: 6;
+    border: none;
+    background-color: rgba(37, 37, 50, 0.801);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+.paginationBtn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 105%;
+    height: 109%;
+    z-index: -1;
+    border: none;
+    background-image: url(/testimonial/gradient.svg);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .paginationBtnActive {
