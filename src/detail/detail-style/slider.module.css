@@ -133,21 +133,43 @@
 
 .listPagination > li {
     position: absolute;
+    width: 102px;
+    height: 102px;
 }
 .listPagination > li:first-child {
     top: 97%;
-    left: 18%;
+    left: 19%;
+}
+.listPagination > li:nth-child(2) {
+    top: 75%;
+    left: 22.5%;
+}
+.listPagination > li:nth-child(3) {
+    top: 56%;
+    left: 31%;
+}
+.listPagination > li:nth-child(4) {
+    top: 47%;
+    left: 47%;
+}
+.listPagination > li:nth-child(5) {
+    top: 56%;
+    right: 31%;
+}
+.listPagination > li:nth-child(6) {
+    top: 75%;
+    right: 22.5%;
 }
 .listPagination > li:last-child {
     top: 97%;
-    right: 18%;
+    right: 19%;
 }
 
 .paginationBtn {
     color: #ffffff;
     cursor: pointer;
-    width: 102px;
-    height: 102px;
+    width: inherit;
+    height: inherit;
     font-size: 14px;
     position: absolute;
     background-color: transparent;
@@ -156,6 +178,7 @@
     background-color: rgba(37, 37, 50, 0.801);
     transition: 0.4s;
     border-radius: 50%;
+    overflow: hidden;
 }
 .paginationBtn::before {
     content: '';
@@ -163,8 +186,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 105%;
-    height: 109%;
+    width: 107%;
+    height: 111%;
     z-index: -1;
     border: none;
     background-image: url(/testimonial/gradient.svg);
@@ -173,10 +196,27 @@
     background-position: center;
     background-size: cover;
 }
-
-.paginationBtnActive {
+.paginationBtn::after {
+    transition: opacity 0.4s;
+    opacity: 0;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 107%;
+    height: 111%;
+    z-index: -1;
+    border: none;
+    background-image: url(/testimonial/gradient-linear.svg);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-
+.paginationBtn:hover::after {
+    opacity: 1;
+}
 .wrapperArrows {
 }
 
