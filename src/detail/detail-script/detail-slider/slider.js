@@ -32,6 +32,7 @@ export default class Slider {
         this.creatorSlide()
         this.creatorPagination()
         this.creatorArrows()
+        this.handlerAction()
     }
 
     creatorElements() {
@@ -146,6 +147,11 @@ export default class Slider {
         const arrowRight = new Creator(arrowRightParams)
         wrapperArrows.getElement().append(arrowLeft.getElement())
         wrapperArrows.getElement().append(arrowRight.getElement())
+    }
+    handlerAction() {
+        this.slider.getElement().addEventListener('click', (e) => {
+            console.log(e)
+        })
     }
 }
 

@@ -218,10 +218,35 @@
     opacity: 1;
 }
 .wrapperArrows {
+    display: flex;
+    gap: 55px;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .arrowLeft {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    background-image: url(/icons/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transform: rotate(180deg);
+    cursor: pointer;
 }
 
 .arrowRight {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    background-image: url(/icons/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
 }
