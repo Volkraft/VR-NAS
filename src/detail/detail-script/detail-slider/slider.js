@@ -33,6 +33,7 @@ export default class Slider {
         this.creatorPagination()
         this.creatorArrows()
         this.handlerAction()
+        this.numberCurrentSlides = 0
     }
 
     creatorElements() {
@@ -150,8 +151,25 @@ export default class Slider {
     }
     handlerAction() {
         this.slider.getElement().addEventListener('click', (e) => {
-            console.log(e)
+            if (e.target.tagName == 'BUTTON') {
+                const btnText = e.target.textContent
+                this.data.forEach((element) => {
+                    if (element.subtitle == btnText) {
+                        console.log(element.id)
+                        this.motion()
+                    }
+                })
+            }
         })
+    }
+    // ToDO
+    motion = () => {
+        const currentMove = this.storageWidth * this.numberCurrentSlides
+        console.log(currentMove)
+        console.log(this.sliderTrack)
+
+        this.sliderTrack.style.transform = `translateX(-${currentMove}px)`
+        this.btnControllStyle()
     }
 }
 
