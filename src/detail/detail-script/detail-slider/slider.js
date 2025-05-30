@@ -1,27 +1,27 @@
-import data from './data-slider.js'
-import Creator from '../creator.js'
 import styles from '../../detail-style/slider.module.css'
+import Creator from '../creator.js'
+import data from './data-slider.js'
 import {
-    sliderParams,
-    wrapperHiddenParams,
-    sliderTrackParams,
-    slideParams,
-    slideTitleParams,
-    slideSubtitleParams,
-    slideDescriptionParams,
-    slideArticleParams,
-    slideArticleTitleParams,
-    slideArticleListParams,
-    slideArticleListItemParams,
-    slideBtnParams,
-    slideBtnTitleParams,
-    listPaginationParams,
-    paginationItemParams,
-    paginationBtnParams,
-    // paginationBtnActiveParams,
-    wrapperArrowsParams,
     arrowLeftParams,
     arrowRightParams,
+    listPaginationParams,
+    // paginationBtnActiveParams,
+    paginationBtnParams,
+    paginationItemParams,
+    slideArticleListItemParams,
+    slideArticleListParams,
+    slideArticleParams,
+    slideArticleTitleParams,
+    slideBtnParams,
+    slideBtnTitleParams,
+    slideDescriptionParams,
+    slideParams,
+    sliderParams,
+    sliderTrackParams,
+    slideSubtitleParams,
+    slideTitleParams,
+    wrapperArrowsParams,
+    wrapperHiddenParams,
 } from './slider-Params.js'
 export default class Slider {
     sliderTrack = null
@@ -136,6 +136,7 @@ export default class Slider {
             listPagination.getElement().append(paginationItem.getElement())
             const paginationBtn = new Creator(paginationBtnParams)
             paginationItem.getElement().append(paginationBtn.getElement())
+
             if (item.subtitle) {
                 paginationBtn.getElement().textContent = item.subtitle
             }
@@ -152,24 +153,32 @@ export default class Slider {
     handlerAction() {
         this.slider.getElement().addEventListener('click', (e) => {
             if (e.target.tagName == 'BUTTON') {
-                const btnText = e.target.textContent
+                const buttons = document.querySelectorAll('li > button')
+                buttons.forEach((item) => {
+                    item.classList.remove(styles.active)
+                })
+                e.target.classList.add(styles.active)
+                let btnText = e.target.textContent
                 this.data.forEach((element) => {
                     if (element.subtitle == btnText) {
-                        console.log(element.id)
-                        this.motion()
+                        this.motion(element.id)
                     }
                 })
             }
         })
     }
     // ToDO
-    motion = () => {
-        const currentMove = this.storageWidth * this.numberCurrentSlides
-        console.log(currentMove)
-        console.log(this.sliderTrack)
-
-        this.sliderTrack.style.transform = `translateX(-${currentMove}px)`
-        this.btnControllStyle()
+    motion = (id) => {
+        const slider = this.sliderTrack.getElement().getElementsByTagName('div')
+        for (let i = 0; i < slider.length; i++) {
+            slider[i].style.order = '1'
+            slider[i].style.opacity = '0'
+            if (i == id) {
+                slider[i].style.order = '0'
+                slider[i].style.transition = 'opacity 3s ease'
+                slider[i].style.opacity = '1'
+            }
+        }
     }
 }
 

@@ -217,6 +217,11 @@
 .paginationBtn:hover::after {
     opacity: 1;
 }
+
+.active::after {
+    opacity: 1;
+}
+
 .wrapperArrows {
     display: flex;
     gap: 55px;
