@@ -2,6 +2,12 @@
     width: 627px;
     overflow: hidden;
     margin: 0 auto;
+
+    @media (max-width: 768px) {
+        width: 90%;
+        margin: 0 auto;
+        /* position: relative; */
+    }
 }
 
 .wrapperHidden {
@@ -129,6 +135,9 @@
 }
 
 .listPagination {
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 
 .listPagination > li {
@@ -223,12 +232,17 @@
 }
 
 .wrapperArrows {
-    display: flex;
     gap: 55px;
     position: absolute;
     top: 64%;
     left: 50%;
     transform: translateX(-50%);
+    display: none;
+
+    @media (max-width: 768px) {
+        display: flex;
+        top: 48%;
+    }
 }
 
 .arrowLeft {

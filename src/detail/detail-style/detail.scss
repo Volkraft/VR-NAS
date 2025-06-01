@@ -47,6 +47,16 @@
     padding-top: 300px;
     background-image: url(/public/detail-page/circles.svg);
     background-repeat: no-repeat;
-    background-size: 65%;
+    background-size: 75%;
+    // background-size: 100%;
+    // background-size: 100vh;
     background-position: center 15%;
+
+    @media (max-width: 1140px) {
+        background-size: 150%;
+    }
+
+    @media (max-width: 768px) {
+        background-size: 350%;
+    }
 }

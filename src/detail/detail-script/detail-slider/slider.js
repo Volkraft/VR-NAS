@@ -34,6 +34,7 @@ export default class Slider {
         this.creatorArrows()
         this.handlerAction()
         this.numberCurrentSlides = 0
+        this.countSlide = 0
     }
 
     creatorElements() {
@@ -153,6 +154,14 @@ export default class Slider {
     handlerAction() {
         this.slider.getElement().addEventListener('click', (e) => {
             if (e.target.tagName == 'BUTTON') {
+                if (e.target.classList.contains(styles.arrowLeft)) {
+                    this.decreaseCurrentCounter()
+                    this.motion(this.numberCurrentSlides)
+                }
+                if (e.target.classList.contains(styles.arrowRight)) {
+                    this.increaseCurrentCounter()
+                    this.motion(this.numberCurrentSlides)
+                }
                 const buttons = document.querySelectorAll('li > button')
                 buttons.forEach((item) => {
                     item.classList.remove(styles.active)
@@ -169,7 +178,9 @@ export default class Slider {
     }
     // ToDO
     motion = (id) => {
+        console.log(id, this.countSlide)
         const slider = this.sliderTrack.getElement().getElementsByTagName('div')
+        this.countSlide = slider.length
         for (let i = 0; i < slider.length; i++) {
             slider[i].style.order = '1'
             slider[i].style.opacity = '0'
@@ -179,6 +190,19 @@ export default class Slider {
                 slider[i].style.opacity = '1'
             }
         }
+    }
+    increaseCurrentCounter = () => {
+        this.numberCurrentSlides =
+            this.numberCurrentSlides < this.countSlide - 1
+                ? this.numberCurrentSlides + 1
+                : 0
+    }
+
+    decreaseCurrentCounter = () => {
+        this.numberCurrentSlides =
+            this.numberCurrentSlides > 0
+                ? this.numberCurrentSlides - 1
+                : this.countSlide - 1
     }
 }
 
