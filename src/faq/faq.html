@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VRNas | Detail Service</title>
-    <script src="./detail-entry.js" type="module" defer="defer"> </script>
+    <script src="./faq-entry.js" type="module" defer="defer"> </script>
 </head>
 <body>
     <header class="header" id="header">
@@ -36,7 +36,7 @@
                                         <a class="anchor-link" href="../price/price.html">Pricing Plan</a>
                                     </li>
                                     <li class="sublist__item">
-                                        <a class="anchor-link" href="../faq/faq.html">FAQ</a>
+                                        <a class="anchor-link" href="#!">FAQ</a>
                                     </li>
                                     <li class="sublist__item">
                                         <a class="anchor-link" href="../t&c/t&c.html">Tems & Conditions</a>
@@ -58,7 +58,7 @@
                                             <a class="anchor-link" href="../team/team.html">Our Team</a>
                                         </li>
                                         <li class="sublist__item">
-                                            <a class="anchor-link" href="#!">Detail&nbsp;Service</a>
+                                            <a class="anchor-link" href="../detail/detail.html">Detail&nbsp;Service</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -91,7 +91,7 @@
                                         <a href="../../index.html" class="anchor-link anchor-link--main">Home</a>
                                     </li>
                                     <li class="info_link">
-                                        <a href="#!" class="anchor-link" style="white-space: nowrap;">Detail Service</a>
+                                        <a href="#!" class="anchor-link" style="white-space: nowrap;">FAQ</a>
                                     </li>
                                 </ul>
                                 <div class="info__line"></div>
@@ -101,101 +101,76 @@
                 </div>
             </section>
 
-            <section class="detail-service">
-                <div class="container" id="slider-wrapper">
-                    <!-- <div class="parrent">
-                        <div class="pagination">
-
-                        </div>
-                        <div class="child">
-                            <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
-                        </div>
-                    </div> -->
-                </div>
-            </section>            
-
-            <section class="get-start get-start--design">
+            <section class="faq">
                 <div class="container">
-                    <div class="get-start__content">
-                        <div class="get-start__header get-start__header--design">
-                            <h6 class="context-title">OUR VR DESIGN PROJECT</h6>
-                            <p class="context-subtitle">Revolutionize Your Experience with Our Cutting-Edge VR Design Project</p>
-                        </div>
-                        <div class="player">
-                            <div class="player__header">
-                                <p class="player__title">VR Design</p>
-                                <p class="player__subtitle">VR Design Projects</p>
-                            </div>
-                            <button title="button" class="player__button-start"></button>
-                            <img src="/public/design-page/design-player.svg" alt="" class="player__poster">
-                            <video
-                            id="my-video"
-                            class="video-js"
-                            controls
-                            preload="auto">
-                            <source src=""  type="video/mp4" />
-                        </video>
-                        </div>
-                        <div class="wrapper-button">
-                            <a href="./src/price/price.html" class="button"><span>GET STARTED</span></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="price">
-                <div class="container">
-                    <div class="price__content">
-                        <div class="price__info price__info--design">
-                            <h6 class="context-title">OUR PRICING</h6>
-                            <p class="context-subtitle">Affordable VR Services for Everyone</p>
-                            <div class="main-text">At VRNas, we believe that everyone should have access to the benefits of VR. That's why we offer a range of pricing options to meet the needs of any budget.</div>
-                        </div>
-                        <div class="price__card">
-                            <ul class="pricing-policy-list">
-                                <li class="pricing-policy-list__item">
-                                    <article class="price-advantages">
-                                        <div class="price-advantages__wrapper-icon">
-                                            <img src="/icons/price-icon.svg" alt="" class="price-advantages__icon">
-                                        </div>
-                                        <div class="price-advantages__description">
-                                            <h6 class="price-advantages__title">Customizable Packages</h6>
-                                            <p class="price-advantages__text">We understand that each project is unique, so we offer customizable packages to&nbsp;ensure that you get the services you need at a price that works for you. Our team will work with you to create a package that meets your specific goals and budget.</p>
-                                        </div>
-                                    </article>
+                    <div class="faq__content">
+                        <div class="partners__header">
+                            <h6 class="context-title">FAQ</h6>
+                            <p class="context-subtitle">Frequently Asked Questions</p>
+                            <div class="main-text">At VRNas, we want to make sure that you have all the information you need to make informed decisions about our VR services. Here are some of the most common questions we receive:</div>
+                            <ul class="sort__list">
+                                <li class="sort__item">
+                                    <button class="link-other-page-empty" data-choose=""><span data-choose="">ALL</span></button>
                                 </li>
-                                <li class="pricing-policy-list__item">
-                                    <article class="price-advantages">
-                                        <div class="price-advantages__wrapper-icon">
-                                            <img src="/icons/price-icon.svg" alt="" class="price-advantages__icon">
-                                        </div>
-                                        <div class="price-advantages__description">
-                                            <h6 class="price-advantages__title">Flexible Payment Options</h6>
-                                            <p class="price-advantages__text">We offer flexible payment options to make it easy for you to get started with our&nbsp;services. We accept various payment methods, including credit cards, bank transfers, and PayPal, and we can also work with you to create a payment plan that suits your needs.</p>
-                                        </div>
-                                    </article>
+                                <li class="sort__item">
+                                    <button class="link-other-page-empty" data-choose="service"><span data-choose="service">VR Service</span></button>
                                 </li>
-                                <li class="pricing-policy-list__item">
-                                    <article class="price-advantages">
-                                        <div class="price-advantages__wrapper-icon">
-                                            <img src="/icons/price-icon.svg" alt="" class="price-advantages__icon">
-                                        </div>
-                                        <div class="price-advantages__description">
-                                            <h6 class="price-advantages__title">Satisfaction Guarantee</h6>
-                                            <p class="price-advantages__text">We stand behind our services and are committed to ensuring that you are completely satisfied with the final product. If for any reason you are not happy with our services, we will work with you to make it right or provide a full refund.</p>
-                                        </div>
-                                    </article>
+                                <li class="sort__item">
+                                    <button class="link-other-page-empty" data-choose="price"><span data-choose="price">Pricing</span></button>
                                 </li>
                             </ul>
-                            <div class="price__logo">
-                                <img class="price__img" src="/price/man-price.svg" alt="">
-                            </div>
-                            <div class="start-price-card">
-                                <p class="start-price-card__title">Start from</p>
-                                <p class="start-price-card__cost">$99</p>
-                                <a href="../price/price.html" class="button"><span>get started</span></a>
-                                <p class="start-price-card__description">30 Days Moneyback Guarantee</p>
-                            </div>
+                        </div>
+                        <div class="partners__info">
+                            <ul class="faqList" id="faqList">
+                                <li class="faq__point active" data-item="service">
+                                    <h6 class="faq__point-title">What is virtual reality?</h6>
+                                    <div class="faq__point-decrpit">Virtual reality (VR) is a technology that uses headsets or other devices to create a simulated environment. Users can interact with this environment as if it were real, allowing for immersive experiences in gaming, education, training, and more.</div>
+                                </li>
+                                <li class="faq__point" data-item="service">
+                                    <h6 class="faq__point-title">What types of VR services do you offer?</h6>
+                                    <div class="faq__point-decrpit">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus inventore, quo itaque qui, magnam est doloribus obcaecati neque architecto tempora ea atque exercitationem ex doloremque quam? Nobis iure adipisci distinctio aut labore nemo molestiae quo minima ab fugit.</div>
+                                </li>
+                                <li class="faq__point" data-item="service">
+                                    <h6 class="faq__point-title">How much does your VR services cost?</h6>
+                                    <div class="faq__point-decrpit">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus inventore, quo itaque qui, magnam est doloribus obcaecati neque architecto tempora ea atque exercitationem ex doloremque quam? Nobis iure adipisci distinctio aut labore nemo molestiae quo minima ab fugit.</div>
+                                </li>
+                                <li class="faq__point" data-item="service">
+                                    <h6 class="faq__point-title">What equipment do I need to use your VR services?</h6>
+                                    <div class="faq__point-decrpit">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus inventore, quo itaque qui, magnam est doloribus obcaecati neque architecto tempora ea atque exercitationem ex doloremque quam? Nobis iure adipisci distinctio aut labore nemo molestiae quo minima ab fugit.</div>
+                                </li>
+                                <li class="faq__point" data-item="service">
+                                    <h6 class="faq__point-title">Can I try out your VR services before I commit?</h6>
+                                    <div class="faq__point-decrpit">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus inventore, quo itaque qui, magnam est doloribus obcaecati neque architecto tempora ea atque exercitationem ex doloremque quam? Nobis iure adipisci distinctio aut labore nemo molestiae quo minima ab fugit.</div>
+                                </li>
+                                <li class="faq__point" data-item="price">
+                                    <h6 class="faq__point-title">Can I try out your VR services before I commit?</h6>
+                                    <div class="faq__point-decrpit">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus inventore, quo itaque qui, magnam est doloribus obcaecati neque architecto tempora ea atque exercitationem ex doloremque quam? Nobis iure adipisci distinctio aut labore nemo molestiae quo minima ab fugit.</div>
+                                </li>
+                                <li class="faq__point" data-item="price">
+                                    <h6 class="faq__point-title">Can I try out your VR services before I commit?</h6>
+                                    <div class="faq__point-decrpit">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus inventore, quo itaque qui, magnam est doloribus obcaecati neque architecto tempora ea atque exercitationem ex doloremque quam? Nobis iure adipisci distinctio aut labore nemo molestiae quo minima ab fugit.</div>
+                                </li>
+                                <li class="faq__point" data-item="price">
+                                    <h6 class="faq__point-title">Can I try out your VR services before I commit?</h6>
+                                    <div class="faq__point-decrpit">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus inventore, quo itaque qui, magnam est doloribus obcaecati neque architecto tempora ea atque exercitationem ex doloremque quam? Nobis iure adipisci distinctio aut labore nemo molestiae quo minima ab fugit.</div>
+                                </li>
+                                <li class="faq__point" data-item="price">
+                                    <h6 class="faq__point-title">Can I try out your VR services before I commit?</h6>
+                                    <div class="faq__point-decrpit">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus inventore, quo itaque qui, magnam est doloribus obcaecati neque architecto tempora ea atque exercitationem ex doloremque quam? Nobis iure adipisci distinctio aut labore nemo molestiae quo minima ab fugit.</div>
+                                </li>
+                                <li class="faq__point" data-item="price">
+                                    <h6 class="faq__point-title">Can I try out your VR services before I commit?</h6>
+                                    <div class="faq__point-decrpit">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus inventore, quo itaque qui, magnam est doloribus obcaecati neque architecto tempora ea atque exercitationem ex doloremque quam? Nobis iure adipisci distinctio aut labore nemo molestiae quo minima ab fugit.</div>
+                                </li>
+                                <li class="faq__point" data-item="price">
+                                    <h6 class="faq__point-title">Can I try out your VR services before I commit?</h6>
+                                    <div class="faq__point-decrpit">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus inventore, quo itaque qui, magnam est doloribus obcaecati neque architecto tempora ea atque exercitationem ex doloremque quam? Nobis iure adipisci distinctio aut labore nemo molestiae quo minima ab fugit.</div>
+                                </li>
+                                <li class="faq__point" data-item="price">
+                                    <h6 class="faq__point-title">Can I try out your VR services before I commit?</h6>
+                                    <div class="faq__point-decrpit">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus inventore, quo itaque qui, magnam est doloribus obcaecati neque architecto tempora ea atque exercitationem ex doloremque quam? Nobis iure adipisci distinctio aut labore nemo molestiae quo minima ab fugit.</div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -265,7 +240,7 @@
                                 <li class="usefull-links__item usefull-links__item--title">Support</li>
                                 <li class="usefull-links__item"><a href="../about-us/about-us.html" class="usefull-link">About us</a></li>
                                 <li class="usefull-links__item"><a href="../contact/contact.html" class="usefull-link">Contact us</a></li>
-                                <li class="usefull-links__item"><a href="../faq/faq.html" class="usefull-link">FAQ</a></li>
+                                <li class="usefull-links__item"><a href="#!" class="usefull-link">FAQ</a></li>
                                 <li class="usefull-links__item"><a href="../t&c/t&c.html" class="usefull-link">Tems & Conditions</a></li>
                                 <li class="usefull-links__item"><a href="../policy/policy.html" class="usefull-link">Privacy Policy</a></li>
                             </ul>
