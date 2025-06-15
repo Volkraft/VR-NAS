@@ -1,0 +1,44 @@
+@use '/src/common/common-style/vars.scss' as *;
+.t-c {
+}
+
+.t-c__content {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    .partners__header {
+        .main-text {
+            margin: 0 auto;
+            max-width: 623px;
+            width: 100%;
+        }
+    }
+}
+.t-c__header {
+    margin-bottom: 50px;
+    max-width: 623px;
+    width: 100%;
+}
+.t-c__list-el {
+    display: flex;
+    max-width: 788px;
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 32px;
+}
+.t-c__item {
+    .context-subtitle {
+        font-size: 20px;
+    }
+    .main-text {
+    }
+}
+.t-c__sublist {
+    margin-top: 7px;
+    padding-left: 17px;
+}
+.t-c__sublist-item {
+    list-style: disc;
+    color: $grey1;
+    margin-bottom: 7px;
+}

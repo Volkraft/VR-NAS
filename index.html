@@ -9,6 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VRNas | Homepage</title>
     <script src="./src/homepage/index-entry.js" type="module" defer="defer"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
 </head>
 <body>
     <div class="background-cell background-cell--first"></div>
@@ -84,13 +88,13 @@
             <section class="preview">
                     <div class="container">
                     <div class="preview__content">
-                        <div class="preview__basic-info">
+                        <div class="preview__basic-info" data-anim="previewInfo">
                             <div class="hero">
                                 <h1 class="main-title">Immerse Yourself in Virtual Reality</h1>
-                                <div class="main-text">
+                                <div class="main-text" data-anim="previewText">
                                     <p>Experience Unforgettable Events in VR. Bring your events to life like never before with our VR services</p>
                                 </div>
-                                <a href="./src/price/price.html" class="button"><span>discover more</span></a>
+                                <a href="./src/price/price.html" class="button" data-anim="previewBtn"><span>discover more</span></a>
                             </div>
                             <div class="reviews">
                                 <div class="reviews__clients">
@@ -107,13 +111,13 @@
                                 <div class="preview-video preview-video--reviews"><img src="/preview/Video.svg" alt=""></div>
                             </div>
                         </div>
-                        <div class="preview__avatar">
+                        <div class="preview__avatar" data-anim="previewAvatar">
                             <img src="/preview/man-with-headset.svg" alt="man-with-headset" class="logo__man">
                         </div>
                     </div>
                 </div>
             </section> 
-            <section class="advantages">
+            <section class="advantages" data-anim="advantages">
                 <div class="container">
                     <div class="advantages__content">
                         <div class="advantages__bottom">
@@ -152,33 +156,33 @@
             </section>
             <section class="about-us">
                 <div class="container">
-                    <div class="about-us__content">
-                        <div class="about-us__logo">
+                    <div class="about-us__content" id="aboutContent">
+                        <div class="about-us__logo" data-anim="aboutLogo" id="aboutLogo">
                             <span class="about-us__wrapper-img"><img src="/man-point.svg" alt="A man in a virtual reality glasses"></span>
                             <div class="about-us__logo-video">
                                 <div class="preview-video preview-video--about"><img src="/about-us/video.svg" alt=""></div>
                             </div>
                         </div>
                         <div class="about-us__info">
-                            <h6 class="context-title">ABOUT US</h6>
-                            <p class="context-subtitle">Bring your events to life like never before with our VR services.</p>
-                            <div class="main-text">VRNas is a leading provider of VR services for education, entertainment, architecture, and events. Our mission is to bring the power of virtual reality to everyone, allowing them to explore new worlds, learn in new ways, and experience events in a whole new light.</div>
-                            <ul class="about-us__list">
+                            <h6 class="context-title" id="aboutTitle">ABOUT US</h6>
+                            <p class="context-subtitle" id="aboutTitle">Bring your events to life like never before with our VR services.</p>
+                            <div class="main-text" id="aboutText">VRNas is a leading provider of VR services for education, entertainment, architecture, and events. Our mission is to bring the power of virtual reality to everyone, allowing them to explore new worlds, learn in new ways, and experience events in a whole new light.</div>
+                            <ul class="about-us__list" id="aboutList">
                                 <li class="about-us__list-point">Cutting-Edge Technology</li>
                                 <li class="about-us__list-point">Versatile Applications</li>
                                 <li class="about-us__list-point">Affordable and Accessible</li>
                             </ul>
-                            <div class="wrapper-button">
+                            <div class="wrapper-button" id="aboutBtn">
                                 <a href="./src/about-us/about-us.html" class="button"><span>READ MORE</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="services">
+            <section class="services" id="service">
                 <div class="container">
                     <div class="services__content">
-                        <div class="services__header">
+                        <div class="services__header" id="serviceHeader">
                             <div class="services__info">
                                 <h6 class="context-title">OUR SERVICE</h6>
                                 <p class="context-subtitle">Our Service</p>
@@ -187,7 +191,7 @@
                         </div>
                         <ul class="services__cards">
                             <li class="services__cards-column services__cards-column--first">
-                                <article class="card-service">
+                                <article class="card-service" id="serviceCardsFirst">
                                     <div class="card-service__img">
                                         <img src="/services/software.svg" alt="">
                                     </div>
@@ -195,7 +199,7 @@
                                     <div class="card-service__descript">From concept to creation, our team of VR developers will bring your vision to life.</div>
                                         <a href="" class="link-other-page-empty services-button"><span>LEARN MORE</span></a>
                                 </article>
-                                <article class="card-service">
+                                <article class="card-service" id="serviceCardsSecond">
                                     <div class="card-service__img">
                                         <img src="/services/video-console.svg" alt="">
                                     </div>
@@ -205,7 +209,7 @@
                                 </article>
                             </li>
                             <li class="services__cards-column services__cards-column--second">
-                                <article class="card-service">
+                                <article class="card-service" id="serviceCardsFirst">
                                     <div class="card-service__img">
                                         <img src="/services/design.svg" alt="">
                                     </div>
@@ -213,7 +217,7 @@
                                     <div class="card-service__descript">Our talented VR designers will create immersive and engaging environments that will captivate your audience.</div>
                                         <a href="" class="link-other-page-empty services-button"><span>LEARN MORE</span></a>
                                 </article>
-                                <article class="card-service">
+                                <article class="card-service" id="serviceCardsSecond">
                                     <div class="card-service__img">
                                         <img src="/services/party.svg" alt="">
                                     </div>
@@ -223,7 +227,7 @@
                                 </article>
                             </li>
                             <li class="services__cards-column services__cards-column--third">
-                                <article class="card-service">
+                                <article class="card-service" id="serviceCardsFirst">
                                     <div class="card-service__img">
                                         <img src="/services/review.svg" alt="">
                                     </div>
@@ -231,7 +235,7 @@
                                     <div class="card-service__descript">Our VR consultants will work with you to ensure that your VR experience meets your goals and exceeds your expectations.</div>
                                         <a href="" class="link-other-page-empty services-button"><span>LEARN MORE</span></a>
                                 </article>
-                                <article class="card-service">
+                                <article class="card-service" id="serviceCardsSecond">
                                     <div class="card-service__img">
                                         <img src="/services/theatre.svg" alt="">
                                     </div>
@@ -244,28 +248,28 @@
                     </div>
                 </div>
             </section>
-            <section class="choouse-us">
+            <section class="choouse-us" id="choouse">
                 <div class="container">
                     <div class="choouse-us__content">
                         <div class="choouse-us__info">
-                            <h6 class="context-title">WHY CHOOSE US</h6>
-                            <p class="context-subtitle">Why Choose Us for Your VR Needs</p>
+                            <h6 class="context-title" id="choouseTitle">WHY CHOOSE US</h6>
+                            <p class="context-subtitle" id="choouseTitle">Why Choose Us for Your VR Needs</p>
                             <ul class="accordList" id="accordList">
-                                <li class="accord__point active" data-item >
+                                <li class="accord__point active" data-item id="choouseListFirst">
                                     <h6 class="accord__point-title">Passionate and Experienced Team</h6>
                                     <div class="accord__point-decrpit">We are proud of our team of VR experts who are passionate about VR and dedicated to delivering the highest quality work. Our team consists of experienced VR developers, designers, and technicians who have a proven track record of creating immersive and engaging VR experiences.</div>
                                 </li>
-                                <li class="accord__point" data-item >
+                                <li class="accord__point" data-item id="choouseListSecond">
                                     <h6 class="accord__point-title">Customized Solutions</h6>
                                     <div class="accord__point-decrpit">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus inventore, quo itaque qui, magnam est doloribus obcaecati neque architecto tempora ea atque exercitationem ex doloremque quam? Nobis iure adipisci distinctio aut labore nemo molestiae quo minima ab fugit.</div>
                                 </li>
-                                <li class="accord__point" data-item>
+                                <li class="accord__point" data-item id="choouseListThird">
                                     <h6 class="accord__point-title">Exceptional Customer Service</h6>
                                     <div class="accord__point-decrpit">Saepe soluta fugit, qui ullam totam adipisci nisi in veniam mollitia, dolorum quaerat impedit recusandae quod dignissimos debitis vel, expedita magnam rerum.</div>
                                 </li>
                             </ul>
                         </div>
-                        <div class="choouse-us__logo">
+                        <div class="choouse-us__logo" id="choouseLogo">
                             <span class="choouse-us__wrapper-img">
                                 <img src="/choouse-us/man-with-vr.svg" alt="A man in a virtual reality glasses">
                             </span>
@@ -276,15 +280,15 @@
                     </div>
                 </div>
             </section>
-            <section class="get-start">
+            <section class="get-start" data-anim="getStart">
                 <div class="container">
-                    <div class="get-start__content">
-                        <div class="get-start__header">
-                            <h6 class="context-title">HOW TO GET STARTED</h6>
-                            <p class="context-subtitle">Bringing Your Virtual Reality
+                    <div class="get-start__content" id="getStart">
+                        <div class="get-start__header" id="getStartHeader">
+                            <h6 class="context-title" id="getStartTitle">HOW TO GET STARTED</h6>
+                            <p class="context-subtitle" id="getStartSubtitle">Bringing Your Virtual Reality
                                 Dreams to Life</p>
                         </div>
-                        <div class="player">
+                        <div class="player" id="player">
                             <div class="player__header">
                                 <p class="player__title">VR Service</p>
                                 <p class="player__subtitle">How to get started</p>
@@ -299,13 +303,13 @@
                             <source src=""  type="video/mp4" />
                         </video> -->
                         </div>
-                        <div class="wrapper-button">
+                        <div class="wrapper-button" id="getStartBtn">
                             <a href="./src/price/price.html" class="button"><span>GET STARTED</span></a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="testimonial">
+            <section class="testimonial" id="testimonial">
                 <div class="container">
                     <div class="testimonial__content" id="testimonailContent">
                         <div class="testimonial__header">
@@ -383,13 +387,13 @@
             </section>
             <section class="price">
                 <div class="container">
-                    <div class="price__content">
-                        <div class="price__info">
+                    <div class="price__content" id="priceSection">
+                        <div class="price__info" id="priceInfo">
                             <h6 class="context-title">OUR PRICING</h6>
                             <p class="context-subtitle">Affordable VR Services for Everyone</p>
                             <div class="main-text">At VRNas, we believe that everyone should have access to the benefits of VR. That's why we offer a range of pricing options to meet the needs of any budget.</div>
                         </div>
-                        <div class="price__card">
+                        <div class="price__card" id="priceCard">
                             <ul class="pricing-policy-list">
                                 <li class="pricing-policy-list__item">
                                     <article class="price-advantages">
