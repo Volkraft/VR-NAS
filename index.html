@@ -9,10 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VRNas | Homepage</title>
     <script src="./src/homepage/index-entry.js" type="module" defer="defer"> </script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
 </head>
 <body>
     <div class="background-cell background-cell--first"></div>
@@ -442,14 +438,14 @@
                     </div>
                 </div>
             </section>
-            <section class="partners">
+            <section class="partners" id="partners">
                 <div class="container">
                     <div class="partners__content">
-                        <div class="partners__header">
+                        <div class="partners__header" id="partnersInfo">
                             <h6 class="context-title">Our Trusted Partners</h6>
                             <p class="context-subtitle">Discover the Companies We Work With</p>
                         </div>
-                        <div class="partners__logo">
+                        <div class="partners__logo" id="partnersLogo">
                             <div class="partners__logo-ambassadors partners__logo-ambassadors--first">
                                 <img src="/partners/facebook.webp" alt="" class="partners__logo-ambassadors-img">
                             </div>
@@ -479,10 +475,10 @@
                 </div>
             </section>
             <!-- <div class="background-cell background-cell--second"></div> -->
-            <section class="articles">
+            <section class="articles" id="articles">
                 <div class="container">
                     <div class="articles__content">
-                        <div class="articles__header">
+                        <div class="articles__header" id="articlesHeader">
                             <h6 class="context-title">OUR ARTICLES</h6>
                             <div class="articles__header-wrapper">
                                 <p class="context-subtitle">Stay Up-to-Date with Our VR Insights</p>
@@ -490,7 +486,7 @@
                             </div>
                         </div>
                         <div class="articles__action-elements">
-                            <div class="wrapper-slider">
+                            <div class="wrapper-slider" id="sliderWrapper">
                                 <h1>Popular Article</h1>
                                 <div id="slider">
                                     <div class="my-slide my-slide--first" data-slide>
@@ -546,7 +542,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <article class="products">
+                            <article class="products" id="products">
                                 <p class="products__title">Recent Article</p>
                                 <ul class="product-list">
                                     <li class="product-list__item">
@@ -681,7 +677,7 @@
                     </div>
                 </div>
             </section>
-            <section class="subscribe">
+            <section class="subscribe" id="subscribe">
                 <div class="container">
                     <div class="subscribe__content">
                         <article class="banner">
@@ -696,10 +692,10 @@
                 </div>
             </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <img class="background-wave-bottom" src="/icons/wave-footer.svg" alt="">
         <div class="container">
-            <div class="footer__content">
+            <div class="footer__content" id="footerContent">
                 <ul class="footer-lists">
                     <li class="footer-lists__item footer-lists__item--social">
                         <a href="#!" class="logo">

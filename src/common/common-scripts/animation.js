@@ -8,9 +8,10 @@ const previewText = document.querySelectorAll('[data-anim="previewText"]')
 const previewBtn = document.querySelectorAll('[data-anim="previewBtn"]')
 const advantages = document.querySelectorAll('[data-anim="advantages"]')
 
-// window.onbeforeunload = function () {
-//     window.scrollTo(0, 0);
-// }
+window.onbeforeunload = function () {
+    window.scrollTo(0, 0)
+}
+
 // preview
 previewInfo.forEach((item) => {
     timelinePreview.from(
@@ -405,6 +406,130 @@ gsap.from('#priceCard', {
         trigger: '#priceSection',
         start: '35% 80%',
         end: '45% 80%',
+        opacity: 0.8,
+        scrub: 1.5,
+        toggleActions: 'play reverse play reverse',
+        once: true,
+    },
+})
+
+// partners
+
+gsap.from('#partnersInfo', {
+    y: 200,
+    opacity: 0,
+    stagger: 0.3,
+    delay: 0.5,
+    scrollTrigger: {
+        // markers:true,
+        trigger: '#partners',
+        start: '20% 80%',
+        end: '35% 80%',
+        opacity: 0.8,
+        scrub: 1.5,
+        toggleActions: 'play reverse play reverse',
+        once: true,
+    },
+})
+gsap.from('#partnersLogo', {
+    y: 200,
+    opacity: 0,
+    stagger: 0.3,
+    delay: 0.5,
+    scrollTrigger: {
+        // markers:true,
+        trigger: '#partners',
+        start: '45% 80%',
+        end: '60% 80%',
+        opacity: 0.8,
+        scrub: 1.5,
+        toggleActions: 'play reverse play reverse',
+        once: true,
+    },
+})
+
+// articles
+
+gsap.from('#articlesHeader', {
+    y: 200,
+    opacity: 0,
+    stagger: 0.3,
+    delay: 0.5,
+    scrollTrigger: {
+        // markers:true,
+        trigger: '#articles',
+        start: '20% 80%',
+        end: '35% 80%',
+        opacity: 0.8,
+        scrub: 1.5,
+        toggleActions: 'play reverse play reverse',
+        once: true,
+    },
+})
+
+gsap.from('#sliderWrapper', {
+    x: -100,
+    opacity: 0,
+    stagger: 0.3,
+    delay: 0.5,
+    scrollTrigger: {
+        // markers:true,
+        trigger: '#articles',
+        start: '30% 80%',
+        end: '65% 80%',
+        opacity: 0.8,
+        scrub: 1.5,
+        toggleActions: 'play reverse play reverse',
+        once: true,
+    },
+})
+
+gsap.from('#products', {
+    x: 100,
+    opacity: 0,
+    stagger: 0.3,
+    delay: 0.5,
+    scrollTrigger: {
+        // markers:true,
+        trigger: '#articles',
+        start: '30% 80%',
+        end: '65% 80%',
+        opacity: 0.8,
+        scrub: 1.5,
+        toggleActions: 'play reverse play reverse',
+        once: true,
+    },
+})
+
+// footer
+
+gsap.from('#subscribe', {
+    y: 100,
+    opacity: 0,
+    stagger: 0.3,
+    delay: 0.5,
+    scrollTrigger: {
+        // markers:true,
+        trigger: '#subscribe',
+        start: '-15% 80%',
+        end: 'bottom 80%',
+        opacity: 0.8,
+        scrub: 1.5,
+        toggleActions: 'play reverse play reverse',
+        once: true,
+    },
+})
+
+gsap.from('#footerContent', {
+    y: 100,
+    opacity: 0,
+    stagger: 0.3,
+    delay: 0.5,
+    scrollTrigger: {
+        // markers:true,
+        trigger: '#footer',
+        start: 'top 80%',
+        end: '48% 80%',
         opacity: 0.8,
         scrub: 1.5,
         toggleActions: 'play reverse play reverse',
