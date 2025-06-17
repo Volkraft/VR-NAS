@@ -17,8 +17,17 @@ export default defineConfig({
                 team: resolve(__dirname, 'src/team/team.html'),
                 faq: resolve(__dirname, 'src/faq/faq.html'),
                 tnc: resolve(__dirname, 'src/t&c/t&c.html'),
-                policy: resolve(__dirname, 'src/policy/policy.html')
-                // '*': resolve(__dirname, 'src/404/404.html')
+                policy: resolve(__dirname, 'src/policy/policy.html'),
+                notFound: resolve(__dirname, 'src/404/404.html')
+            }
+        }
+    },
+    server: {
+        proxy: {
+            '/api': {
+                target: 'http://your-backend-server.com',
+                changeOrigin: true,
+                rewrite: (path) => path.replace(/^\/api/, '')
             }
         }
     }

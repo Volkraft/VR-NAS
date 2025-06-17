@@ -115,30 +115,3 @@
         background-position: center;
     }
 }
-.product__btn {
-    cursor: pointer;
-    position: relative;
-    display: inline-block;
-    text-transform: uppercase;
-    font-weight: 700;
-    border: none;
-    background: $linear;
-    color: transparent;
-    background-clip: text;
-
-    &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 1.2px;
-        background: $linear;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-    &::hover {
-    }
-}
