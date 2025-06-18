@@ -1,0 +1,1 @@
+import"./scrollList-DVUMz_3Y.js";import"./faqAccr-Cx7woSAD.js";const a=document.querySelectorAll("button.link-other-page-empty"),c=document.querySelectorAll(".faq__point");a.forEach(o=>{o.addEventListener("click",l=>{let t=l.target.dataset.choose;c.forEach(e=>{let s=e.dataset.item;t==s||t==""?e.style.display="block":e.style.display="none"})})});
