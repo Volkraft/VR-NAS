@@ -18,6 +18,7 @@ export default defineConfig({
                 faq: resolve(__dirname, 'src/faq/faq.html'),
                 tnc: resolve(__dirname, 'src/t&c/t&c.html'),
                 policy: resolve(__dirname, 'src/policy/policy.html'),
+                articles: resolve(__dirname, 'src/articles/articles.html'),
                 notFound: resolve(__dirname, 'src/404/404.html')
             }
         }
