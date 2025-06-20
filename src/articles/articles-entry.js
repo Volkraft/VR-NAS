@@ -6,3 +6,4 @@ import '../homepage/homepage-style/product-list.scss'
 
 import '../common/common-scripts/header.js'
 import '../common/common-scripts/scrollList.js'
+import '../articles/articles-scirpt/postViewer.js'
