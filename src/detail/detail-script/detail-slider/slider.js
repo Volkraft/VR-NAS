@@ -152,6 +152,18 @@ export default class Slider {
         wrapperArrows.getElement().append(arrowRight.getElement())
     }
     handlerAction() {
+        this.slider
+            .getElement()
+            .addEventListener('mousedown', this.createStartingPoint)
+        this.slider
+            .getElement()
+            .addEventListener('mouseup', this.createEndingPoint)
+        this.slider
+            .getElement()
+            .addEventListener('touchstart', this.createStartingPoint)
+        this.slider
+            .getElement()
+            .addEventListener('touchend', this.createEndingPoint)
         this.slider.getElement().addEventListener('click', (e) => {
             if (e.target.tagName == 'BUTTON') {
                 if (e.target.classList.contains(styles.arrowLeft)) {
@@ -178,7 +190,6 @@ export default class Slider {
     }
     // ToDO
     motion = (id) => {
-        console.log(id, this.countSlide)
         const slider = this.sliderTrack.getElement().getElementsByTagName('div')
         this.countSlide = slider.length
         for (let i = 0; i < slider.length; i++) {
@@ -203,6 +214,45 @@ export default class Slider {
             this.numberCurrentSlides > 0
                 ? this.numberCurrentSlides - 1
                 : this.countSlide - 1
+    }
+
+    choiceOfDirection = (direction) => {
+        if (direction === 'right') {
+            this.increaseCurrentCounter()
+        } else if (direction === 'left') {
+            this.decreaseCurrentCounter()
+        }
+    }
+
+    handlerMove = () => {
+        const differenceMoves = this.startPoint - this.endPoint
+        const minMove = 40
+
+        if (Math.abs(differenceMoves) >= minMove) {
+            if (differenceMoves > 0) {
+                this.choiceOfDirection('right')
+            } else {
+                this.choiceOfDirection('left')
+            }
+        }
+
+        this.motion(this.numberCurrentSlides)
+    }
+
+    createStartingPoint = (e) => {
+        const point = e.type.includes('mouse')
+            ? e.clientX
+            : e.touches[0].clientX
+        this.startPoint = point
+        this.endPoint = this.startPoint
+    }
+
+    createEndingPoint = (e) => {
+        const point = e.type.includes('mouse')
+            ? e.clientX
+            : e.changedTouches[0].clientX
+        this.endPoint = point
+        this.handlerMove()
     }
 }
 

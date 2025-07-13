@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRNas | Blog</title>
+    <script src="./article-entry.js" type="module" defer="defer"> </script>
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__content">
+                <a href="../../index.html" class="logo">
+                    <img class="logo__img" src="/logo.svg" alt="VRNas logotype">
+                </a>
+                <nav class="menu" id="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="../../index.html" class="anchor-link">Home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="../about-us/about-us.html" class="anchor-link">About us</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="../service/service.html" class="anchor-link">Service</a>
+                        </li>
+                        <li class="menu__item" data-acrList>
+                            <button class="anchor-link anchor-link--sublist">Page</button>
+                            <div class="menu__wrapper-list">
+                                <ul class="sublist sublist--first">
+                                    <li class="sublist__item">
+                                        <a class="anchor-link" href="../price/price.html">Pricing Plan</a>
+                                    </li>
+                                    <li class="sublist__item">
+                                        <a class="anchor-link" href="../faq/faq.html">FAQ</a>
+                                    </li>
+                                    <li class="sublist__item">
+                                        <a class="anchor-link" href="../t&c/t&c.html">Tems & Conditions</a>
+                                    </li>
+                                        <li class="sublist__item">
+                                            <a class="anchor-link" href="../policy/policy.html">Privacy Policy</a>
+                                        </li>
+                                    </ul>
+                                </div >
+                        </li>
+                        <li class="menu__item" data-acrList>
+                                <button class="anchor-link anchor-link--sublist">Blog</button>
+                                <div class="menu__wrapper-list menu__wrapper-list--second">
+                                    <ul class="sublist sublist--first">
+                                        <li class="sublist__item">
+                                            <a class="anchor-link" href="#!">Resent articles</a> 
+                                        </li>
+                                        <li class="sublist__item">
+                                            <a class="anchor-link" href="../team/team.html">Our Team</a>
+                                        </li>
+                                        <li class="sublist__item">
+                                            <a class="anchor-link" href="../detail/detail.html">Detail&nbsp;Service</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </li>
+                        <li data-link-mobile>
+                            <a href="../contact/contact.html" class="link-other-page-empty"><span>Contact us</span></a>
+                        </li>
+                        </ul>
+                    </nav>
+                    <div class="wrapper-header-controls">
+                        <a href="" class="link-other-page-empty" data-link-desktop><span>Contact us</span></a>
+                        <button class="burger" title="button" id="burger">
+                            <span class="burger__line"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <img class="background-wave" src="/icons/wave.svg" alt="">
+            <section class="info">
+                <div class="container">
+                    <div class="info__content">
+                        <div class="info__header info__header--article">
+                            <div class="info__top"> 
+                                <ul class="info__links">
+                                    <li class="info_link">
+                                        <a href="../../index.html" class="anchor-link anchor-link--main">Home</a>
+                                    </li>
+                                    <li class="info_link">
+                                        <a href="./articles.html" class="anchor-link anchor-link--main" style="white-space: nowrap;">Blog</a>
+                                    </li>
+                                    <li class="info_link">
+                                        <a href="#!" class="anchor-link" style="white-space: nowrap;" id="post-link"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="posts">
+                <div class="container">
+                    <div id="post-viewer"></div>
+                    <template id="template-post">
+                        <article class="post">
+                            <div class="product__wrapper-text">
+                                <p class="product__title blog"></p>
+                                <p class="context__subtitle blog"></p>
+                                <h6 class="context__title blog"></h6>
+                                <img class="product__img blog" alt="#!">
+                                <div class="main-text blog"></div>
+                                <div class="post__tags">
+                                    <h3 class="post__tags-title">Post Tags :</h3>
+                                </div>
+                                <div class="post__links">
+                                    <h3 class="post__links-title">Share :</h3>
+                                    <script src="https://yastatic.net/share2/share.js"></script>
+                                    <div class="ya-share2" data-curtain data-shape="round" data-color-scheme="whiteblack" data-services="telegram,twitter,linkedin"></div>
+                                    <!-- <a href=""><img src="/icons/x.svg" alt="" class="post__links-img"></a>
+                                    <a href=""><img src="/icons/f.svg" alt="" class="post__links-img"></a>
+                                    <a href=""><img src="/icons/insta.svg" alt="" class="post__links-img"></a> -->
+                                </div>
+                            </div>
+                        </article>
+                    </template>
+                    <div class="news-blog">
+                        <h3 class="news-blog__title title">Recent Article</h3>
+                        <ul class="product-list">
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <div class="product__wrapper-img">
+                                        <img src="/articles/vr-edication.svg" class="product__img" alt="">
+                                    </div>
+                                    <div class="product__wrapper-text">
+                                        <p class="product__title">VR Education</p>
+                                        <p class="product__description">The Future of Education: How VR is Revolutionizing the Classroom</p>
+                                    </div>
+                                    <a href="" class="link-other-page-empty link-other-page-empty--product">
+                                        <span class="product-wrapper-arrow"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <div class="product__wrapper-img">
+                                        <img src="/articles/hand-vr.svg" class="product__img" alt="">
+                                    </div>
+                                    <div class="product__wrapper-text">
+                                        <p class="product__title">VR Architecture</p>
+                                        <p class="product__description">Bringing Designs to Life: How VR is Changing Architecture</p>
+                                    </div>
+                                    <a href="" class="link-other-page-empty link-other-page-empty--product">
+                                        <span class="product-wrapper-arrow"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <div class="product__wrapper-img">
+                                        <img src="/articles/vr-entertainment.svg" class="product__img" alt="">
+                                    </div>
+                                    <div class="product__wrapper-text">
+                                        <p class="product__title">VR Entertainment</p>
+                                        <p class="product__description">Making Events Memorable: The Power of VR for Corporate and Special Occasions</p>
+                                    </div>
+                                    <a href="" class="link-other-page-empty link-other-page-empty--product">
+                                        <span class="product-wrapper-arrow"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <div class="product__wrapper-img">
+                                        <img src="/articles/vr-event.svg" class="product__img" alt="">
+                                    </div>
+                                    <div class="product__wrapper-text">
+                                        <p class="product__title">VR Event</p>
+                                        <p class="product__description">Exploring New Worlds: The Benefits of VR Travel</p>
+                                    </div>
+                                    <a href="" class="link-other-page-empty link-other-page-empty--product">
+                                        <span class="product-wrapper-arrow"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <div class="product__wrapper-img">
+                                        <img src="/articles/vr-games-1.svg" class="product__img" alt="">
+                                    </div>
+                                    <div class="product__wrapper-text">
+                                        <p class="product__title">VR Games</p>
+                                        <p class="product__description">Entertainment Goes Virtual: The Rise of VR Gaming</p>
+                                    </div>
+                                    <a href="" class="link-other-page-empty link-other-page-empty--product">
+                                        <span class="product-wrapper-arrow"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <div class="product__wrapper-img">
+                                        <img src="/articles/vr-games-2.svg" class="product__img" alt="">
+                                    </div>
+                                    <div class="product__wrapper-text">
+                                        <p class="product__title">VR Games</p>
+                                        <p class="product__description">Entertainment Goes Virtual: The Rise of VR Gaming</p>
+                                    </div>
+                                    <a href="" class="link-other-page-empty link-other-page-empty--product">
+                                        <span class="product-wrapper-arrow"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <div class="product__wrapper-img">
+                                        <img src="/articles/vr-games-3.svg" class="product__img" alt="">
+                                    </div>
+                                    <div class="product__wrapper-text">
+                                        <p class="product__title">VR Games</p>
+                                        <p class="product__description">Entertainment Goes Virtual: The Rise of VR Gaming</p>
+                                    </div>
+                                    <a href="" class="link-other-page-empty link-other-page-empty--product">
+                                        <span class="product-wrapper-arrow"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <div class="product__wrapper-img">
+                                        <img src="/articles/vr-games-4.svg" class="product__img" alt="">
+                                    </div>
+                                    <div class="product__wrapper-text">
+                                        <p class="product__title">VR Games</p>
+                                        <p class="product__description">Entertainment Goes Virtual: The Rise of VR Gaming</p>
+                                    </div>
+                                    <a href="" class="link-other-page-empty link-other-page-empty--product">
+                                        <span class="product-wrapper-arrow"></span>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="product-list__item">
+                                <div class="product">
+                                    <div class="product__wrapper-img">
+                                        <img src="/articles/vr-games-5.svg" class="product__img" alt="">
+                                    </div>
+                                    <div class="product__wrapper-text">
+                                        <p class="product__title">VR Games</p>
+                                        <p class="product__description">Entertainment Goes Virtual: The Rise of VR Gaming</p>
+                                    </div>
+                                    <a href="" class="link-other-page-empty link-other-page-empty--product">
+                                        <span class="product-wrapper-arrow"></span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="hashtags">
+                            <h3 class="hashtags__title title">Popular Hashtag</h3>
+                            <p class="product__title">#VRDesign</p>
+                            <p class="product__title">#ArchitectureInnovation</p>
+                            <p class="product__title">#DesignThinking</p>
+                            <p class="product__title">#VirtualRealityArchitecture</p>
+                            <p class="product__title">#BringingDesignsToLife</p>
+                            <p class="product__title">#DesignVisualization</p>
+                            <p class="product__title">#ArchitecturalVisualization</p>
+                            <p class="product__title">#RevolutionizingArchitecture</p>
+                            <p class="product__title">#BuildingInVR</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="subscribe">
+                <div class="container">
+                    <div class="subscribe__content">
+                        <article class="banner">
+                            <p class="banner__title">Subscribe to our newsletter for latest updates</p>
+                            <form action="" class="banner__form">
+                                <span class="banner__wrapper-icon"></span>
+                                <input type="email" placeholder="Enter your email address" class="banner__form-email">
+                                <button class="banner__form-submit" type="submit" title="btn-submit"></button>
+                            </form>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <img class="background-wave-bottom" src="/icons/wave-footer.svg" alt="">
+            <div class="container">
+                <div class="footer__content">
+                    <ul class="footer-lists">
+                        <li class="footer-lists__item footer-lists__item--social">
+                            <a href="#!" class="logo">
+                                <img class="logo__img" src="/logo.svg" alt="VRNas logotype">
+                            </a>
+                            <ul class="social-list">
+                                <li class="social-list__item">
+                                    <a href="" class="social-link">
+                                        <img src="/icons/x.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="" class="social-link">
+                                        <img src="/icons/f.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="" class="social-link">
+                                        <img src="/icons/insta.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="social-list__item">
+                                    <a href="" class="social-link">
+                                        <img src="/icons/github.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer-lists__item">
+                            <ul class="usefull-links"> 
+                                <li class="usefull-links__item usefull-links__item--title">Quicklinks</li>
+                                <li class="usefull-links__item"><a href="../../index.html" class="usefull-link">Home</a></li>
+                                <li class="usefull-links__item"><a href="../price/price.html" class="usefull-link">Pricing Plan</a></li>
+                                <li class="usefull-links__item"><a href="../service/service.html" class="usefull-link">Service</a></li>
+                                <li class="usefull-links__item"><a href="../articles/articles.html" class="usefull-link">Blog</a></li>
+                                <li class="usefull-links__item"><a href="../team/team.html" class="usefull-link">Our Team</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer-lists__item">
+                            <ul class="usefull-links">
+                                <li class="usefull-links__item usefull-links__item--title">Support</li>
+                                <li class="usefull-links__item"><a href="../about-us/about-us.html" class="usefull-link">About us</a></li>
+                                <li class="usefull-links__item"><a href="../contact/contact.html" class="usefull-link">Contact us</a></li>
+                                <li class="usefull-links__item"><a href="../faq/faq.html" class="usefull-link">FAQ</a></li>
+                                <li class="usefull-links__item"><a href="../t&c/t&c.html" class="usefull-link">Tems & Conditions</a></li>
+                                <li class="usefull-links__item"><a href="../policy/policy.html" class="usefull-link">Privacy Policy</a></li>
+                            </ul>
+                        </li>
+                        <li class="footer-lists__item">
+                                <ul class="usefull-links">
+                                    <li class="usefull-links__item usefull-links__item--title">Need Help?</li>
+                                    <li class="usefull-links__item"><a href="" class="usefull-link usefull-link--contacts usefull-link--location">Tanjung Sari Street no.48, Pontianak City</a></li>
+                                    <li class="usefull-links__item"><a href="" class="usefull-link usefull-link--contacts usefull-link--email">Support@VRNas.com</a></li>
+                                    <li class="usefull-links__item"><a href="" class="usefull-link usefull-link--contacts usefull-link--phone">+123 456 7890</a></li>
+                                </ul>
+                        </li>
+                    </ul>
+                    <p class="copyright">© Copyright 2023-2024, All Rights Reserved</p>
+                </div>
+            </div>
+        </footer> 
+</body>
+</html>

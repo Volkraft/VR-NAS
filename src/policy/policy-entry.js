@@ -6,3 +6,4 @@ import './policy-style/policy.scss'
 
 import '../common/common-scripts/header.js'
 import '../common/common-scripts/scrollList.js'
+import '../common/common-scripts/routeChecker.js'

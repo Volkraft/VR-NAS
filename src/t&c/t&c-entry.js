@@ -5,3 +5,4 @@ import './t&c-style/t&c.scss'
 
 import '../common/common-scripts/header.js'
 import '../common/common-scripts/scrollList.js'
+import '../common/common-scripts/routeChecker.js'
